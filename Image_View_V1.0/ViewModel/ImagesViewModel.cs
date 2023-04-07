@@ -13,10 +13,10 @@ public partial class ImagesViewModel : BaseViewModel
     [RelayCommand]
 async Task GoToDetailsAsync(ImageSource image)
     {
-        ImageToProcess imgSrcTemp = new() ;
-        //ImageSource image = ImageSource.FromFile("nodata.png");
+        ImageToProcess imgSrcTemp = new();
 
         imgSrcTemp.ImageSrc = image;
+
         await Shell.Current.GoToAsync($"{nameof(DetailsPage)}", true, 
             new Dictionary<string, object>
             {
@@ -36,7 +36,10 @@ async Task GoToDetailsAsync(ImageSource image)
 
             var image = await imageService.GetImage();
 
-            await GoToDetailsAsync(image);
+            if (image != null)
+            {
+                await GoToDetailsAsync(image);
+            }
           
 }
         catch (Exception ex)

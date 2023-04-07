@@ -5,10 +5,63 @@
               xmlns:viewmodel="clr-namespace:Image_View_V1._0.ViewModel"
     x:DataType="viewmodel:ImageDetailsViewModel">
 
-    <AbsoluteLayout>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="927" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
         <Image
             Source = "{Binding ImageToProcess.ImageSrc}"
-            AbsoluteLayout.LayoutBounds="0.01, 0.65, 1200, 1200"
-               AbsoluteLayout.LayoutFlags="PositionProportional"/>
-    </AbsoluteLayout>
+            WidthRequest="595"
+            HeightRequest="708"
+            VerticalOptions="Center"
+        HorizontalOptions="Center"/>
+
+        <Grid Grid.Column="1">
+            <TableView  x:Name="MyTb" BackgroundColor="{StaticResource DarkBackground}">
+                <TableRoot>
+                    <TableSection>
+                        <!-- Dodaj tu wiersze tabeli -->
+                        <ViewCell Height="200">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Image
+                        Source= "photo_processed.png" 
+                        WidthRequest="80"
+                        HeightRequest="95"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Grid.Column="0" />
+
+                                <Label
+                        Text="miniaturka"
+                        TextColor="{StaticResource Accent}"
+                        VerticalOptions="Center"
+                                    HorizontalOptions="Start"
+                        Grid.Column="1" />
+                            </Grid>
+                        </ViewCell>
+                        
+                        
+                        
+                        <ViewCell Height="300">
+                            <Label Text="histogram" TextColor="{StaticResource Accent}" VerticalOptions="Center" />
+                        </ViewCell>
+                        <ViewCell Height="400">
+                            <Label Text="chunki" TextColor="{StaticResource Accent}" VerticalOptions="Center" />
+                        </ViewCell>
+                        <ViewCell Height="500">
+                            <Label Text="fft" TextColor="{StaticResource Accent}" VerticalOptions="Center" />
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </Grid>
+    </Grid>
+
 </ContentPage>

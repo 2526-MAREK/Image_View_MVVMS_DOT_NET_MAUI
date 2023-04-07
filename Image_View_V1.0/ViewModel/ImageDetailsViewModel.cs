@@ -12,4 +12,10 @@ public partial class ImageDetailsViewModel : BaseViewModel
     ImageToProcess imageToProcess;
 
 
-}
+    [RelayCommand]
+    async Task GoBackAsync()
+    {
+        await Shell.Current.GoToAsync("..");
+    }
+
+ }

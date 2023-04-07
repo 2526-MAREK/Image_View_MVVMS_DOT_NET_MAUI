@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EMSZVnxEYrDxB5L+uwsvpLJ8ycgrleVBqpEeen6vFKS6EHwvulJCl+TMaeqX19L6tccQauavr87nnbuj2ZedBQ==",
+  "dgSpecHash": "u917cZLijW4njX3/3l/9ElNU2U7rFRsCkHDlEr/huom/lYcpuvM2ZjsQiEeD1DS5yKDsQewLgnGW2q36GBfVWg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marek\\source\\repos\\Image_View_V1.0\\Image_View_V1.0\\Image_View_V1.0.csproj",
+  "projectFilePath": "C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Image_View_V1.0.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marek\\.nuget\\packages\\communitytoolkit.mvvm\\8.1.0\\communitytoolkit.mvvm.8.1.0.nupkg.sha512",
     "C:\\Users\\marek\\.nuget\\packages\\googlegson\\2.9.1.1\\googlegson.2.9.1.1.nupkg.sha512",

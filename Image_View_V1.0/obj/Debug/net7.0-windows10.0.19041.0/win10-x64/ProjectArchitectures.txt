@@ -1,1 +1,1 @@
-C:\Users\marek\source\repos\Image_View_V1.0\Image_View_V1.0\Image_View_V1.0.csproj;x64
+C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Image_View_V1.0.csproj;x64
