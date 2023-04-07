@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Image_View_V1._0.Services
 {
@@ -62,6 +64,25 @@ namespace Image_View_V1._0.Services
             await System.IO.File.WriteAllBytesAsync(
                 @"C:\Users\marek\source\repos\Image_View_V1.0\Image_View_V1.0\Resources\Images\photo_processed.png", memory_stream.ToArray());
         }
+
+        public async Task<ChunkIHDR> GetChunkIHDR()
+        {
+            ChunkIHDR ChTemp = new();
+
+            using var stream = await FileSystem.OpenAppPackageFileAsync("IHDR.json");
+            using var reader = new StreamReader(stream);
+            var contents = await reader.ReadToEndAsync();
+            JObject jObject = JObject.Parse(contents);
+
+            ChTemp.Width = (int)jObject["width"];
+            ChTemp.Height = (int)jObject["height"];
+            ChTemp.BitDepth = (int)jObject["bit_depth"];
+
+            return ChTemp;
+
+        }
     }
 
-}
+    
+
+    }
