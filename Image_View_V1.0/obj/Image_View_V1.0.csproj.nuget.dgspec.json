@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marek\\source\\repos\\Image_View_V1.0\\Image_View_V1.0\\Image_View_V1.0.csproj": {}
+    "C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Image_View_V1.0.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marek\\source\\repos\\Image_View_V1.0\\Image_View_V1.0\\Image_View_V1.0.csproj": {
+    "C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Image_View_V1.0.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marek\\source\\repos\\Image_View_V1.0\\Image_View_V1.0\\Image_View_V1.0.csproj",
+        "projectUniqueName": "C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Image_View_V1.0.csproj",
         "projectName": "Image_View_V1.0",
-        "projectPath": "C:\\Users\\marek\\source\\repos\\Image_View_V1.0\\Image_View_V1.0\\Image_View_V1.0.csproj",
+        "projectPath": "C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Image_View_V1.0.csproj",
         "packagesPath": "C:\\Users\\marek\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marek\\source\\repos\\Image_View_V1.0\\Image_View_V1.0\\obj\\",
+        "outputPath": "C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [

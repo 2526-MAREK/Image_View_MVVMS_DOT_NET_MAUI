@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using Image_View_V1._0.Services;
 using Image_View_V1._0.View;
+using Windows.UI.ViewManagement;
 
 namespace Image_View_V1._0;
 
@@ -28,7 +29,23 @@ public static class MauiProgram
         builder.Services.AddSingleton<MainPage>();
         builder.Services.AddTransient<DetailsPage>();
 
-        return builder.Build();
+        var app = builder.Build();
+
+        // Konfiguracja rozmiaru okna dla platformy Windows
+#if WINDOWS
+        if (app.Services.GetService<Microsoft.UI.Xaml.Window>() is Microsoft.UI.Xaml.Window mainWindow)
+        {
+            mainWindow.Activated += (sender, args) =>
+            {
+                var applicationView = ApplicationView.GetForCurrentView();
+                applicationView.SetPreferredMinSize(new Windows.Foundation.Size(1224, 982));
+                ApplicationView.PreferredLaunchViewSize = new Windows.Foundation.Size(1224, 982);
+                ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
+            };
+        }
+#endif
+
+        return app;
     }
 }
 
