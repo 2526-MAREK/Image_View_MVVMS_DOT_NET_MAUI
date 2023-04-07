@@ -46,18 +46,88 @@
                         Grid.Column="1" />
                             </Grid>
                         </ViewCell>
-                        
-                        
-                        
+
+
+                        <ViewCell Height="185">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+
+                       
+
+                                <Label
+                        Text="histogram"
+                        TextColor="{StaticResource Accent}"
+                        VerticalOptions="Center"
+                                    HorizontalOptions="Start"
+                        Grid.Row="0" />
+                                <Image
+                        Source= "photo_processed.png" 
+                        WidthRequest="266"
+                        HeightRequest="140"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Grid.Row="1" />
+                            </Grid>
+                        </ViewCell>
+
+                     
+
+
+                        <ViewCell Height="360">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+
+
+
+                                <Label
+                        Text="IHDR"
+                                    Style="{StaticResource BigLabel}"
+                        TextColor="{StaticResource Accent}"
+                        VerticalOptions="Center"
+                                    HorizontalOptions="Start"
+                        Grid.Row="0" />
+                                <VerticalStackLayout Grid.Row="1" Padding="10" Spacing="10">
+                                    <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.Height, StringFormat='Height: {0}'}" />
+                                    <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.Width , StringFormat='Width: {0}'}" />
+                                <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.BitDepth, StringFormat='BitDepth: {0}'}" />
+                                </VerticalStackLayout>
+                            </Grid>
+                        </ViewCell>
+
+
                         <ViewCell Height="300">
-                            <Label Text="histogram" TextColor="{StaticResource Accent}" VerticalOptions="Center" />
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+
+
+
+                                <Label
+                        Text="fft"
+                        TextColor="{StaticResource Accent}"
+                        VerticalOptions="Center"
+                                    HorizontalOptions="Start"
+                        Grid.Row="0" />
+                                <Image
+                        Source= "photo_processed.png" 
+                        WidthRequest="266"
+                        HeightRequest="266"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Grid.Row="1" />
+                            </Grid>
                         </ViewCell>
-                        <ViewCell Height="400">
-                            <Label Text="chunki" TextColor="{StaticResource Accent}" VerticalOptions="Center" />
-                        </ViewCell>
-                        <ViewCell Height="500">
-                            <Label Text="fft" TextColor="{StaticResource Accent}" VerticalOptions="Center" />
-                        </ViewCell>
+                        
+                        
+                    
                     </TableSection>
                 </TableRoot>
             </TableView>

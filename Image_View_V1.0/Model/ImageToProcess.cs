@@ -3,5 +3,6 @@
     public class ImageToProcess
     {
         public ImageSource ImageSrc { get; set; }
+        public ChunkIHDR ChIHDR { get; set; }
     }
 }
