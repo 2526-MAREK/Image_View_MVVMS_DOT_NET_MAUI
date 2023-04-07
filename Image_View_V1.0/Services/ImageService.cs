@@ -28,9 +28,12 @@ namespace Image_View_V1._0.Services
               })
             });
 
-            SaveImage(result);
+            if(result == null)
+                return imageSource;
 
             using var stream = await result.OpenReadAsync();
+
+            SaveImage(stream);
 
             // Tworzenie MemoryStream z oryginalnego strumienia
             MemoryStream memoryStream = new MemoryStream();
@@ -43,9 +46,8 @@ namespace Image_View_V1._0.Services
             return imageSource;
         }
 
-        private async void SaveImage(FileResult file_result)
+        private async void SaveImage(System.IO.Stream stream)
         {
-            using var stream = await file_result.OpenReadAsync();
             using var memory_stream = new MemoryStream();
 
             stream.CopyTo(memory_stream);
