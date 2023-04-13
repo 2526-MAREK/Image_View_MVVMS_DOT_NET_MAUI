@@ -117,7 +117,7 @@
                                     HorizontalOptions="Start"
                         Grid.Row="0" />
                                 <Image
-                        Source= "photo_processed.png" 
+                        Source= "{Binding ImageToProcess.ImageSrcFFT}"
                         WidthRequest="266"
                         HeightRequest="266"
                         VerticalOptions="Center"

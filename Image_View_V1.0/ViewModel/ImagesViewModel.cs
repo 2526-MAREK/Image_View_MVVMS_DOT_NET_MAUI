@@ -16,6 +16,7 @@ async Task GoToDetailsAsync(ImageToProcess image)
         //uruchamiamy python....
 
         image.ChIHDR = await imageService.GetChunkIHDR();
+        image.ImageSrcFFT = await imageService.GetImageFFTFromProcess();
 
         await Shell.Current.GoToAsync($"{nameof(DetailsPage)}", true, 
             new Dictionary<string, object>

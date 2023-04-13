@@ -5,5 +5,7 @@
         public ImageSource ImageSrcMain { get; set; }
         public ImageSource ImageSrcThumbnail { get; set; }
         public ChunkIHDR ChIHDR { get; set; }
+
+        public ImageSource ImageSrcFFT { get; set; }
     }
 }

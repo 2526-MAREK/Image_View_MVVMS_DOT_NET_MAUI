@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Microsoft.Maui.Controls;
+using System.Reflection;
 
 namespace Image_View_V1._0.Services
 {
@@ -87,6 +88,24 @@ namespace Image_View_V1._0.Services
 
             return ChTemp;
 
+        }
+
+        private async Task<ImageSource> LoadImageFromResource(string imagePath)
+        {
+            var assembly = Assembly.GetExecutingAssembly();
+            //ImageSource source = new FileImageSource { File = $"resource://{assembly.GetName().Name}.{imagePath}" };
+            ImageSource source = new FileImageSource { File = @"C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Images\fft.png" };
+
+            return source;
+        }
+
+        public async Task<ImageSource> GetImageFFTFromProcess()
+        {
+             string imagePath = "Images\fft.png"; // Ścieżka do zdjęcia w folderze projektu
+
+            ImageSource source = await LoadImageFromResource(imagePath); //new FileImageSource { File = @"C:\Users\marek\source\repos\Image_View_V1.0\Image_View_V1.0\Resources\Images\fft.png" };
+
+            return source;
         }
     }
 
