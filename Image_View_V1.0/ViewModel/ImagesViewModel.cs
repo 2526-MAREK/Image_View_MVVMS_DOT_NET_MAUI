@@ -11,20 +11,16 @@ public partial class ImagesViewModel : BaseViewModel
     }
 
     [RelayCommand]
-async Task GoToDetailsAsync(ImageSource image)
+async Task GoToDetailsAsync(ImageToProcess image)
     {
-        ImageToProcess imgSrcTemp = new();
-
-        imgSrcTemp.ImageSrc = image;
-
         //uruchamiamy python....
-        
-        imgSrcTemp.ChIHDR = await imageService.GetChunkIHDR();
+
+        image.ChIHDR = await imageService.GetChunkIHDR();
 
         await Shell.Current.GoToAsync($"{nameof(DetailsPage)}", true, 
             new Dictionary<string, object>
             {
-                {"ImageToProcess", imgSrcTemp }
+                {"ImageToProcess", image }
             });
     }
 
@@ -38,11 +34,12 @@ async Task GoToDetailsAsync(ImageSource image)
         {
             IsBusy = true;
 
-            var image = await imageService.GetImage();
+            ImageToProcess imgSrcTemp = new();
+            imgSrcTemp = await imageService.GetImage();
 
-            if (image != null)
+            if (imgSrcTemp != null)
             {
-                await GoToDetailsAsync(image);
+                await GoToDetailsAsync(imgSrcTemp);
             }
           
 }

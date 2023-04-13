@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Microsoft.Maui.Controls;
 
 namespace Image_View_V1._0.Services
 {
@@ -16,10 +17,23 @@ namespace Image_View_V1._0.Services
         
         }
 
-        ImageSource imageSource;
-        public async Task<ImageSource> GetImage()
+        private async Task<ImageSource> GetImageSource(System.IO.Stream stream)
         {
+            // Tworzenie MemoryStream z oryginalnego strumienia
+            MemoryStream memoryStream = new MemoryStream();
+            await stream.CopyToAsync(memoryStream);
+            memoryStream.Position = 0; // Ustawienie pozycji na początek strumienia
 
+            ImageSource imageSourceTemp;
+            // Użycie MemoryStream zamiast oryginalnego strumienia
+            imageSourceTemp = new StreamImageSource { Stream = cancellationToken => Task.FromResult((Stream)memoryStream) };
+
+            return imageSourceTemp;
+
+        }
+        public async Task<ImageToProcess> GetImage()
+        {
+            ImageToProcess imageToProcess = new();
 
             var result = await FilePicker.PickAsync(new PickOptions
             {
@@ -31,21 +45,18 @@ namespace Image_View_V1._0.Services
             });
 
             if(result == null)
-                return imageSource;
+                return imageToProcess;
 
-            using var stream = await result.OpenReadAsync();
+            using var stream1 = await result.OpenReadAsync();
+            using var stream2 = await result.OpenReadAsync();
 
-            SaveImage(stream);
+            SaveImage(stream1);
 
-            // Tworzenie MemoryStream z oryginalnego strumienia
-            MemoryStream memoryStream = new MemoryStream();
-            await stream.CopyToAsync(memoryStream);
-            memoryStream.Position = 0; // Ustawienie pozycji na początek strumienia
+            imageToProcess.ImageSrcMain = await GetImageSource(stream1);
 
-            // Użycie MemoryStream zamiast oryginalnego strumienia
-            imageSource = new StreamImageSource { Stream = cancellationToken => Task.FromResult((Stream)memoryStream) };
+            imageToProcess.ImageSrcThumbnail = await GetImageSource(stream2);
 
-            return imageSource;
+            return imageToProcess;
         }
 
         private async void SaveImage(System.IO.Stream stream)
@@ -57,10 +68,6 @@ namespace Image_View_V1._0.Services
             stream.Position = 0;
             memory_stream.Position = 0;
 
-            //string folderPath = Environment.CurrentDirectory;
-            //string projectFolderPath = Path.Combine(folderPath, "Images");
-
-            //Debug.WriteLine(folderPath);
             await System.IO.File.WriteAllBytesAsync(
                 @"C:\Users\marek\source\repos\Image_View_V1.0\Image_View_V1.0\Resources\Images\photo_processed.png", memory_stream.ToArray());
         }
