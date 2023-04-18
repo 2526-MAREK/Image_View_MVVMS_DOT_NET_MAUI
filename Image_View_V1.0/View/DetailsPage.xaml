@@ -7,8 +7,8 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="927" />
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="297" />
         </Grid.ColumnDefinitions>
 
         <Image
@@ -23,7 +23,7 @@
                 <TableRoot>
                     <TableSection>
                         <!-- Dodaj tu wiersze tabeli -->
-                        <ViewCell Height="200">
+                        <ViewCell Height="100">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="100" />

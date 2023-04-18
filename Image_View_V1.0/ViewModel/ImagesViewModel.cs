@@ -20,7 +20,8 @@ async Task GoToDetailsAsync(ImageToProcess image)
         Debug.WriteLine("Skrypt w  pythonie się wykonał\n");
 
         image.ChIHDR = await imageService.GetChunkIHDR();
-        image.ImageSrcFFT = await imageService.GetImageFFTFromProcess();
+        image.ImageSrcFFT = imageService.GetImageFFTFromProcess();
+        image.ImageSrcMiniature = imageService.GetImageMiniatureFromProcess();
 
         await Shell.Current.GoToAsync($"{nameof(DetailsPage)}", true, 
             new Dictionary<string, object>

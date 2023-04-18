@@ -70,7 +70,7 @@ namespace Image_View_V1._0.Services
             memory_stream.Position = 0;
 
             await System.IO.File.WriteAllBytesAsync(
-                @"C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Images\photo_processed.png", memory_stream.ToArray());
+                @"C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Model\PythonScripts\photo_processed.png", memory_stream.ToArray());
         }
 
         public async Task<ChunkIHDR> GetChunkIHDR()
@@ -90,20 +90,29 @@ namespace Image_View_V1._0.Services
 
         }
 
-        private async Task<ImageSource> LoadImageFromResource(string imagePath)
+        private ImageSource LoadImageFromResource(string imagePath)
         {
             var assembly = Assembly.GetExecutingAssembly();
             //ImageSource source = new FileImageSource { File = $"resource://{assembly.GetName().Name}.{imagePath}" };
-            ImageSource source = new FileImageSource { File = @"C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Images\fft.png" };
+            ImageSource source = new FileImageSource { File = imagePath };
 
             return source;
         }
 
-        public async Task<ImageSource> GetImageFFTFromProcess()
+        public ImageSource GetImageFFTFromProcess()
         {
-             string imagePath = "Images\fft.png"; // Ścieżka do zdjęcia w folderze projektu
+             string imagePath = @"C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Model\PythonScripts\fft.png"; // Ścieżka do zdjęcia w folderze projektu
 
-            ImageSource source = await LoadImageFromResource(imagePath); //new FileImageSource { File = @"C:\Users\marek\source\repos\Image_View_V1.0\Image_View_V1.0\Resources\Images\fft.png" };
+            ImageSource source =  LoadImageFromResource(imagePath); //new FileImageSource { File = @"C:\Users\marek\source\repos\Image_View_V1.0\Image_View_V1.0\Resources\Images\fft.png" };
+
+            return source;
+        }
+
+        public ImageSource GetImageMiniatureFromProcess()
+        {
+            string imagePath = @"C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Images\miniature.png"; // Ścieżka do zdjęcia w folderze projektu
+
+            ImageSource source = LoadImageFromResource(imagePath); //new FileImageSource { File = @"C:\Users\marek\source\repos\Image_View_V1.0\Image_View_V1.0\Resources\Images\fft.png" };
 
             return source;
         }
