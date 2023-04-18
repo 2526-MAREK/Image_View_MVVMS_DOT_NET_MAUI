@@ -14,6 +14,10 @@ public partial class ImagesViewModel : BaseViewModel
 async Task GoToDetailsAsync(ImageToProcess image)
     {
         //uruchamiamy python....
+        Debug.WriteLine("Execute python process...");
+        imageService.RunPythonToImageProcess();
+
+        Debug.WriteLine("Skrypt w  pythonie się wykonał\n");
 
         image.ChIHDR = await imageService.GetChunkIHDR();
         image.ImageSrcFFT = await imageService.GetImageFFTFromProcess();

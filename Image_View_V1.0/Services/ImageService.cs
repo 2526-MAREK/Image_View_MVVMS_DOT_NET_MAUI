@@ -70,7 +70,7 @@ namespace Image_View_V1._0.Services
             memory_stream.Position = 0;
 
             await System.IO.File.WriteAllBytesAsync(
-                @"C:\Users\marek\source\repos\Image_View_V1.0\Image_View_V1.0\Resources\Images\photo_processed.png", memory_stream.ToArray());
+                @"C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Images\photo_processed.png", memory_stream.ToArray());
         }
 
         public async Task<ChunkIHDR> GetChunkIHDR()
@@ -106,6 +106,44 @@ namespace Image_View_V1._0.Services
             ImageSource source = await LoadImageFromResource(imagePath); //new FileImageSource { File = @"C:\Users\marek\source\repos\Image_View_V1.0\Image_View_V1.0\Resources\Images\fft.png" };
 
             return source;
+        }
+
+        public void RunPythonToImageProcess()
+        {
+            // 1) Create Process Info
+            var psi = new ProcessStartInfo();
+            psi.FileName = @"C:\Users\marek\AppData\Local\Programs\Python\Python311\python.exe";
+
+            // 2) Provide script and arguments
+            var script = @"C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Model\PythonScripts\ImageProcess.py";
+            var start = "2019-1-1";
+            var end = "2019-1-22";
+
+            psi.Arguments = $"\"{script}\" \"{start}\" \"{end}\"";
+
+            // 3) Process configuration
+            psi.UseShellExecute = false;
+            psi.CreateNoWindow = true;
+            psi.RedirectStandardOutput = true;
+            psi.RedirectStandardError = true;
+
+            // 4) Execute process and get output
+            var errors = "";
+            var results = "";
+
+            using (var process = Process.Start(psi))
+            {
+                errors = process.StandardError.ReadToEnd();
+                results = process.StandardOutput.ReadToEnd();
+            }
+
+            // 5) Display output
+            Debug.WriteLine("ERRORS:");
+            Debug.WriteLine(errors);
+            Debug.WriteLine("\n");
+            Debug.WriteLine("Results:");
+            Debug.WriteLine(results);
+
         }
     }
 

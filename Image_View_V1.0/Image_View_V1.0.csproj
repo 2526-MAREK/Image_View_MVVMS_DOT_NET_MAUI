@@ -55,6 +55,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="Model\PythonScripts\" />
 	  <Folder Include="View\" />
 	</ItemGroup>
 
