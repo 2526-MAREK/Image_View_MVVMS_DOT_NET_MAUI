@@ -120,7 +120,6 @@ def delete_output_files(output_folder):
 def fft_of_image(image_path, output_path, draw_plots):
 
     img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
-
     f = np.fft.fft2(img)
     f_shift = np.fft.fftshift(f)
     magnitude_spectrum = 20 * np.log(np.abs(f_shift))
@@ -136,7 +135,7 @@ def fft_of_image(image_path, output_path, draw_plots):
     cv2.imwrite(output_path + 'fft.png', magnitude_spectrum)    # Save the magnitude spectrum to a file
 
 
-def histogram_of_image(image_path, output_folder, draw_plots):
+def histogram_of_image(image_path, output_folder, output_imgs_folder, draw_plots):
     # Load the image
     img = cv2.imread(image_path)
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -148,14 +147,18 @@ def histogram_of_image(image_path, output_folder, draw_plots):
     hist_g = cv2.calcHist([img_rgb], [1], None, [256], [0, 256])
     hist_b = cv2.calcHist([img_rgb], [2], None, [256], [0, 256])
 
+
+    plt.figure()
+    plt.subplot(221), plt.plot(hist_gray), plt.title('Grayscale Histogram')
+    plt.subplot(222), plt.plot(hist_r, color='r'), plt.title('Red Channel Histogram')
+    plt.subplot(223), plt.plot(hist_g, color='g'), plt.title('Green Channel Histogram')
+    plt.subplot(224), plt.plot(hist_b, color='b'), plt.title('Blue Channel Histogram')
+    plt.tight_layout()
+    plt.savefig(output_imgs_folder + 'hist.png')
+    print("Done")
     if draw_plots:
-        plt.figure()
-        plt.subplot(221), plt.plot(hist_gray), plt.title('Grayscale Histogram')
-        plt.subplot(222), plt.plot(hist_r, color='r'), plt.title('Red Channel Histogram')
-        plt.subplot(223), plt.plot(hist_g, color='g'), plt.title('Green Channel Histogram')
-        plt.subplot(224), plt.plot(hist_b, color='b'), plt.title('Blue Channel Histogram')
-        plt.tight_layout()
         plt.show()
+
 
     with open(output_folder + 'hist.json', 'w') as f:
         json.dump(hist_gray.tolist(), f)
@@ -168,9 +171,17 @@ def histogram_of_image(image_path, output_folder, draw_plots):
 
 
 # Initial conditions
-draw_plots = False
-file_name = "C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Model\\PythonScripts\\photo_processed.png"
-output_folder = "C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Model\\PythonScripts\\"
+draw_plots = True
+Windows = False
+
+if Windows:
+    file_name = "C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Model\\PythonScripts\\photo_processed.png"
+    output_json_folder = "C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Resources\\Raw\\"
+    output_imgs_folder = "C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Resources\\Images\\"
+else :
+    file_name = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Model/PythonScripts/photo_processed.png"
+    output_json_folder = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Resources/Raw/"
+    output_imgs_folder = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Resources/Images/"
 
 
 
@@ -198,5 +209,5 @@ with open(file_name, 'rb') as file:  # Open PNG file
 # img = np.frombuffer(img_bytes, dtype=np.uint8).reshape(-1)
 
 
-fft_of_image(file_name, output_folder, draw_plots)
-histogram_of_image(file_name, output_folder, draw_plots)
+fft_of_image(file_name, output_imgs_folder, draw_plots)
+histogram_of_image(file_name, output_json_folder, output_imgs_folder, draw_plots)
