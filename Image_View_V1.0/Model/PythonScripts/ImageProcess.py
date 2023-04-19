@@ -168,13 +168,22 @@ def histogram_of_image(image_path, output_folder, draw_plots):
 
 
 # Initial conditions
-draw_plots = False
-file_name = "C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Model\\PythonScripts\\photo_processed.png"
-output_folder = "C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Model\\PythonScripts\\"
+draw_plots = True
+Windows = False
+
+if Windows:
+    file_name = "C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Model\\PythonScripts\\photo_processed.png"
+    output_json_folder = "C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Resources\\Raw\\python_output\\"
+    output_imgs_folder = "C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Resources\\Images\\python_output\\"
+else :
+    file_name = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Model/PythonScripts/photo_processed.png"
+    output_json_folder = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Resources/Raw/"
+    output_imgs_folder = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Resources/Images/"
 
 
+delete_output_files(output_json_folder)
+delete_output_files(output_imgs_folder)
 
-delete_output_files(output_folder)
 
 with open(file_name, 'rb') as file:  # Open PNG file
     file.read(8) # Read PNG file header
@@ -192,11 +201,11 @@ with open(file_name, 'rb') as file:  # Open PNG file
             break
         else:
             #print(get_chunk_data(chunk_name, chunk_data))
-            save_chunk_data_to_json(chunk_name, chunk_data, output_folder)
+            save_chunk_data_to_json(chunk_name, chunk_data, output_json_folder)
 
 # img_bytes = zlib.decompress(img_data)  # Decompress image data
 # img = np.frombuffer(img_bytes, dtype=np.uint8).reshape(-1)
 
 
-fft_of_image(file_name, output_folder, draw_plots)
-histogram_of_image(file_name, output_folder, draw_plots)
+fft_of_image(file_name, output_imgs_folder, draw_plots)
+histogram_of_image(file_name, output_json_folder, draw_plots)
