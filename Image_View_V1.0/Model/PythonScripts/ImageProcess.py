@@ -163,6 +163,12 @@ def get_chunk_data(chunk_name, chunk_data):
         return get_iTXt_data(chunk_data)
     elif chunk_name == 'sPLT':
         return get_sPLT_data(chunk_data)
+    elif chunk_name == 'sTER':
+        return get_sPLT_data(chunk_data)
+    elif chunk_name == 'sRGB':
+        return get_sPLT_data(chunk_data)
+    elif chunk_name == 'oFFs':
+        return get_sPLT_data(chunk_data)
     else:
         return None
 
@@ -192,6 +198,15 @@ def save_chunk_data_to_json(chunk_name, chunk_data, output_folder):
             json.dump(get_iTXt_data(chunk_data), f)
     elif chunk_name == 'sPLT':
         with open(output_folder + 'sPLT.json', 'w') as f:
+            json.dump(get_sPLT_data(chunk_data), f)
+    elif chunk_name == 'sTER':
+        with open(output_folder + 'sTER.json', 'w') as f:
+            json.dump(get_sPLT_data(chunk_data), f)
+    elif chunk_name == 'sRGB':
+        with open(output_folder + 'sRGB.json', 'w') as f:
+            json.dump(get_sPLT_data(chunk_data), f)
+    elif chunk_name == 'oFFs':
+        with open(output_folder + 'oFFs.json', 'w') as f:
             json.dump(get_sPLT_data(chunk_data), f)
     else:
         return None
@@ -224,6 +239,12 @@ def delete_output_files(output_folder):
         os.remove(output_folder + "sPLT.json")
     if os.path.exists(output_folder + "chunk_hIST.json"):
         os.remove(output_folder + "chunk_hIST.json")
+    if os.path.exists(output_folder + "sTER.json"):
+        os.remove(output_folder + "sTER.json")
+    if os.path.exists(output_folder + "sRGB.json"):
+        os.remove(output_folder + "sRGB.json")
+    if os.path.exists(output_folder + "oFFs.json"):
+        os.remove(output_folder + "oFFs.json")
 
 
 
@@ -285,13 +306,13 @@ if Windows:
     file_name = "C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Model\\PythonScripts\\photo_processed.png"
     output_json_folder = "C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Resources\\Raw\\python_output\\"
     output_imgs_folder = "C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Resources\\Images\\python_output\\"
-else :
+else:
     file_name = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Model/PythonScripts/photo_processed.png"
     output_json_folder = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Resources/Raw/"
     output_imgs_folder = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Resources/Images/"
 
 # Only for debugging:
-file_name = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Model/PythonScripts/ExampleImages/hIST.png"
+file_name = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Model/PythonScripts/ExampleImages/sRGB.png"
 
 
 
@@ -306,8 +327,8 @@ with open(file_name, 'rb') as file:  # Open PNG file
     while True:  # Read all chunks
         chunk_name, chunk_data = get_chunk(file)
         print(f'Chunk name: {chunk_name}')  # Display chunk info
-        print(f'Chunk length: {len(chunk_data)}')
-        print(f'Data: {chunk_data.hex()}')
+        # print(f'Chunk length: {len(chunk_data)}')
+        # print(f'Data: {chunk_data.hex()}')
 
         if chunk_name == 'IDAT':
             img_data += chunk_data
