@@ -64,7 +64,7 @@
                                     HorizontalOptions="Start"
                         Grid.Row="0" />
                                 <Image
-                        Source= "photo_processed.png" 
+                        Source= "{Binding ImageToProcess.ImageSrcHist}" 
                         WidthRequest="266"
                         HeightRequest="140"
                         VerticalOptions="Center"
@@ -96,6 +96,10 @@
                                     <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.Height, StringFormat='Height: {0}'}" />
                                     <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.Width , StringFormat='Width: {0}'}" />
                                 <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.BitDepth, StringFormat='BitDepth: {0}'}" />
+                                    <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.ColorType, StringFormat='ColorType: {0}'}" />
+                                    <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.CompressionMethod, StringFormat='CompressionMethod: {0}'}" />
+                                    <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.FilterMethod, StringFormat='FilterMethod: {0}'}" />
+                                    <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.InterlaceMethod, StringFormat='InterlaceMethod: {0}'}" />
                                 </VerticalStackLayout>
                             </Grid>
                         </ViewCell>

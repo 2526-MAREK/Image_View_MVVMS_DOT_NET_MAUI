@@ -52,6 +52,7 @@ dotnet_bot.scale-150.png
 dotnet_bot.scale-200.png
 dotnet_bot.scale-400.png
 fft.scale-100.png
+hist.scale-100.png
 miniature.scale-100.png
 photo_processed.scale-100.png
 splashSplashScreen.scale-100.png
@@ -60,5 +61,8 @@ splashSplashScreen.scale-150.png
 splashSplashScreen.scale-200.png
 splashSplashScreen.scale-400.png
 AboutAssets.txt
-chunks.json
+hist.json
+hist_b.json
+hist_g.json
+hist_r.json
 IHDR.json

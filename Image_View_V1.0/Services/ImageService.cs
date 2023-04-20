@@ -70,21 +70,44 @@ namespace Image_View_V1._0.Services
             memory_stream.Position = 0;
 
             await System.IO.File.WriteAllBytesAsync(
-                @"C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Model\PythonScripts\photo_processed.png", memory_stream.ToArray());
+                @"C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Images\photo_processed.png", memory_stream.ToArray());
         }
 
         public async Task<ChunkIHDR> GetChunkIHDR()
         {
             ChunkIHDR ChTemp = new();
 
-            using var stream = await FileSystem.OpenAppPackageFileAsync("IHDR.json");
-            using var reader = new StreamReader(stream);
-            var contents = await reader.ReadToEndAsync();
-            JObject jObject = JObject.Parse(contents);
+            /*FileSystem.OpenAppPackageFileAsync() - Ta metoda jest częścią klasy FileSystem, która jest 
+             * przeznaczona do odczytu plików wewnątrz 
+             * pakietu aplikacji. Pakiet aplikacji to zestaw plików, z których składa się aplikacja, 
+             * takich jak zasoby, pliki konfiguracyjne, itp. Zwykle pliki w pakiecie aplikacji
+             * są tylko do odczytu i nie są przeznaczone do częstego aktualizowania.*/
 
+            /* Ta metoda jest częścią klasy File, która służy do zarządzania plikami 
+             * na dysku. Metoda File.ReadAllTextAsync() 
+             * jest przeznaczona do odczytu plików, które mogą być często aktualizowane.*/
+
+            /*using var stream = await FileSystem.OpenAppPackageFileAsync("IHDR.json");
+            using var reader = new StreamReader(stream);
+            var contents = await reader.ReadToEndAsync();*/
+
+            string filePath = @"C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Resources\\Raw\\IHDR.json";
+
+            var contents = await File.ReadAllTextAsync(filePath);
+            
+            //Debug.WriteLine("Zawartość pliku IHDR.json przed przetworzeniem: " + contents);
+            JObject jObject = JObject.Parse(contents);
+            //"bit_depth": 8, "color_type": 6, "compression_method": 0, "filter_method": 0, "interlace_method": 0}
             ChTemp.Width = (int)jObject["width"];
             ChTemp.Height = (int)jObject["height"];
             ChTemp.BitDepth = (int)jObject["bit_depth"];
+            ChTemp.ColorType = (int)jObject["color_type"];
+            ChTemp.CompressionMethod = (int)jObject["compression_method"];
+            ChTemp.FilterMethod = (int)jObject["filter_method"];
+            ChTemp.InterlaceMethod = (int)jObject["interlace_method"];
+
+
+            //Debug.WriteLine($"Przetworzone dane: Szerokość = {ChTemp.Width}, Wysokość = {ChTemp.Height}, Głębia bitów = {ChTemp.BitDepth}");
 
             return ChTemp;
 
@@ -101,9 +124,18 @@ namespace Image_View_V1._0.Services
 
         public ImageSource GetImageFFTFromProcess()
         {
-             string imagePath = @"C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Model\PythonScripts\fft.png"; // Ścieżka do zdjęcia w folderze projektu
+             string imagePath = @"C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Images\fft.png"; // Ścieżka do zdjęcia w folderze projektu
 
             ImageSource source =  LoadImageFromResource(imagePath); //new FileImageSource { File = @"C:\Users\marek\source\repos\Image_View_V1.0\Image_View_V1.0\Resources\Images\fft.png" };
+
+            return source;
+        }
+
+        public ImageSource GetImageHistFromProcess()
+        {
+            string imagePath = @"C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Images\hist.png"; // Ścieżka do zdjęcia w folderze projektu
+
+            ImageSource source = LoadImageFromResource(imagePath); //new FileImageSource { File = @"C:\Users\marek\source\repos\Image_View_V1.0\Image_View_V1.0\Resources\Images\fft.png" };
 
             return source;
         }
@@ -117,7 +149,7 @@ namespace Image_View_V1._0.Services
             return source;
         }
 
-        public void RunPythonToImageProcess()
+        public async Task RunPythonToImageProcess()
         {
             // 1) Create Process Info
             var psi = new ProcessStartInfo();
