@@ -15,13 +15,14 @@ async Task GoToDetailsAsync(ImageToProcess image)
     {
         //uruchamiamy python....
         Debug.WriteLine("Execute python process...");
-        imageService.RunPythonToImageProcess();
+        await imageService.RunPythonToImageProcess();
 
         Debug.WriteLine("Skrypt w  pythonie się wykonał\n");
 
         image.ChIHDR = await imageService.GetChunkIHDR();
         image.ImageSrcFFT = imageService.GetImageFFTFromProcess();
         image.ImageSrcMiniature = imageService.GetImageMiniatureFromProcess();
+        image.ImageSrcHist = imageService.GetImageHistFromProcess();
 
         await Shell.Current.GoToAsync($"{nameof(DetailsPage)}", true, 
             new Dictionary<string, object>

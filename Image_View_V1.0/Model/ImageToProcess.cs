@@ -9,8 +9,5 @@
         public ImageSource ImageSrcFFT { get; set; }
         public ImageSource ImageSrcMiniature { get; set; }
         public ImageSource ImageSrcHist { get; set; }
-        public ImageSource ImageSrcHistR { get; set; }
-        public ImageSource ImageSrcHistG { get; set; }
-        public ImageSource ImageSrcHistB { get; set; }
     }
 }
