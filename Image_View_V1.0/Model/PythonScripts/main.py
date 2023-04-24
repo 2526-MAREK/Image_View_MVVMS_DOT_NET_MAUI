@@ -4,7 +4,7 @@ from image_analysis import ImageAnalysis
 
 Windows = False
 
-draw_fft = True
+draw_fft = False
 draw_hist = True
 hist_rgb = False
 print_info = True
@@ -19,7 +19,7 @@ else:
     output_imgs_folder = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Resources/Images/"
 
 # Only for debugging:
-# file_name = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Model/PythonScripts/ExampleImages/hIST.png"
+file_name = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Model/PythonScripts/ExampleImages/hIST.png"
 #
 PNGImage.delete_output_files(output_json_folder)
 PNGImage.delete_output_files(output_imgs_folder)
@@ -36,7 +36,7 @@ with open(file_name, 'rb') as file:     # Open PNG file
         if chunk_name == 'IDAT':
             img_data += chunk_data
         elif chunk_name == 'hIST':
-            hIST = ChunkParser.save_hIST_data(chunk_data)
+            hIST = ChunkParser.get_hIST_data(chunk_data)
         elif chunk_name == 'IEND':
             break
 
