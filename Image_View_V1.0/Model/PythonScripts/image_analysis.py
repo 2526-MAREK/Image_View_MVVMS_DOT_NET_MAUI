@@ -8,6 +8,7 @@ class ImageAnalysis:
     def __init__(self):
         pass
 
+
     @staticmethod
     def fft_of_image(image_path, output_path, draw_plots):
 
@@ -39,48 +40,65 @@ class ImageAnalysis:
 
         return result
 
+
     @staticmethod
-    def histogram_of_image(image_path, output_folder, output_imgs_folder, draw_plots, hist_rgb, hIST):
+    def histogram_of_image(image_path, output_folder, output_imgs_folder, draw_plots, hIST):
         # Load the image
         img = cv2.imread(image_path)
         img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
-        # Plot setup
-        fig = plt.figure(figsize=(10, 4))
-        ax = plt.axes()
-        ax.set_xlim([0, 256])
-        fig.set_facecolor((0.09375, 0.09375, 0.09375))
-        ax.set_facecolor((0.2, 0.2, 0.2))
+        # Plor parameters
+        x_vals = np.arange(0, 256, 1)
+        bar_alpha = 0.5
+        bar_width = 1
+        fig_color = (0.09375, 0.09375, 0.09375)
+        ax_color = (0.2, 0.2, 0.2)
+
+        # Greyscale plot setup
+        fig1 = plt.figure(figsize=(10, 4))
+        ax1 = plt.axes()
+        ax1.set_xlim([0, 256])
+        fig1.set_facecolor(fig_color)
+        ax1.set_facecolor(ax_color)
         frame = plt.gca()  # Remove the labels:
         frame.axes.xaxis.set_ticklabels([])
         frame.axes.yaxis.set_ticklabels([])
 
-        x_vals = np.arange(0, 256, 1)
-
-        bar_alpha = 0.5
-        bar_width = 1
-
-        if hist_rgb:
-            hist_r = cv2.calcHist([img_rgb], [0], None, [256], [0, 256])
-            hist_g = cv2.calcHist([img_rgb], [1], None, [256], [0, 256])
-            hist_b = cv2.calcHist([img_rgb], [2], None, [256], [0, 256])
-
-            ax.set_ylim([0, max(max(hist_r), max(hist_g), max(hist_b)) * 1.1])
-            plt.bar(x_vals, hist_r[:, 0], width=bar_width, color='r', alpha=bar_alpha)
-            plt.bar(x_vals, hist_g[:, 0], width=bar_width, color='g', alpha=bar_alpha)
-            plt.bar(x_vals, hist_b[:, 0], width=bar_width, color='b', alpha=bar_alpha)
-
+        if hIST is None:    # If no histogram data is given, calculate it
+            hist_gray = cv2.calcHist([img_gray], [0], None, [256], [0, 256])
         else:
-            if hIST is None:    # If no histogram data is given, calculate it
-                hist_gray = cv2.calcHist([img_gray], [0], None, [256], [0, 256])
-            else:
-                hist_gray = ImageAnalysis.transform_hist(hIST)
+            hist_gray = ImageAnalysis.transform_hist(hIST)
 
-            ax.set_ylim([0, max(hist_gray) * 1.1])
-            plt.bar(x_vals, hist_gray[:, 0], width=bar_width, color='w', alpha=bar_alpha)
+        ax1.set_ylim([0, max(hist_gray) * 1.1])
+        plt.bar(x_vals, hist_gray[:, 0], width=bar_width, color='w', alpha=bar_alpha)
 
         plt.tight_layout()
         plt.savefig(output_imgs_folder + 'hist.png')
+        if draw_plots:
+            plt.show()
+
+
+        # RGB plot setup
+        fig2 = plt.figure(figsize=(10, 4))
+        ax2 = plt.axes()
+        ax2.set_xlim([0, 256])
+        fig2.set_facecolor(fig_color)
+        ax2.set_facecolor(ax_color)
+        frame = plt.gca()  # Remove the labels:
+        frame.axes.xaxis.set_ticklabels([])
+        frame.axes.yaxis.set_ticklabels([])
+
+        hist_r = cv2.calcHist([img_rgb], [0], None, [256], [0, 256])
+        hist_g = cv2.calcHist([img_rgb], [1], None, [256], [0, 256])
+        hist_b = cv2.calcHist([img_rgb], [2], None, [256], [0, 256])
+
+        ax2.set_ylim([0, max(max(hist_r), max(hist_g), max(hist_b)) * 1.1])
+        plt.bar(x_vals, hist_r[:, 0], width=bar_width, color='r', alpha=bar_alpha)
+        plt.bar(x_vals, hist_g[:, 0], width=bar_width, color='g', alpha=bar_alpha)
+        plt.bar(x_vals, hist_b[:, 0], width=bar_width, color='b', alpha=bar_alpha)
+
+        plt.tight_layout()
+        plt.savefig(output_imgs_folder + 'hist_rgb.png')
         if draw_plots:
             plt.show()

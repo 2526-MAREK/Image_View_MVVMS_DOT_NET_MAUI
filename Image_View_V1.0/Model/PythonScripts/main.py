@@ -66,7 +66,7 @@ def main(args):
             ChunkParser.save_chunk_data_to_json(chunk_name, chunk_data, output_json_folder)
 
     ImageAnalysis.fft_of_image(file_name, output_imgs_folder, draw_fft)
-    ImageAnalysis.histogram_of_image(file_name, output_json_folder, output_imgs_folder, draw_hist, hist_rgb, hIST)
+    ImageAnalysis.histogram_of_image(file_name, output_json_folder, output_imgs_folder, draw_hist, hIST)
 
     PNGImage.delete_redundant_chunks(file_name, (output_json_folder + 'png_no_meta.png'))
 
@@ -77,7 +77,7 @@ if __name__ == "__main__":
     parser.add_argument("--draw_fft", action="store_true", help="Rysuj FFT obrazu")
     parser.add_argument("--draw_hist", action="store_true", help="Rysuj histogram obrazu (domyślnie: True)")
     parser.add_argument("--hist_rgb", action="store_true", help="Histogram dla kanałów RGB")
-    parser.add_argument("--print_info", action="store_true", help="Wyświetl informacje o chunkach (domyślnie: True)")
+    parser.add_argument("--print_info", action="store_true", help="Wyświetl informacje o chunkach")
 
     args = parser.parse_args()
     main(args)
