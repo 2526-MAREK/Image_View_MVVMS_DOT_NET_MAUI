@@ -23,6 +23,7 @@ class ChunkParser:
                 'filter_method': filter_method,
                 'interlace_method': interlace_method}
 
+
     @staticmethod
     def get_tEXt_data(chunk_data):
         null_byte_index = chunk_data.find(b'\x00')
@@ -30,6 +31,7 @@ class ChunkParser:
         text = chunk_data[null_byte_index + 1:].decode('utf-8')
         return {'Keyword': keyword,
                 'Text': text}
+
 
     @staticmethod
     def get_tIME_data(chunk_data):
@@ -46,6 +48,7 @@ class ChunkParser:
                 'Minute': minute,
                 'Second': second}
 
+
     @staticmethod
     def get_pHYs_data(chunk_data):
         pixels_per_unit_x = int.from_bytes(chunk_data[:4], byteorder='big')
@@ -55,15 +58,24 @@ class ChunkParser:
                 'PixelsPerUnitY': pixels_per_unit_y,
                 'UnitSpecifier': unit_specifier}
 
+
     @staticmethod
     def get_gAMA_data(chunk_data):
         gamma = int.from_bytes(chunk_data, byteorder='big')
         return {'Gamma': gamma}
 
+
     @staticmethod
     def get_hIST_data(chunk_data):
         hist_values = [int.from_bytes(chunk_data[i:i + 2], byteorder='big') for i in range(0, len(chunk_data), 2)]
         return {'Histogram': hist_values}
+
+
+    @staticmethod
+    def save_hIST_data(chunk_data):
+        hist_values = [int.from_bytes(chunk_data[i:i + 2], byteorder='big') for i in range(0, len(chunk_data), 2)]
+        return hist_values
+
 
     @staticmethod
     def get_iTXt_data(chunk_data):
@@ -76,7 +88,6 @@ class ChunkParser:
         null_byte_index3 = chunk_data.find(b'\x00', null_byte_index2 + 1)
         translated_keyword = chunk_data[null_byte_index2 + 1:null_byte_index3].decode('utf-8')
         text = chunk_data[null_byte_index3 + 1:].decode('utf-8')
-
         return {
             'Keyword': keyword,
             'CompressionFlag': compression_flag,
@@ -85,6 +96,7 @@ class ChunkParser:
             'TranslatedKeyword': translated_keyword,
             'Text': text
         }
+
 
     @staticmethod
     def get_sPLT_data(chunk_data):
@@ -116,15 +128,18 @@ class ChunkParser:
             'Entries': entries
         }
 
+
     @staticmethod
     def get_sTER_data(chunk_data):
         stereo_mode = chunk_data[0]
         return {'StereoMode': stereo_mode}
 
+
     @staticmethod
     def get_sRGB_data(chunk_data):
         rendering_intent = chunk_data[0]
         return {'RenderingIntent': rendering_intent}
+
 
     @staticmethod
     def get_oFFs_data(chunk_data):
@@ -134,6 +149,7 @@ class ChunkParser:
         return {'PositionX': position_x,
                 'PositionY': position_y,
                 'UnitSpecifier': unit_specifier}
+
 
     @staticmethod
     def get_chunk_data(chunk_name, chunk_data):
@@ -162,6 +178,7 @@ class ChunkParser:
         else:
             return None
 
+
     @staticmethod
     def save_chunk_data_to_json(chunk_name, chunk_data, output_folder):
         if chunk_name == 'IHDR':
@@ -180,7 +197,7 @@ class ChunkParser:
             with open(output_folder + 'gAMA.json', 'w') as f:
                 json.dump(ChunkParser.get_gAMA_data(chunk_data), f)
         elif chunk_name == 'hIST':
-            with open(output_folder + 'chunk_hIST.json', 'w') as f:
+            with open(output_folder + 'hIST.json', 'w') as f:
                 json.dump(ChunkParser.get_hIST_data(chunk_data), f)
         elif chunk_name == 'iTXt':
             with open(output_folder + 'iTXt.json', 'w') as f:

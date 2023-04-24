@@ -3,10 +3,10 @@ import zlib
 
 
 class PNGImage:
-    def __init__(self, file_path):
+    def __init__(self):
         pass
 
-
+    @staticmethod
     def get_chunk(file):
         length = int.from_bytes(file.read(4), byteorder='big')  # Read chunk length
         chunk_name = file.read(4).decode('ascii')  # Read chunk name`
@@ -18,7 +18,7 @@ class PNGImage:
         return chunk_name, chunk_data
     # Your existing get_chunk function
 
-
+    @staticmethod
     def delete_output_files(output_folder):
         if os.path.exists(output_folder + "IHDR.json"):
             os.remove(output_folder + "IHDR.json")
@@ -44,8 +44,8 @@ class PNGImage:
             os.remove(output_folder + "iTXt.json")
         if os.path.exists(output_folder + "sPLT.json"):
             os.remove(output_folder + "sPLT.json")
-        if os.path.exists(output_folder + "chunk_hIST.json"):
-            os.remove(output_folder + "chunk_hIST.json")
+        if os.path.exists(output_folder + "hIST.json"):
+            os.remove(output_folder + "hIST.json")
         if os.path.exists(output_folder + "sTER.json"):
             os.remove(output_folder + "sTER.json")
         if os.path.exists(output_folder + "sRGB.json"):
@@ -53,7 +53,7 @@ class PNGImage:
         if os.path.exists(output_folder + "oFFs.json"):
             os.remove(output_folder + "oFFs.json")
 
-
+    @staticmethod
     def delete_redundant_chunks(input_file_path, output_file_path):
         essential_chunks = {'IHDR', 'IDAT', 'IEND'}
 
