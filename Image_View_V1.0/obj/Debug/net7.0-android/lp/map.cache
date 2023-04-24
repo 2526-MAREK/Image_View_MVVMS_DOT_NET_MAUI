@@ -155,3 +155,6 @@ gifdecoder.aar
 glide.aar
 GoogleGson.aar
 Xamarin.Google.Crypto.Tink.Android.aar
+Mopups.dll
+Mopups.aar
+SQLitePCLRaw.lib.e_sqlite3.android.dll

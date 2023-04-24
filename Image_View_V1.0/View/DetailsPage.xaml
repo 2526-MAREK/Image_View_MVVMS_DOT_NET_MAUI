@@ -5,11 +5,38 @@
               xmlns:viewmodel="clr-namespace:Image_View_V1._0.ViewModel"
     x:DataType="viewmodel:ImageDetailsViewModel">
 
+
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="297" />
-        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    
+    <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="297" />
+            </Grid.ColumnDefinitions>
+
+
+        <Button Text="Save processed Image"
+            Command="{Binding AddImageAfterProcessToDataBaseCommand}"
+            
+            Style="{StaticResource ButtonOutline}"
+            Margin="36,870,0,0"
+            Grid.Row="0"
+            Grid.Column="0"
+            HorizontalOptions="Start"
+            VerticalOptions="Start" />
+
+        <Button Text="Load processed Image"
+            Command="{Binding ShowPopUpWithLoadDataFromDataBaseCommand}"
+           
+            Style="{StaticResource ButtonOutline}"
+            Margin="367,870,0,0"
+            Grid.Row="0"
+            Grid.Column="0"
+            HorizontalOptions="Start"
+            VerticalOptions="Start" />
 
         <Image
             Source = "{Binding ImageToProcess.ImageSrcMain}"
@@ -18,19 +45,20 @@
             VerticalOptions="Center"
         HorizontalOptions="Center"/>
 
-        <Grid Grid.Column="1">
-            <TableView  x:Name="MyTb" BackgroundColor="{StaticResource DarkBackground}">
-                <TableRoot>
-                    <TableSection>
-                        <!-- Dodaj tu wiersze tabeli -->
-                        <ViewCell Height="100">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="100" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
 
-                                <Image
+            <Grid Grid.Column="1">
+                <TableView  x:Name="MyTb" BackgroundColor="{StaticResource DarkBackground}">
+                    <TableRoot>
+                        <TableSection>
+                            <!-- Dodaj tu wiersze tabeli -->
+                            <ViewCell Height="100">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image
                         Source= "{Binding ImageToProcess.ImageSrcThumbnail}" 
                         WidthRequest="80"
                         HeightRequest="95"
@@ -38,104 +66,104 @@
                         HorizontalOptions="Center"
                         Grid.Column="0" />
 
-                                <Label
+                                    <Label
                         Text="miniaturka"
                         TextColor="{StaticResource Accent}"
                         VerticalOptions="Center"
                                     HorizontalOptions="Start"
                         Grid.Column="1" />
-                            </Grid>
-                        </ViewCell>
+                                </Grid>
+                            </ViewCell>
 
 
-                        <ViewCell Height="185">
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="20" />
-                                    <RowDefinition Height="*" />
-                                </Grid.RowDefinitions>
+                            <ViewCell Height="185">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
 
-                       
 
-                                <Label
+
+                                    <Label
                         Text="histogram"
                         TextColor="{StaticResource Accent}"
                         VerticalOptions="Center"
                                     HorizontalOptions="Start"
                         Grid.Row="0" />
-                                <Image
+                                    <Image
                         Source= "{Binding ImageToProcess.ImageSrcHist}" 
                         WidthRequest="266"
                         HeightRequest="140"
                         VerticalOptions="Center"
                         HorizontalOptions="Center"
                         Grid.Row="1" />
-                            </Grid>
-                        </ViewCell>
-
-                     
-
-
-                        <ViewCell Height="360">
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="20" />
-                                    <RowDefinition Height="*" />
-                                </Grid.RowDefinitions>
+                                </Grid>
+                            </ViewCell>
 
 
 
-                                <Label
+
+                            <ViewCell Height="360">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+
+
+
+                                    <Label
                         Text="IHDR"
                                     Style="{StaticResource BigLabel}"
                         TextColor="{StaticResource Accent}"
                         VerticalOptions="Center"
                                     HorizontalOptions="Start"
                         Grid.Row="0" />
-                                <VerticalStackLayout Grid.Row="1" Padding="10" Spacing="10">
-                                    <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.Height, StringFormat='Height: {0}'}" />
-                                    <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.Width , StringFormat='Width: {0}'}" />
-                                <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.BitDepth, StringFormat='BitDepth: {0}'}" />
-                                    <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.ColorType, StringFormat='ColorType: {0}'}" />
-                                    <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.CompressionMethod, StringFormat='CompressionMethod: {0}'}" />
-                                    <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.FilterMethod, StringFormat='FilterMethod: {0}'}" />
-                                    <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.InterlaceMethod, StringFormat='InterlaceMethod: {0}'}" />
-                                </VerticalStackLayout>
-                            </Grid>
-                        </ViewCell>
+                                    <VerticalStackLayout Grid.Row="1" Padding="10" Spacing="10">
+                                        <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.Height, StringFormat='Height: {0}'}" />
+                                        <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.Width , StringFormat='Width: {0}'}" />
+                                        <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.BitDepth, StringFormat='BitDepth: {0}'}" />
+                                        <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.ColorType, StringFormat='ColorType: {0}'}" />
+                                        <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.CompressionMethod, StringFormat='CompressionMethod: {0}'}" />
+                                        <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.FilterMethod, StringFormat='FilterMethod: {0}'}" />
+                                        <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.InterlaceMethod, StringFormat='InterlaceMethod: {0}'}" />
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </ViewCell>
 
 
-                        <ViewCell Height="300">
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="20" />
-                                    <RowDefinition Height="*" />
-                                </Grid.RowDefinitions>
+                            <ViewCell Height="300">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
 
 
 
-                                <Label
+                                    <Label
                         Text="fft"
                         TextColor="{StaticResource Accent}"
                         VerticalOptions="Center"
                                     HorizontalOptions="Start"
                         Grid.Row="0" />
-                                <Image
+                                    <Image
                         Source= "{Binding ImageToProcess.ImageSrcFFT}"
                         WidthRequest="266"
                         HeightRequest="266"
                         VerticalOptions="Center"
                         HorizontalOptions="Center"
                         Grid.Row="1" />
-                            </Grid>
-                        </ViewCell>
-                        
-                        
-                    
-                    </TableSection>
-                </TableRoot>
-            </TableView>
-        </Grid>
-    </Grid>
+                                </Grid>
+                            </ViewCell>
 
+
+
+                        </TableSection>
+                    </TableRoot>
+                </TableView>
+            </Grid>
+        </Grid>
+    
 </ContentPage>
