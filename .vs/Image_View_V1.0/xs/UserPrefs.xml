@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{12A0889C-71BA-418C-AFD1-8E056F67940E}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Image_View_V1.0/AppShell.xaml">
+    <Files>
+      <File FileName="Image_View_V1.0/MauiProgram.cs" Line="4" Column="26" />
+      <File FileName="Image_View_V1.0/AppShell.xaml" Line="12" Column="59" />
+      <File FileName="Image_View_V1.0/App.xaml" Line="31" Column="65" />
+      <File FileName="Image_View_V1.0/App.xaml.cs" Line="1" Column="1" />
+      <File FileName="Image_View_V1.0/AppShell.xaml.cs" Line="1" Column="1" />
+      <File FileName="Image_View_V1.0/ViewModel/ImageDetailsViewModel.cs" Line="1" Column="1" />
+      <File FileName="Image_View_V1.0/ViewModel/ImagesViewModel.cs" Line="32" Column="1" />
+      <File FileName="Image_View_V1.0/Model/PythonScripts/ImageProcess.py" Line="283" Column="18" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Image_View_V1.0" expanded="True">
+            <Node name="Image_View_V1.0" expanded="True">
+              <Node name="Model" expanded="True">
+                <Node name="PythonScripts" expanded="True" />
+              </Node>
+              <Node name="Services" expanded="True" />
+              <Node name="View" expanded="True" />
+              <Node name="ViewModel" expanded="True" />
+              <Node name="AppShell.xaml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Image__View__V1.0 PreferredExecutionTarget="MyAppleMacCatalystID" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>
