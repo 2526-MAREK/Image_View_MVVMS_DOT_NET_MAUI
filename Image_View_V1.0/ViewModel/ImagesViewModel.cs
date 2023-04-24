@@ -6,11 +6,11 @@ namespace Image_View_V1._0.ViewModel;
 public partial class ImagesViewModel : BaseViewModel
 {
     ImageService imageService;
-    //ImageToProcessHelper imageHelper;
-    public ImagesViewModel(ImageService imageService)//, ImageToProcessHelper imageHelper)
+    ImageToProcessHelper imageHelper;
+    public ImagesViewModel(ImageService imageService, ImageToProcessHelper imageHelper)
     {
         this.imageService = imageService;
-       // this.imageHelper = imageHelper;
+        this.imageHelper = imageHelper;
     }
 
     [RelayCommand]
@@ -23,17 +23,17 @@ async Task GoToDetailsAsync(ImageToProcess image)
         Debug.WriteLine("Skrypt w  pythonie się wykonał\n");
 
         image.ChIHDR = await imageService.GetChunkIHDR();
-        //image.ChIHDRJson = imageHelper.SerializeChunkIHDR(image.ChIHDR);
+        image.ChIHDRJson = imageHelper.SerializeChunkIHDR(image.ChIHDR);
 
         image.ImageSrcFFT = imageService.GetImageFFTFromProcess();
-        //image.ImageSrcFFTBytes = await imageHelper.ImageSourceToByteArrayAsync(image.ImageSrcFFT);
+        image.ImageSrcFFTBytes = await imageHelper.ImageSourceToByteArrayAsync(imageService.GetImageFFTFromProcess());
 
         image.ImageSrcMiniature = imageService.GetImageMiniatureFromProcess();
-        //image.ImageSrcMiniatureBytes = await imageHelper.ImageSourceToByteArrayAsync(image.ImageSrcMiniature);
+        image.ImageSrcMiniatureBytes = await imageHelper.ImageSourceToByteArrayAsync(imageService.GetImageMiniatureFromProcess());
 
 
         image.ImageSrcHist = imageService.GetImageHistFromProcess();
-        //image.ImageSrcHistBytes = await imageHelper.ImageSourceToByteArrayAsync(image.ImageSrcHist);
+        image.ImageSrcHistBytes = await imageHelper.ImageSourceToByteArrayAsync(imageService.GetImageHistFromProcess());
 
         await Shell.Current.GoToAsync($"{nameof(DetailsPage)}", true, 
             new Dictionary<string, object>
