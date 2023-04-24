@@ -2,6 +2,9 @@
 using Image_View_V1._0.Services;
 using Image_View_V1._0.View;
 using Windows.UI.ViewManagement;
+using Mopups.Hosting;
+using Mopups.Interfaces;
+using Mopups.Services;
 
 namespace Image_View_V1._0;
 
@@ -12,6 +15,7 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
+            .ConfigureMopups() 
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -22,11 +26,15 @@ public static class MauiProgram
 #endif
 
         builder.Services.AddSingleton<ImageService>();
+        builder.Services.AddSingleton<ImageDataBaseService>();
 
         builder.Services.AddSingleton<ImagesViewModel>();
         builder.Services.AddTransient<ImageDetailsViewModel>();
 
         builder.Services.AddSingleton<MainPage>();
+        builder.Services.AddTransient<DetailsPage>();
+
+        builder.Services.AddSingleton<IPopupNavigation>(MopupService.Instance);
         builder.Services.AddTransient<DetailsPage>();
 
         var app = builder.Build();
