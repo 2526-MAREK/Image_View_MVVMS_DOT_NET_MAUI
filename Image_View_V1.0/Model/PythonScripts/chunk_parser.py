@@ -72,12 +72,6 @@ class ChunkParser:
 
 
     @staticmethod
-    def save_hIST_data(chunk_data):
-        hist_values = [int.from_bytes(chunk_data[i:i + 2], byteorder='big') for i in range(0, len(chunk_data), 2)]
-        return hist_values
-
-
-    @staticmethod
     def get_iTXt_data(chunk_data):
         null_byte_index = chunk_data.find(b'\x00')
         keyword = chunk_data[:null_byte_index].decode('utf-8')

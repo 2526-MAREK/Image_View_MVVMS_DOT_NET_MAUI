@@ -65,16 +65,18 @@ class ImageAnalysis:
             hist_r = cv2.calcHist([img_rgb], [0], None, [256], [0, 256])
             hist_g = cv2.calcHist([img_rgb], [1], None, [256], [0, 256])
             hist_b = cv2.calcHist([img_rgb], [2], None, [256], [0, 256])
+
             ax.set_ylim([0, max(max(hist_r), max(hist_g), max(hist_b)) * 1.1])
             plt.bar(x_vals, hist_r[:, 0], width=bar_width, color='r', alpha=bar_alpha)
             plt.bar(x_vals, hist_g[:, 0], width=bar_width, color='g', alpha=bar_alpha)
             plt.bar(x_vals, hist_b[:, 0], width=bar_width, color='b', alpha=bar_alpha)
 
         else:
-            if hIST is None:
+            if hIST is None:    # If no histogram data is given, calculate it
                 hist_gray = cv2.calcHist([img_gray], [0], None, [256], [0, 256])
             else:
                 hist_gray = ImageAnalysis.transform_hist(hIST)
+
             ax.set_ylim([0, max(hist_gray) * 1.1])
             plt.bar(x_vals, hist_gray[:, 0], width=bar_width, color='w', alpha=bar_alpha)
 
