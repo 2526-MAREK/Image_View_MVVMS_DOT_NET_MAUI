@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using Image_View_V1._0.Services;
+using Image_View_V1._0.Helpers;
 using Image_View_V1._0.View;
 using Windows.UI.ViewManagement;
 using Mopups.Hosting;
@@ -25,8 +26,10 @@ public static class MauiProgram
         builder.Logging.AddDebug();
 #endif
 
+        
         builder.Services.AddSingleton<ImageService>();
         builder.Services.AddSingleton<ImageDataBaseService>();
+        builder.Services.AddSingleton<ImageToProcessHelper>();
 
         builder.Services.AddSingleton<ImagesViewModel>();
         builder.Services.AddTransient<ImageDetailsViewModel>();
