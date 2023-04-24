@@ -1,11 +1,15 @@
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-#      Napisz flage jeśli chcesz ustawić tą wartość na True:    #
-#   Flagi:                                                      #
-#  --windows    - jeśli uruchamiamy na Windowsie                #
-#  --draw_fft   - rysuje FFT                                    #
-#  --draw_hist  - rysuje histogram                              #
-#  --hist_rgb   - rysuje histogram RGB                          #
-#  --print_info - wypisuje informacje o pliku                   #
+#                                                               #
+#     Napisz flage jeśli chcesz ustawić tą wartość na True:     #
+#                                                               #
+#     Flagi:                                                    #
+#                                                               #
+#   --windows    - jeśli uruchamiamy na Windowsie               #
+#   --draw_fft   - rysuje FFT                                   #
+#   --draw_hist  - rysuje histogram                             #
+#   --hist_rgb   - rysuje histogram RGB                         #
+#   --print_info - wypisuje informacje o pliku                  #
+#                                                               #
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
 from png_handler import PNGImage
