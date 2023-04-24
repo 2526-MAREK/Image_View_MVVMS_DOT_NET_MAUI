@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
 using Image_View_V1._0.Services;
 using Image_View_V1._0.View;
-using Windows.UI.ViewManagement;
+//using Windows.UI.ViewManagement;
 
 namespace Image_View_V1._0;
 
