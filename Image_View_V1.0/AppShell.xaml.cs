@@ -10,5 +10,6 @@ public partial class AppShell : Shell
 
         //nameof(DetailsPage) == "DetailsPage"
         Routing.RegisterRoute(nameof(DetailsPage), typeof(DetailsPage));
+        Routing.RegisterRoute(nameof(PopUpWithLoadDataFromDataBase), typeof(PopUpWithLoadDataFromDataBase));
     }
 }

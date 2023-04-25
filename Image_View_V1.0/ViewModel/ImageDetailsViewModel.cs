@@ -2,6 +2,7 @@
 //using MvvmHelpers.Commands;
 //using Command = MvvmHelpers.Commands.Command;
 using Image_View_V1._0.Services;
+using Image_View_V1._0.Helpers;
 using Mopups.Services;
 using Mopups.Interfaces;
 
@@ -12,6 +13,7 @@ public partial class ImageDetailsViewModel : BaseViewModel
 {
     ImageDataBaseService imageDataBaseService;
     IPopupNavigation popupNavigation;
+    ImageToProcessHelper imageHelper;
 
     [ObservableProperty]
     ImageToProcess imageToProcess;
@@ -21,10 +23,11 @@ public partial class ImageDetailsViewModel : BaseViewModel
     public AsyncCommand<ImageToProcess> RemoveCommand { get; }
     public AsyncCommand<ImageToProcess> SelectedCommand { get; }*/
 
-    public ImageDetailsViewModel(ImageDataBaseService imageDataBaseService, IPopupNavigation popupNavigation)
+    public ImageDetailsViewModel(ImageDataBaseService imageDataBaseService, IPopupNavigation popupNavigation, ImageToProcessHelper imageHelper)
     {
         this.imageDataBaseService = imageDataBaseService;
         this.popupNavigation = popupNavigation;
+        this.imageHelper = imageHelper;
         
         //RefreshCommand = new AsyncCommand(Refresh);
         /*AddCommand = new AsyncCommand(Add);
@@ -62,10 +65,18 @@ public partial class ImageDetailsViewModel : BaseViewModel
         //await Refresh();
     }
 
-    [RelayCommand]
-    async Task LoadImageAfterProcessFromDataBase(ImageToProcess imageToProcess)
-    { 
-        imageToProcess = await imageDataBaseService.GetImageAfterProcessFromDataBase(imageToProcess.Id);
+    
+    private async void LoadImageAfterProcessFromDataBase(object sender, int e)
+    {
+        ImageToProcess imageToProcessTemp;
+        imageToProcessTemp = await imageDataBaseService.GetImageAfterProcessFromDataBase(e);
+        imageToProcessTemp.ChIHDR = imageHelper.DeserializeChunkIHDR(imageToProcessTemp.ChIHDRJson);
+        imageToProcessTemp.ImageSrcMain = imageHelper.ByteArrayToImageSource(imageToProcessTemp.ImageSrcMainBytes);
+        imageToProcessTemp.ImageSrcFFT = imageHelper.ByteArrayToImageSource(imageToProcessTemp.ImageSrcFFTBytes);
+        imageToProcessTemp.ImageSrcHist = imageHelper.ByteArrayToImageSource(imageToProcessTemp.ImageSrcHistBytes);
+        imageToProcessTemp.ImageSrcMiniature = imageHelper.ByteArrayToImageSource(imageToProcessTemp.ImageSrcMiniatureBytes);
+
+        ImageToProcess = imageToProcessTemp;
     }
 
     [RelayCommand]
@@ -97,7 +108,12 @@ public partial class ImageDetailsViewModel : BaseViewModel
     [RelayCommand]
     async Task ShowPopUpWithLoadDataFromDataBase()
     {
-        popupNavigation.PushAsync(new PopUpWithLoadDataFromDataBase());
+        IEnumerable<ImageToProcess> listOfImagesAfterProcess = await imageDataBaseService.GetAllImageAfterProcessFromDataBase();
+        var popupPage = new PopUpWithLoadDataFromDataBase(listOfImagesAfterProcess); // Zastąp nazwą swojej klasy popup
+        popupPage.ButtonClicked += LoadImageAfterProcessFromDataBase;
+        //await Rg.Plugins.Popup.Services.PopupNavigation.Instance.PushAsync(popupPage);
+
+        await popupNavigation.PushAsync(popupPage);
     }
 
     [RelayCommand]

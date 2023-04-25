@@ -8,14 +8,16 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Microsoft.Maui.Controls;
 using System.Reflection;
+using Image_View_V1._0.Helpers;
 
 namespace Image_View_V1._0.Services
 {
     public class ImageService
     {
-        public ImageService()
+        ImageToProcessHelper imageHelper;
+        public ImageService(ImageToProcessHelper imageHelper)
         {
-        
+            this.imageHelper = imageHelper;
         }
 
         private async Task<ImageSource> GetImageSource(System.IO.Stream stream)
@@ -50,12 +52,14 @@ namespace Image_View_V1._0.Services
 
             using var stream1 = await result.OpenReadAsync();
             using var stream2 = await result.OpenReadAsync();
+            using var stream3 = await result.OpenReadAsync();
 
             SaveImage(stream1);
 
             imageToProcess.ImageSrcMain = await GetImageSource(stream1);
+            imageToProcess.ImageSrcMainBytes = await imageHelper.ImageSourceToByteArrayAsync(await GetImageSource(stream2));
 
-            imageToProcess.ImageSrcThumbnail = await GetImageSource(stream2);
+            imageToProcess.ImageSrcThumbnail = await GetImageSource(stream3);
 
             return imageToProcess;
         }
