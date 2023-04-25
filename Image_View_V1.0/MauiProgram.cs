@@ -36,6 +36,8 @@ public static class MauiProgram
 
         builder.Services.AddSingleton<MainPage>();
         builder.Services.AddTransient<DetailsPage>();
+        builder.Services
+            .AddTransient<PopUpWithLoadDataFromDataBase>();
 
         builder.Services.AddSingleton<IPopupNavigation>(MopupService.Instance);
         builder.Services.AddTransient<DetailsPage>();

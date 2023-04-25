@@ -25,6 +25,9 @@ async Task GoToDetailsAsync(ImageToProcess image)
         image.ChIHDR = await imageService.GetChunkIHDR();
         image.ChIHDRJson = imageHelper.SerializeChunkIHDR(image.ChIHDR);
 
+        //var tempImage = image.ImageSrcMain;
+        //image.ImageSrcMainBytes = await imageHelper.ImageSourceToByteArrayAsync(tempImage);
+
         image.ImageSrcFFT = imageService.GetImageFFTFromProcess();
         image.ImageSrcFFTBytes = await imageHelper.ImageSourceToByteArrayAsync(imageService.GetImageFFTFromProcess());
 
