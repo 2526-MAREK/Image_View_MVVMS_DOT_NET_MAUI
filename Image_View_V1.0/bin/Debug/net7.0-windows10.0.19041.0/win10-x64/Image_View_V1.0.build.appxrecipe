@@ -610,6 +610,27 @@
     <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\communitytoolkit.mvvm\8.1.0\lib\net6.0\CommunityToolkit.Mvvm.dll">
       <PackagePath>CommunityToolkit.Mvvm.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\microsoft.data.sqlite.core\7.0.5\lib\net6.0\Microsoft.Data.Sqlite.dll">
+      <PackagePath>Microsoft.Data.Sqlite.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\microsoft.entityframeworkcore\7.0.5\lib\net6.0\Microsoft.EntityFrameworkCore.dll">
+      <PackagePath>Microsoft.EntityFrameworkCore.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\microsoft.entityframeworkcore.abstractions\7.0.5\lib\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll">
+      <PackagePath>Microsoft.EntityFrameworkCore.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\microsoft.entityframeworkcore.relational\7.0.5\lib\net6.0\Microsoft.EntityFrameworkCore.Relational.dll">
+      <PackagePath>Microsoft.EntityFrameworkCore.Relational.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\microsoft.entityframeworkcore.sqlite.core\7.0.5\lib\net6.0\Microsoft.EntityFrameworkCore.Sqlite.dll">
+      <PackagePath>Microsoft.EntityFrameworkCore.Sqlite.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\microsoft.extensions.caching.abstractions\7.0.0\lib\net7.0\Microsoft.Extensions.Caching.Abstractions.dll">
+      <PackagePath>Microsoft.Extensions.Caching.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\microsoft.extensions.caching.memory\7.0.0\lib\net7.0\Microsoft.Extensions.Caching.Memory.dll">
+      <PackagePath>Microsoft.Extensions.Caching.Memory.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\microsoft.extensions.configuration\7.0.0\lib\net7.0\Microsoft.Extensions.Configuration.dll">
       <PackagePath>Microsoft.Extensions.Configuration.dll</PackagePath>
     </AppxPackagedFile>
@@ -621,6 +642,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\7.0.0\lib\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll">
       <PackagePath>Microsoft.Extensions.DependencyInjection.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\microsoft.extensions.dependencymodel\7.0.0\lib\net7.0\Microsoft.Extensions.DependencyModel.dll">
+      <PackagePath>Microsoft.Extensions.DependencyModel.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\microsoft.extensions.logging\7.0.0\lib\net7.0\Microsoft.Extensions.Logging.dll">
       <PackagePath>Microsoft.Extensions.Logging.dll</PackagePath>
@@ -697,17 +721,20 @@
     <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\sqlite-net-pcl\1.8.116\lib\netstandard2.0\SQLite-net.dll">
       <PackagePath>SQLite-net.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\sqlitepclraw.bundle_green\2.0.4\lib\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll">
+    <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\sqlitepclraw.bundle_e_sqlite3\2.1.4\lib\netstandard2.0\SQLitePCLRaw.batteries_v2.dll">
       <PackagePath>SQLitePCLRaw.batteries_v2.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\sqlitepclraw.bundle_green\2.0.4\lib\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll">
       <PackagePath>SQLitePCLRaw.nativelibrary.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\sqlitepclraw.core\2.0.4\lib\netstandard2.0\SQLitePCLRaw.core.dll">
+    <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\sqlitepclraw.core\2.1.4\lib\netstandard2.0\SQLitePCLRaw.core.dll">
       <PackagePath>SQLitePCLRaw.core.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\sqlitepclraw.provider.dynamic_cdecl\2.0.4\lib\netstandard2.0\SQLitePCLRaw.provider.dynamic_cdecl.dll">
       <PackagePath>SQLitePCLRaw.provider.dynamic_cdecl.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\sqlitepclraw.provider.e_sqlite3\2.1.4\lib\net6.0-windows7.0\SQLitePCLRaw.provider.e_sqlite3.dll">
+      <PackagePath>SQLitePCLRaw.provider.e_sqlite3.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\microsoft.graphics.win2d\1.0.4\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
@@ -715,11 +742,23 @@
     <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\microsoft.windowsappsdk\1.2.221209.1\runtimes\win10-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\sqlitepclraw.lib.e_sqlite3\2.0.4\runtimes\win-x64\native\e_sqlite3.dll">
+    <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\sqlitepclraw.lib.e_sqlite3\2.1.4\runtimes\win-x64\native\e_sqlite3.dll">
       <PackagePath>e_sqlite3.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Image_View_V1.0.deps.json">
       <PackagePath>Image_View_V1.0.deps.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\humanizer.core\2.14.1\lib\net6.0\Humanizer.dll">
+      <PackagePath>Humanizer.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\microsoft.entityframeworkcore.design\7.0.5\lib\net6.0\Microsoft.EntityFrameworkCore.Design.dll">
+      <PackagePath>Microsoft.EntityFrameworkCore.Design.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\mono.texttemplating\2.2.1\lib\netstandard2.0\Mono.TextTemplating.dll">
+      <PackagePath>Mono.TextTemplating.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\system.codedom\4.4.0\lib\netstandard2.0\System.CodeDom.dll">
+      <PackagePath>System.CodeDom.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\7.0.59\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
