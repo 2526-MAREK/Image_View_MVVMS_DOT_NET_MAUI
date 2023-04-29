@@ -18,11 +18,20 @@
             </Grid.ColumnDefinitions>
 
 
+       
+
+        <Image
+            Source = "{Binding ImageToProcess.ImageSrcMain}"
+            WidthRequest="595"
+            HeightRequest="708"
+            VerticalOptions="Center"
+        HorizontalOptions="Center"/>
+
         <Button Text="Save processed Image"
             Command="{Binding AddImageAfterProcessToDataBaseCommand}"
             
             Style="{StaticResource ButtonOutline}"
-            Margin="36,870,0,0"
+            Margin="36,670,0,0"
             Grid.Row="0"
             Grid.Column="0"
             HorizontalOptions="Start"
@@ -32,21 +41,24 @@
             Command="{Binding ShowPopUpWithLoadDataFromDataBaseCommand}"
            
             Style="{StaticResource ButtonOutline}"
-            Margin="367,870,0,0"
+            Margin="367,670,0,0"
             Grid.Row="0"
             Grid.Column="0"
             HorizontalOptions="Start"
             VerticalOptions="Start" />
 
-        <Image
-            Source = "{Binding ImageToProcess.ImageSrcMain}"
-            WidthRequest="595"
-            HeightRequest="708"
-            VerticalOptions="Center"
-        HorizontalOptions="Center"/>
+        <Button Text="Delete processed Image"
+            Command="{Binding ShowPopUpWithDeleteDataFromDataBaseCommand}"
+           
+            Style="{StaticResource ButtonOutline}"
+            Margin="667,670,0,0"
+            Grid.Row="0"
+            Grid.Column="0"
+            HorizontalOptions="Start"
+            VerticalOptions="Start" />
 
 
-            <Grid Grid.Column="1">
+        <Grid Grid.Column="1">
                 <TableView  x:Name="MyTb" BackgroundColor="{StaticResource DarkBackground}">
                     <TableRoot>
                         <TableSection>

@@ -58,10 +58,10 @@ public partial class ImageDetailsViewModel : BaseViewModel
         await Shell.Current.GoToAsync(route);
     }*/
 
-    [RelayCommand]
-    async Task RemoveImageAfterProcessFromDataBase(ImageToProcess imageToProcess)
+    private async void RemoveImageAfterProcessFromDataBase(object sender, int e)
     {
-        await imageDataBaseService.RemoveImageAfterProcessFromDataBase(imageToProcess.Id);
+        await imageDataBaseService.RemoveImageAfterProcessFromDataBase(e);
+
         //await Refresh();
     }
 
@@ -104,6 +104,18 @@ public partial class ImageDetailsViewModel : BaseViewModel
 
         DependencyService.Get<IToast>()?.MakeToast("Refreshed!");
     }*/
+
+    [RelayCommand]
+    async Task ShowPopUpWithDeleteDataFromDataBase()
+    {
+        IEnumerable<ImageToProcess> listOfImagesAfterProcess = await imageDataBaseService.GetAllImageAfterProcessFromDataBase();
+        var popupPage = new PopUpWithLoadDataFromDataBase(listOfImagesAfterProcess); // Zastąp nazwą swojej klasy popup
+        popupPage.ButtonClicked += RemoveImageAfterProcessFromDataBase;
+        //await Rg.Plugins.Popup.Services.PopupNavigation.Instance.PushAsync(popupPage);
+
+        await popupNavigation.PushAsync(popupPage);
+        
+    }
 
     [RelayCommand]
     async Task ShowPopUpWithLoadDataFromDataBase()

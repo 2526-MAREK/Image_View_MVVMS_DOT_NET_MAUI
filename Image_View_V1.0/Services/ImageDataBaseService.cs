@@ -1,14 +1,16 @@
 ﻿using Image_View_V1._0.Services;
+using Microsoft.EntityFrameworkCore;
 using SQLite;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Sqlite;
 
 namespace Image_View_V1._0.Services
 {
-    public class ImageDataBaseService 
+    public class ImageDataBaseService
     {
         SQLiteAsyncConnection db;
         async Task Init()

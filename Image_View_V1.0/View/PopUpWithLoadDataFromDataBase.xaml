@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
@@ -10,31 +10,48 @@
     <mopups:PopupPage.Animation>
         <!-- ... -->
     </mopups:PopupPage.Animation>
-    <ScrollView HorizontalOptions="Center" VerticalOptions="Center">
+    <Grid HorizontalOptions="Center" VerticalOptions="Center">
         <Border WidthRequest="300" HeightRequest="300"
-                BackgroundColor="White"
-                HorizontalOptions="Center">
-            <!-- ... -->
-            <VerticalStackLayout Spacing="3">
+            BackgroundColor="White"
+            HorizontalOptions="Center">
+            <StackLayout Spacing="3">
                 <Button x:Name="CloseButton"
-                        Text="X"
+                    Text="X"
+                    FontSize="18"
+                    FontAttributes="Bold"
+                    BackgroundColor="Transparent"
+                    TextColor="Black"
+                    HorizontalOptions="End"
+                    VerticalOptions="Start"
+                    Clicked="CloseButtonClick" />
+
+                <Grid x:Name="ButtonGrid" VerticalOptions="StartAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                </Grid>
+                <!-- Buttons will be added here -->
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button x:Name="ScrollUpButton"
+                        Text="▲"
                         FontSize="18"
-                        FontAttributes="Bold"
                         BackgroundColor="Transparent"
                         TextColor="Black"
-                        HorizontalOptions="End"
-                        VerticalOptions="Start"
-                        Clicked="CloseButtonClick" />
-                <CollectionView x:Name="MyCollectionView">
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Button Text="{Binding NameOfImageToDataBase}" Clicked="OnNameOfChooseLoadImageClicked" />
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-                </CollectionView>
-            </VerticalStackLayout>
+                        Clicked="ScrollUpButtonClicked" />
+                    <Button x:Name="ScrollDownButton"
+                        Text="▼"
+                        FontSize="18"
+                        BackgroundColor="Transparent"
+                        TextColor="Black"
+                        Clicked="ScrollDownButtonClicked" />
+                </StackLayout>
+            </StackLayout>
         </Border>
-
-    </ScrollView>
-
+    </Grid>
 </mopups:PopupPage>

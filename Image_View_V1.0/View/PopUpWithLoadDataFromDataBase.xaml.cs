@@ -2,6 +2,7 @@ using Mopups.Pages;
 using Mopups.Services;
 using System.Collections.Generic;
 using System.Windows.Input;
+using Microsoft.Maui.Controls;
 
 namespace Image_View_V1._0;
 
@@ -15,30 +16,88 @@ public partial class PopUpWithLoadDataFromDataBase : PopupPage
         //BindingContext = popUpWithLoadDataFromDataBaseViewModel;
     }*/
 
-    PopupLoadDataBaseViewModel _viewModel;
+    //PopupLoadDataBaseViewModel _viewModel;
     public event EventHandler<int> ButtonClicked;
+    ObservableCollection<ImageToProcess> imageAfterProcessList;
+
 
     //ImageToProcess imageAfterProcess;
     public PopUpWithLoadDataFromDataBase(IEnumerable<ImageToProcess> imageAfterProcessList)
     {
         InitializeComponent();
-        _viewModel = new PopupLoadDataBaseViewModel(imageAfterProcessList);
-        BindingContext = _viewModel;
-        MyCollectionView.ItemsSource = imageAfterProcessList;
-       // MyCollectionView.SelectionChanged     = OnNameOfChooseLoadImageClicked();
+        //_viewModel = new PopupLoadDataBaseViewModel(imageAfterProcessList);
+        //BindingContext = _viewModel;
+        this.imageAfterProcessList = new ObservableCollection<ImageToProcess>(imageAfterProcessList);
+       // LoadButtons();
+        //MyCollectionView.ItemsSource = this.imageAfterProcessList;
+        // MyCollectionView.SelectionChanged     = OnNameOfChooseLoadImageClicked();
 
     }
 
-    private void OnNameOfChooseLoadImageClicked(object sender, EventArgs e)
+    protected override void OnAppearing()
     {
-        var button = sender as Button;
-        var image = button.BindingContext as ImageToProcess;
+        base.OnAppearing();
+        CreateButtons();
+    }
+
+    private void CreateButtons()
+    {
+        int rowIndex = 0;
+        foreach (var item in imageAfterProcessList)
+        {
+            var button = new Button
+            {
+                Text = item.NameOfImageToDataBase, // Replace 'NameOfImageToDataBase' with the property you want to display
+                Command = new Command(async () => await OnNameOfChooseLoadImageClicked(item))
+            };
+            Grid.SetRow(button, rowIndex);
+            ButtonGrid.Children.Add(button);
+            rowIndex++;
+        }
+        UpdateButtonVisibility();
+    }
+
+    /*private void LoadButtons()
+    {
+        // Pobierz dane z odpowiedniego Ÿród³a
+        // Wype³nij listê przycisków, u¿ywaj¹c poni¿szego kodu
+
+        ButtonGrid.RowDefinitions.Clear();
+        int numberOfRows = imageAfterProcessList.Count;
+        for (int i = 0; i < numberOfRows; i++)
+        {
+            ButtonGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
+        }
+
+        int rowIndex = 0;
+        foreach (var image in imageAfterProcessList)
+        {
+            Button button = new Button
+            {
+                Text = image.NameOfImageToDataBase,
+            };
+
+            button.Clicked += OnNameOfChooseLoadImageClicked;
+
+            Grid.SetRow(button, rowIndex);
+            ButtonGrid.Children.Add(button);
+            rowIndex++;
+        }
+
+        UpdateButtonVisibility();
+    }*/
+
+
+    private async Task OnNameOfChooseLoadImageClicked(ImageToProcess image)
+    {
+        //var button = sender as Button;
+       // var image = button.BindingContext as ImageToProcess;
         if (image != null) { 
         
             // Zrób coœ z wartoœciami 'imageName' i 'imageType', np. wyœwietl alert
             ButtonClicked?.Invoke(this, image.Id);
         }
-       
+        MopupService.Instance.PopAsync();
     }
 
         private void CloseButtonClick(object sender, EventArgs e)
@@ -47,7 +106,44 @@ public partial class PopUpWithLoadDataFromDataBase : PopupPage
         MopupService.Instance.PopAsync();
     }
 
+    private int currentRow = 0;
 
+    private void ScrollUpButtonClicked(object sender, EventArgs e)
+    {
+        if (currentRow > 0)
+        {
+            currentRow--;
+            UpdateButtonVisibility();
+        }
+    }
+
+    private void ScrollDownButtonClicked(object sender, EventArgs e)
+    {
+        if (currentRow < ButtonGrid.RowDefinitions.Count - 1)
+        {
+            currentRow++;
+            UpdateButtonVisibility();
+        }
+    }
+
+    private void UpdateButtonVisibility()
+    {
+        for (int i = 0; i < ButtonGrid.Children.Count; i++)
+        {
+            if (ButtonGrid.Children[i] is Microsoft.Maui.Controls.View view)
+            {
+                if (i >= currentRow && i < currentRow + 6)
+                {
+                    view.IsVisible = true;
+                    Grid.SetRow(view, i - currentRow);
+                }
+                else
+                {
+                    view.IsVisible = false;
+                }
+            }
+        }
+    }
     /*public PopUpWithLoadDataFromDataBase(ImageDetailsViewModel viewModel)
     {
         InitializeComponent();
