@@ -38,7 +38,7 @@ def main(args):
         output_imgs_folder = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Resources/Images/"
 
     # Only for debugging:
-    # file_name = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Model/PythonScripts/ExampleImages/pHYs.png"
+    file_name = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Model/PythonScripts/ExampleImages/tIME.png"
     #
     PNGImage.delete_output_files(output_json_folder)
     PNGImage.delete_output_files(output_imgs_folder)
@@ -89,4 +89,5 @@ if __name__ == "__main__":
 
 
 # TODO: chunk sTER -> json jest pusty
-#
+# TODO: deleting all chunks except IDAT and IEND
+
