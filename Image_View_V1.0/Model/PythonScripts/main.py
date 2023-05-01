@@ -3,11 +3,9 @@
 #     Napisz flage jeśli chcesz ustawić tą wartość na True:     #
 #                                                               #
 #     Flagi:                                                    #
-#                                                               #
 #   --windows      - jeśli uruchamiamy na Windowsie             #
 #   --draw_fft     - rysuje FFT                                 #
 #   --draw_hist    - rysuje histogram                           #
-#   --hist_rgb     - rysuje histogram RGB                       #
 #   --print_info   - wypisuje informacje o pliku                #
 #   --clear_chunks - usuwa metadane obrazu, aktualizuje jsony   #
 #                                                               #
@@ -17,6 +15,7 @@ from png_handler import PNGImage
 from chunk_parser import ChunkParser
 from image_analysis import ImageAnalysis
 import argparse
+import os
 
 
 def main(args):
@@ -24,7 +23,6 @@ def main(args):
 
     draw_fft = args.draw_fft
     draw_hist = args.draw_hist
-    hist_rgb = args.hist_rgb
     print_info = args.print_info
     clear_chunks = args.clear_chunks
 
@@ -38,12 +36,16 @@ def main(args):
         output_imgs_folder = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Resources/Images/"
 
     # Only for debugging:
-    file_name = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Model/PythonScripts/ExampleImages/tIME.png"
+    # file_name = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Model/PythonScripts/ExampleImages/gAMA.png"
+    # file_name = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Resources/Images/cleaned.png"
     #
-    PNGImage.delete_output_files(output_json_folder)
-    PNGImage.delete_output_files(output_imgs_folder)
 
     hIST = None
+    PNGImage.delete_output_files(output_json_folder, output_imgs_folder)
+
+    if clear_chunks:
+        output_cleaned_png = os.path.join(output_imgs_folder, "cleaned.png")
+        PNGImage.remove_unwanted_chunks(file_name, output_cleaned_png)
 
     with open(file_name, 'rb') as file:     # Open PNG file
         file.read(8)                        # Read PNG file header
@@ -75,19 +77,14 @@ def main(args):
 
     # PNGImage.delete_redundant_chunks(file_name, (output_json_folder + 'png_no_meta.png'))
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Obsługa argumentów wywołania")
     parser.add_argument("--windows", action="store_true", help="Ustaw, jeśli używasz systemu Windows")
     parser.add_argument("--draw_fft", action="store_true", help="Rysuj FFT obrazu")
     parser.add_argument("--draw_hist", action="store_true", default=True, help="Rysuj histogram obrazu (domyślnie: True)")
-    parser.add_argument("--hist_rgb", action="store_true", help="Histogram dla kanałów RGB")
     parser.add_argument("--print_info", action="store_true", default=True, help="Wyświetl informacje o chunkach")
     parser.add_argument("--clear_chunks", action="store_true", help="Usuwa metadane obrazu, aktualizuje jsony")
 
     args = parser.parse_args()
     main(args)
-
-
-# TODO: chunk sTER -> json jest pusty
-# TODO: deleting all chunks except IDAT and IEND
-

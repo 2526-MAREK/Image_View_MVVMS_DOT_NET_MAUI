@@ -5,19 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af215e3e-853e-43b2-8139-1619fc926696" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Image_View_V1.0/Model/PythonScripts/ExampleImages/doge.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image_View_V1.0/Model/PythonScripts/chunk_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/Image_View_V1.0/Model/PythonScripts/chunk_parser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Image_View_V1.0/Model/PythonScripts/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Image_View_V1.0/Model/PythonScripts/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Image_View_V1.0/Model/PythonScripts/png_handler.py" beforeDir="false" afterPath="$PROJECT_DIR$/Image_View_V1.0/Model/PythonScripts/png_handler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image_View_V1.0/Resources/Images/fft.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image_View_V1.0/Resources/Images/hist.png" beforeDir="false" afterPath="$PROJECT_DIR$/Image_View_V1.0/Resources/Images/hist.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image_View_V1.0/Resources/Images/hist_rgb.png" beforeDir="false" afterPath="$PROJECT_DIR$/Image_View_V1.0/Resources/Images/hist_rgb.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image_View_V1.0/Resources/Images/miniature.png" beforeDir="false" afterPath="$PROJECT_DIR$/Image_View_V1.0/Model/PythonScripts/ExampleImages/miniature.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image_View_V1.0/Resources/Images/thumbnail_output.png" beforeDir="false" afterPath="$PROJECT_DIR$/Image_View_V1.0/Resources/Images/thumbnail_output.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image_View_V1.0/Resources/Raw/IHDR.json" beforeDir="false" afterPath="$PROJECT_DIR$/Image_View_V1.0/Resources/Raw/IHDR.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image_View_V1.0/Resources/Raw/iTXt.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image_View_V1.0/Resources/Raw/pHYs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Image_View_V1.0/Resources/Raw/tIME.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

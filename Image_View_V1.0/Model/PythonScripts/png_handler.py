@@ -1,6 +1,6 @@
 import os
 import zlib
-
+import struct
 
 class PNGImage:
     def __init__(self):
@@ -19,7 +19,7 @@ class PNGImage:
 
 
     @staticmethod
-    def delete_output_files(output_folder):
+    def delete_output_files(output_folder, output_folder_img):
         if os.path.exists(output_folder + "IHDR.json"):
             os.remove(output_folder + "IHDR.json")
         if os.path.exists(output_folder + "tEXt.json"):
@@ -54,6 +54,12 @@ class PNGImage:
             os.remove(output_folder + "sBIT.json")
         if os.path.exists(output_folder + "oFFs.json"):
             os.remove(output_folder + "oFFs.json")
+        if os.path.exists(output_folder_img + "hist.png"):
+            os.remove(output_folder_img + "hist.png")
+        if os.path.exists(output_folder_img + "hist_rgb.png"):
+            os.remove(output_folder_img + "hist_rgb.png")
+        if os.path.exists(output_folder_img + "thumbnail_output.png"):
+            os.remove(output_folder_img + "thumbnail_output.png")
 
 
     @staticmethod
@@ -81,3 +87,23 @@ class PNGImage:
 
                 if chunk_name == 'IEND':
                     break
+
+
+    @staticmethod
+    def remove_unwanted_chunks(png_file, output_file):
+        with open(png_file, 'rb') as src, open(output_file, 'wb') as dest:
+            dest.write(src.read(8))  # Write PNG signature
+
+            while True:
+                chunk_data = src.read(8)
+                if len(chunk_data) < 8:
+                    break
+
+                length, chunk_type = struct.unpack('!I4s', chunk_data)
+                chunk_data = src.read(length + 4)  # Read chunk data and CRC
+
+                if chunk_type not in (b'IDAT', b'IHDR', b'IEND', b'PLTE', b'tRNS', b'gAMA', b'sRGB', b'cHRM', b'iCCP', b'bKGD', b'hIST', b'pHYs', b'sBIT', b'tIME', b'tEXt', b'zTXt', b'iTXt', b'vpAg', b'sTER'):
+                    continue  # Skip unwanted chunks
+
+                dest.write(struct.pack('!I4s', length, chunk_type))
+                dest.write(chunk_data)
