@@ -70,7 +70,21 @@ public partial class ImageDetailsViewModel : BaseViewModel
     {
         ImageToProcess imageToProcessTemp;
         imageToProcessTemp = await imageDataBaseService.GetImageAfterProcessFromDataBase(e);
-        imageToProcessTemp.ChIHDR = imageHelper.DeserializeChunkIHDR(imageToProcessTemp.ChIHDRJson);
+
+        imageToProcessTemp.ChIHDR = imageHelper.DeserializeChunk< ChunkIHDR>(imageToProcessTemp.ChIHDRJson);
+        imageToProcessTemp.ChgAMA = imageHelper.DeserializeChunk<ChunkgAMA>(imageToProcessTemp.ChgAMAJson);
+        imageToProcessTemp.ChhIST = imageHelper.DeserializeChunk<ChunkhIST>(imageToProcessTemp.ChhISTJson);
+        imageToProcessTemp.ChiTXt = imageHelper.DeserializeChunk<ChunkiTXt>(imageToProcessTemp.ChiTXtJson);
+        imageToProcessTemp.ChoFFs = imageHelper.DeserializeChunk<ChunkoFFs>(imageToProcessTemp.ChoFFsJson);
+        imageToProcessTemp.ChpHYs = imageHelper.DeserializeChunk<ChunkpHYs>(imageToProcessTemp.ChpHYsJson);
+        imageToProcessTemp.ChsBIT = imageHelper.DeserializeChunk<ChunksBIT>(imageToProcessTemp.ChsBITJson);
+        imageToProcessTemp.ChsPLT = imageHelper.DeserializeChunk<ChunksPLT>(imageToProcessTemp.ChsPLTJson);
+        imageToProcessTemp.ChsRGB = imageHelper.DeserializeChunk<ChunksRGB>(imageToProcessTemp.ChsRGBJson);
+        imageToProcessTemp.ChsTER = imageHelper.DeserializeChunk<ChunksTER>(imageToProcessTemp.ChsTERJson);
+        imageToProcessTemp.ChtEXt = imageHelper.DeserializeChunk<ChunktEXt>(imageToProcessTemp.ChtEXtJson);
+        imageToProcessTemp.ChtIME = imageHelper.DeserializeChunk<ChunktIME>(imageToProcessTemp.ChtIMEJson);
+
+
         imageToProcessTemp.ImageSrcMain = imageHelper.ByteArrayToImageSource(imageToProcessTemp.ImageSrcMainBytes);
         imageToProcessTemp.ImageSrcFFT = imageHelper.ByteArrayToImageSource(imageToProcessTemp.ImageSrcFFTBytes);
         imageToProcessTemp.ImageSrcHist = imageHelper.ByteArrayToImageSource(imageToProcessTemp.ImageSrcHistBytes);

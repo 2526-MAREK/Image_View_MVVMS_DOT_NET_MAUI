@@ -136,6 +136,22 @@ class ChunkParser:
 
 
     @staticmethod
+    def get_sBIT_data(chunk_data):
+        color_type = int.from_bytes(chunk_data[:1], byteorder='big')
+        if color_type == 0 or color_type == 4:
+            grayscale_bit_depth = int.from_bytes(chunk_data[1:2], byteorder='big')
+            return {'GrayscaleBitDepth': grayscale_bit_depth}
+        elif color_type == 2 or color_type == 3 or color_type == 6:
+            red_bit_depth = int.from_bytes(chunk_data[1:2], byteorder='big')
+            green_bit_depth = int.from_bytes(chunk_data[2:3], byteorder='big')
+            blue_bit_depth = int.from_bytes(chunk_data[3:4], byteorder='big')
+            return {'RedBitDepth': red_bit_depth,
+                    'GreenBitDepth': green_bit_depth,
+                    'BlueBitDepth': blue_bit_depth}
+        else:
+            return None
+
+    @staticmethod
     def get_oFFs_data(chunk_data):
         position_x = int.from_bytes(chunk_data[:4], byteorder='big', signed=True)
         position_y = int.from_bytes(chunk_data[4:8], byteorder='big', signed=True)
@@ -164,11 +180,13 @@ class ChunkParser:
         elif chunk_name == 'sPLT':
             return ChunkParser.get_sPLT_data(chunk_data)
         elif chunk_name == 'sTER':
-            return ChunkParser.get_sPLT_data(chunk_data)
+            return ChunkParser.get_sTER_data(chunk_data)
         elif chunk_name == 'sRGB':
-            return ChunkParser.get_sPLT_data(chunk_data)
+            return ChunkParser.get_sRGB_data(chunk_data)
+        elif chunk_name == 'sBIT':
+            return ChunkParser.get_sBIT_data(chunk_data)
         elif chunk_name == 'oFFs':
-            return ChunkParser.get_sPLT_data(chunk_data)
+            return ChunkParser.get_oFFs_data(chunk_data)
         else:
             return None
 
@@ -201,12 +219,15 @@ class ChunkParser:
                 json.dump(ChunkParser.get_sPLT_data(chunk_data), f)
         elif chunk_name == 'sTER':
             with open(output_folder + 'sTER.json', 'w') as f:
-                json.dump(ChunkParser.get_sPLT_data(chunk_data), f)
+                json.dump(ChunkParser.get_sTER_data(chunk_data), f)
         elif chunk_name == 'sRGB':
             with open(output_folder + 'sRGB.json', 'w') as f:
-                json.dump(ChunkParser.get_sPLT_data(chunk_data), f)
+                json.dump(ChunkParser.get_sRGB_data(chunk_data), f)
+        elif chunk_name == 'sBIT':
+            with open(output_folder + 'sBIT.json', 'w') as f:
+                json.dump(ChunkParser.get_sBIT_data(chunk_data), f)
         elif chunk_name == 'oFFs':
             with open(output_folder + 'oFFs.json', 'w') as f:
-                json.dump(ChunkParser.get_sPLT_data(chunk_data), f)
+                json.dump(ChunkParser.get_oFFs_data(chunk_data), f)
         else:
             return None

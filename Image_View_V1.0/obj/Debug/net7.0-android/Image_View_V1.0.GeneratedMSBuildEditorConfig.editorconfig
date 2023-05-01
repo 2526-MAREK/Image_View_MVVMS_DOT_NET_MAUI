@@ -38,6 +38,78 @@ build_metadata.AdditionalFiles.ManifestResourceName = Image_View_V1._0.Resources
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
+[C:/Users/marek/OneDrive/Dokumenty/GitHub/Image_Viewer/Image_View_MVVC/Image_View_V1.0/View/ChunkSection/gAMASection.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Image_View_V1._0.View.ChunkSection.gAMASection.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ChunkSection\gAMASection.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ChunkSection\gAMASection.xaml
+
+[C:/Users/marek/OneDrive/Dokumenty/GitHub/Image_Viewer/Image_View_MVVC/Image_View_V1.0/View/ChunkSection/hISTSection.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Image_View_V1._0.View.ChunkSection.hISTSection.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ChunkSection\hISTSection.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ChunkSection\hISTSection.xaml
+
+[C:/Users/marek/OneDrive/Dokumenty/GitHub/Image_Viewer/Image_View_MVVC/Image_View_V1.0/View/ChunkSection/IHDRSection.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Image_View_V1._0.View.ChunkSection.IHDRSection.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ChunkSection\IHDRSection.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ChunkSection\IHDRSection.xaml
+
+[C:/Users/marek/OneDrive/Dokumenty/GitHub/Image_Viewer/Image_View_MVVC/Image_View_V1.0/View/ChunkSection/iTXtSection.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Image_View_V1._0.View.ChunkSection.iTXtSection.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ChunkSection\iTXtSection.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ChunkSection\iTXtSection.xaml
+
+[C:/Users/marek/OneDrive/Dokumenty/GitHub/Image_Viewer/Image_View_MVVC/Image_View_V1.0/View/ChunkSection/oFFsSection.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Image_View_V1._0.View.ChunkSection.oFFsSection.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ChunkSection\oFFsSection.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ChunkSection\oFFsSection.xaml
+
+[C:/Users/marek/OneDrive/Dokumenty/GitHub/Image_Viewer/Image_View_MVVC/Image_View_V1.0/View/ChunkSection/pHYsSection.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Image_View_V1._0.View.ChunkSection.pHYsSection.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ChunkSection\pHYsSection.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ChunkSection\pHYsSection.xaml
+
+[C:/Users/marek/OneDrive/Dokumenty/GitHub/Image_Viewer/Image_View_MVVC/Image_View_V1.0/View/ChunkSection/sBITSection.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Image_View_V1._0.View.ChunkSection.sBITSection.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ChunkSection\sBITSection.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ChunkSection\sBITSection.xaml
+
+[C:/Users/marek/OneDrive/Dokumenty/GitHub/Image_Viewer/Image_View_MVVC/Image_View_V1.0/View/ChunkSection/sPLTSection.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Image_View_V1._0.View.ChunkSection.sPLTSection.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ChunkSection\sPLTSection.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ChunkSection\sPLTSection.xaml
+
+[C:/Users/marek/OneDrive/Dokumenty/GitHub/Image_Viewer/Image_View_MVVC/Image_View_V1.0/View/ChunkSection/sRGBSection.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Image_View_V1._0.View.ChunkSection.sRGBSection.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ChunkSection\sRGBSection.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ChunkSection\sRGBSection.xaml
+
+[C:/Users/marek/OneDrive/Dokumenty/GitHub/Image_Viewer/Image_View_MVVC/Image_View_V1.0/View/ChunkSection/sTERSection.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Image_View_V1._0.View.ChunkSection.sTERSection.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ChunkSection\sTERSection.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ChunkSection\sTERSection.xaml
+
+[C:/Users/marek/OneDrive/Dokumenty/GitHub/Image_Viewer/Image_View_MVVC/Image_View_V1.0/View/ChunkSection/tEXtSection.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Image_View_V1._0.View.ChunkSection.tEXtSection.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ChunkSection\tEXtSection.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ChunkSection\tEXtSection.xaml
+
+[C:/Users/marek/OneDrive/Dokumenty/GitHub/Image_Viewer/Image_View_MVVC/Image_View_V1.0/View/ChunkSection/tIMESection.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Image_View_V1._0.View.ChunkSection.tIMESection.xaml
+build_metadata.AdditionalFiles.TargetPath = View\ChunkSection\tIMESection.xaml
+build_metadata.AdditionalFiles.RelativePath = View\ChunkSection\tIMESection.xaml
+
 [C:/Users/marek/OneDrive/Dokumenty/GitHub/Image_Viewer/Image_View_MVVC/Image_View_V1.0/View/DetailsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Image_View_V1._0.View.DetailsPage.xaml

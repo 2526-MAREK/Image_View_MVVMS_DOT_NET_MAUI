@@ -68,6 +68,6 @@ with open(file_name, 'rb') as file:     # Open PNG file
 ImageAnalysis.fft_of_image(file_name, output_imgs_folder, draw_fft)
 ImageAnalysis.histogram_of_image(file_name, output_json_folder, output_imgs_folder, draw_hist, hIST)
 
-PNGImage.delete_redundant_chunks(file_name, (output_json_folder + 'png_no_meta.png'))
+#PNGImage.delete_redundant_chunks(file_name, (output_json_folder + 'png_no_meta.png'))
 
 

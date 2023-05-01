@@ -3,22 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Image_View_V1._0.DetailsPage"
               xmlns:viewmodel="clr-namespace:Image_View_V1._0.ViewModel"
+             xmlns:conveters="clr-namespace:Image_View_V1._0.Converters"
     x:DataType="viewmodel:ImageDetailsViewModel">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <conveters:NotNullToBoolConverter x:Key="NotNullToBoolConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
     <Grid>
-        <Grid.RowDefinitions>
-        <RowDefinition Height="Auto" />
-        <RowDefinition Height="*" />
-    </Grid.RowDefinitions>
-    
-    <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="297" />
-            </Grid.ColumnDefinitions>
 
-
-       
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="297" />
+        </Grid.ColumnDefinitions>
 
         <Image
             Source = "{Binding ImageToProcess.ImageSrcMain}"
@@ -26,6 +25,8 @@
             HeightRequest="708"
             VerticalOptions="Center"
         HorizontalOptions="Center"/>
+
+
 
         <Button Text="Save processed Image"
             Command="{Binding AddImageAfterProcessToDataBaseCommand}"
@@ -59,123 +60,362 @@
 
 
         <Grid Grid.Column="1">
-                <TableView  x:Name="MyTb" BackgroundColor="{StaticResource DarkBackground}">
-                    <TableRoot>
-                        <TableSection>
-                            <!-- Dodaj tu wiersze tabeli -->
-                            <ViewCell Height="100">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="100" />
-                                        <ColumnDefinition Width="*" />
-                                    </Grid.ColumnDefinitions>
 
-                                    <Image
-                        Source= "{Binding ImageToProcess.ImageSrcThumbnail}" 
+            <TableView  x:Name="MyTb" BackgroundColor="{StaticResource DarkBackground}">
+                <TableRoot>
+                    <TableSection>
+                        <!-- Dodaj tu wiersze tabeli -->
+                        <ViewCell Height="100">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="100" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Image
+                        Source= "{Binding ImageToProcess.ImageSrcMiniature}" 
                         WidthRequest="80"
                         HeightRequest="95"
                         VerticalOptions="Center"
                         HorizontalOptions="Center"
                         Grid.Column="0" />
 
-                                    <Label
+                                <Label
                         Text="miniaturka"
                         TextColor="{StaticResource Accent}"
                         VerticalOptions="Center"
                                     HorizontalOptions="Start"
                         Grid.Column="1" />
-                                </Grid>
-                            </ViewCell>
+                            </Grid>
+                        </ViewCell>
 
 
-                            <ViewCell Height="185">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="20" />
-                                        <RowDefinition Height="*" />
-                                    </Grid.RowDefinitions>
+                        <ViewCell Height="185">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
 
 
 
-                                    <Label
+                                <Label
                         Text="histogram"
                         TextColor="{StaticResource Accent}"
                         VerticalOptions="Center"
                                     HorizontalOptions="Start"
                         Grid.Row="0" />
-                                    <Image
+                                <Image
                         Source= "{Binding ImageToProcess.ImageSrcHist}" 
                         WidthRequest="266"
                         HeightRequest="140"
                         VerticalOptions="Center"
                         HorizontalOptions="Center"
                         Grid.Row="1" />
-                                </Grid>
-                            </ViewCell>
+                            </Grid>
+                        </ViewCell>
 
 
 
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
 
-                            <ViewCell Height="360">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="20" />
-                                        <RowDefinition Height="*" />
-                                    </Grid.RowDefinitions>
+                                <StackLayout Grid.Row="0" IsVisible="{Binding ImageToProcess.ChIHDR, Converter={StaticResource NotNullToBoolConverter}}">
+                                    <!-- Kod dla sekcji IHDR -->
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="20" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
 
 
 
-                                    <Label
+                                        <Label
                         Text="IHDR"
                                     Style="{StaticResource BigLabel}"
                         TextColor="{StaticResource Accent}"
                         VerticalOptions="Center"
                                     HorizontalOptions="Start"
                         Grid.Row="0" />
-                                    <VerticalStackLayout Grid.Row="1" Padding="10" Spacing="10">
-                                        <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.Height, StringFormat='Height: {0}'}" />
-                                        <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.Width , StringFormat='Width: {0}'}" />
-                                        <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.BitDepth, StringFormat='BitDepth: {0}'}" />
-                                        <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.ColorType, StringFormat='ColorType: {0}'}" />
-                                        <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.CompressionMethod, StringFormat='CompressionMethod: {0}'}" />
-                                        <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.FilterMethod, StringFormat='FilterMethod: {0}'}" />
-                                        <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.InterlaceMethod, StringFormat='InterlaceMethod: {0}'}" />
-                                    </VerticalStackLayout>
-                                </Grid>
-                            </ViewCell>
+                                        <VerticalStackLayout Grid.Row="1" Padding="10" Spacing="10">
+                                            <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.Height, StringFormat='Height: {0}'}" />
+                                            <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.Width , StringFormat='Width: {0}'}" />
+                                            <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.BitDepth, StringFormat='BitDepth: {0}'}" />
+                                            <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.ColorType, StringFormat='ColorType: {0}'}" />
+                                            <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.CompressionMethod, StringFormat='CompressionMethod: {0}'}" />
+                                            <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.FilterMethod, StringFormat='FilterMethod: {0}'}" />
+                                            <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.InterlaceMethod, StringFormat='InterlaceMethod: {0}'}" />
+                                        </VerticalStackLayout>
+                                    </Grid>
+                                </StackLayout>
+
+                                <StackLayout Grid.Row="1" IsVisible="{Binding ImageToProcess.ChgAMA, Converter={StaticResource NotNullToBoolConverter}}">
+                                    <!-- Kod dla sekcji gAMA -->
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="20" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
 
 
-                            <ViewCell Height="300">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="20" />
-                                        <RowDefinition Height="*" />
-                                    </Grid.RowDefinitions>
+
+                                        <Label
+                        Text="gAMA"
+                                    Style="{StaticResource BigLabel}"
+                        TextColor="{StaticResource Accent}"
+                        VerticalOptions="Center"
+                                    HorizontalOptions="Start"
+                        Grid.Row="0" />
+                                        <VerticalStackLayout Grid.Row="1" Padding="10" Spacing="10">
+                                            <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChgAMA.Gamma, StringFormat='Gamma: {0}'}" />
+
+                                        </VerticalStackLayout>
+                                    </Grid>
+                                </StackLayout>
+
+                                <StackLayout Grid.Row="2" IsVisible="{Binding ImageToProcess.ChhIST, Converter={StaticResource NotNullToBoolConverter}}">
+                                    <!-- Kod dla sekcji gAMA -->
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="20" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+
+                                        <Label
+        Text="hIST"
+        Style="{StaticResource BigLabel}"
+        TextColor="{StaticResource Accent}"
+        VerticalOptions="Center"
+        HorizontalOptions="Start"
+        Grid.Row="0" />
+                                        <Grid Grid.Row="1" Padding="10">
+                                            <ListView ItemsSource="{Binding ImageToProcess.ChhIST.Histogram}">
+                                                <ListView.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <ViewCell>
+                                                            <Label
+                            Style="{StaticResource SmallLabel}"
+                            Text="{Binding ., StringFormat='Histogram: {0}'}" />
+                                                        </ViewCell>
+                                                    </DataTemplate>
+                                                </ListView.ItemTemplate>
+                                            </ListView>
+                                        </Grid>
+                                    </Grid>
+                                </StackLayout>
+
+
+                                <StackLayout Grid.Row="3" IsVisible="{Binding ImageToProcess.ChiTXt, Converter={StaticResource NotNullToBoolConverter}}">
+                                    <!-- Kod dla sekcji gAMA -->
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="20" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+
+                                        <Label
+        Text="iTXt"
+        Style="{StaticResource BigLabel}"
+        TextColor="{StaticResource Accent}"
+        VerticalOptions="Center"
+        HorizontalOptions="Start"
+        Grid.Row="0" />
+                                        <Grid Grid.Row="1" Padding="10">
+                                            <VerticalStackLayout Grid.Row="1" Padding="10" Spacing="10">
+                                                <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChiTXt.CompressionFlag, StringFormat='CompressionFlag: {0}'}" />
+                                                <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChiTXt.CompressionMethod , StringFormat='CompressionMethod: {0}'}" />
+                                                <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChiTXt.Keyword, StringFormat='Keyword: {0}'}" />
+                                                <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChiTXt.LanguageTag, StringFormat='LanguageTag: {0}'}" />
+                                                <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChiTXt.Text, StringFormat='Text: {0}'}" />
+                                                <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChiTXt.TranslatedKeyword, StringFormat='TranslatedKeyword: {0}'}" />
+                                            </VerticalStackLayout>
+
+                                        </Grid>
+                                    </Grid>
+                                </StackLayout>
+
+                                <StackLayout Grid.Row="4" IsVisible="{Binding ImageToProcess.ChoFFs, Converter={StaticResource NotNullToBoolConverter}}">
+                                    <!-- Kod dla sekcji gAMA -->
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="20" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+
+                                        <Label
+        Text="oFFs"
+        Style="{StaticResource BigLabel}"
+        TextColor="{StaticResource Accent}"
+        VerticalOptions="Center"
+        HorizontalOptions="Start"
+        Grid.Row="0" />
+                                        <Grid Grid.Row="1" Padding="10">
+                                            <Label Text="{Binding ImageToProcess.ChoFFs.PaletteName, StringFormat='Palette Name: {0}'}" />
+                                            <Label Text="{Binding ImageToProcess.ChoFFs.SampleDepth, StringFormat='Sample Depth: {0}'}" />
+
+
+                                        </Grid>
+                                    </Grid>
+                                </StackLayout>
+
+                                <StackLayout Grid.Row="5" IsVisible="{Binding ImageToProcess.ChpHYs, Converter={StaticResource NotNullToBoolConverter}}">
+                                    <!-- Kod dla sekcji gAMA -->
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="20" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+
+                                        <Label
+        Text="pHYs"
+        Style="{StaticResource BigLabel}"
+        TextColor="{StaticResource Accent}"
+        VerticalOptions="Center"
+        HorizontalOptions="Start"
+        Grid.Row="0" />
+                                        <Grid Grid.Row="1" Padding="10">
+                                            <VerticalStackLayout Grid.Row="1" Padding="10" Spacing="10">
+                                                <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChpHYs.PixelsPerUnitX, StringFormat='PixelsPerUnitX: {0}'}" />
+                                                <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChpHYs.PixelsPerUnitY , StringFormat='PixelsPerUnitY: {0}'}" />
+                                                <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChpHYs.UnitSpecifier, StringFormat='UnitSpecifier: {0}'}" />
+                                            </VerticalStackLayout>
+
+                                        </Grid>
+                                    </Grid>
+                                </StackLayout>
+
+                                <StackLayout Grid.Row="6" IsVisible="{Binding ImageToProcess.ChsBIT, Converter={StaticResource NotNullToBoolConverter}}">
+                                    <!-- Kod dla sekcji gAMA -->
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="20" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+
+                                        <Label
+        Text="sBIT"
+        Style="{StaticResource BigLabel}"
+        TextColor="{StaticResource Accent}"
+        VerticalOptions="Center"
+        HorizontalOptions="Start"
+        Grid.Row="0" />
+                                        <Grid Grid.Row="1" Padding="10">
+                                            <VerticalStackLayout Grid.Row="1" Padding="10" Spacing="10">
+                                                <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChpHYs.PixelsPerUnitX, StringFormat='PixelsPerUnitX: {0}'}" />
+                                                <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChpHYs.PixelsPerUnitY , StringFormat='PixelsPerUnitY: {0}'}" />
+                                                <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChpHYs.UnitSpecifier, StringFormat='UnitSpecifier: {0}'}" />
+                                            </VerticalStackLayout>
+
+                                        </Grid>
+                                    </Grid>
+                                </StackLayout>
+
+
+                                <StackLayout Grid.Row="7" IsVisible="{Binding ImageToProcess.ChsPLT, Converter={StaticResource NotNullToBoolConverter}}">
+                                    <!-- Kod dla sekcji gAMA -->
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="20" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+
+                                        <Label
+        Text="sPLT"
+        Style="{StaticResource BigLabel}"
+        TextColor="{StaticResource Accent}"
+        VerticalOptions="Center"
+        HorizontalOptions="Start"
+        Grid.Row="0" />
+                                        <Grid Grid.Row="1" Padding="10">
+                                            <VerticalStackLayout Grid.Row="1" Padding="10" Spacing="10">
+                                            <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChsPLT.PaletteName, StringFormat='Palette Name: {0}'}" />
+                                            <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChsPLT.SampleDepth, StringFormat='Sample Depth: {0}'}" />
+                                            </VerticalStackLayout>
+
+
+                                        </Grid>
+                                    </Grid>
+                                </StackLayout>
+
+                                <StackLayout Grid.Row="8" IsVisible="{Binding ImageToProcess.ChsRGB, Converter={StaticResource NotNullToBoolConverter}}">
+                                    <!-- Kod dla sekcji gAMA -->
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="20" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+
+                                        <Label
+        Text="sRGB"
+        Style="{StaticResource BigLabel}"
+        TextColor="{StaticResource Accent}"
+        VerticalOptions="Center"
+        HorizontalOptions="Start"
+        Grid.Row="0" />
+                                        <Grid Grid.Row="1" Padding="10">
+                                            <VerticalStackLayout Grid.Row="1" Padding="10" Spacing="10">
+                                            <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChsRGB.PaletteName, StringFormat='Palette Name: {0}'}" />
+                                            <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChsRGB.SampleDepth, StringFormat='Sample Depth: {0}'}" />
+                                            </VerticalStackLayout>
+
+
+                                        </Grid>
+                                    </Grid>
+                                </StackLayout>
+
+
+                            </Grid>
+                        </ViewCell>
 
 
 
-                                    <Label
+                        <ViewCell Height="300">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="20" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+
+
+
+                                <Label
                         Text="fft"
                         TextColor="{StaticResource Accent}"
                         VerticalOptions="Center"
                                     HorizontalOptions="Start"
                         Grid.Row="0" />
-                                    <Image
+                                <Image
                         Source= "{Binding ImageToProcess.ImageSrcFFT}"
                         WidthRequest="266"
                         HeightRequest="266"
                         VerticalOptions="Center"
                         HorizontalOptions="Center"
                         Grid.Row="1" />
-                                </Grid>
-                            </ViewCell>
+                            </Grid>
+                        </ViewCell>
 
 
 
-                        </TableSection>
-                    </TableRoot>
-                </TableView>
-            </Grid>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+
         </Grid>
-    
+
+    </Grid>
+
 </ContentPage>

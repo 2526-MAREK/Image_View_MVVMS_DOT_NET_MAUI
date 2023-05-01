@@ -16,7 +16,7 @@ class PNGImage:
             raise ValueError('Incorrect sum of control')
 
         return chunk_name, chunk_data
-    # Your existing get_chunk function
+
 
     @staticmethod
     def delete_output_files(output_folder):
@@ -50,8 +50,11 @@ class PNGImage:
             os.remove(output_folder + "sTER.json")
         if os.path.exists(output_folder + "sRGB.json"):
             os.remove(output_folder + "sRGB.json")
+        if os.path.exists(output_folder + "sBIT.json"):
+            os.remove(output_folder + "sBIT.json")
         if os.path.exists(output_folder + "oFFs.json"):
             os.remove(output_folder + "oFFs.json")
+
 
     @staticmethod
     def delete_redundant_chunks(input_file_path, output_file_path):

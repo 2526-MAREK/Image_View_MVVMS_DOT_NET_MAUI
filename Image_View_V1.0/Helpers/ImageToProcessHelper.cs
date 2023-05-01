@@ -62,14 +62,20 @@ namespace Image_View_V1._0.Helpers
             return ImageSource.FromStream(() => new MemoryStream(imageBytes));
         }
 
-        public string SerializeChunkIHDR(ChunkIHDR chunkIHDR)
+        public T DeserializeChunk<T>(string json)
         {
-            return JsonConvert.SerializeObject(chunkIHDR);
+            return JsonConvert.DeserializeObject<T>(json);
+        }
+            public string SerializeChunk<T>(T chunk)
+        {
+            return JsonConvert.SerializeObject(chunk);
         }
 
-        public ChunkIHDR DeserializeChunkIHDR(string json)
+        public async Task<(T chunk, string json)> LoadChunkData<T>(Func<Task<T>> getChunkMethod)
         {
-            return JsonConvert.DeserializeObject<ChunkIHDR>(json);
+            T chunk = await getChunkMethod();
+            string json = SerializeChunk(chunk);
+            return (chunk, json);
         }
     }
 }

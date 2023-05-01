@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Image_View_V1._0.View.ChunkSection.IHDRSection"
+             xmlns:viewmodel="clr-namespace:Image_View_V1._0.ViewModel">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+
+        <Label
+                        Text="IHDR"
+                                    Style="{StaticResource BigLabel}"
+                        TextColor="{StaticResource Accent}"
+                        VerticalOptions="Center"
+                                    HorizontalOptions="Start"
+                        Grid.Row="0" />
+        <VerticalStackLayout Grid.Row="1" Padding="10" Spacing="10">
+            <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.Height, StringFormat='Height: {0}'}" />
+            <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.Width , StringFormat='Width: {0}'}" />
+            <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.BitDepth, StringFormat='BitDepth: {0}'}" />
+            <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.ColorType, StringFormat='ColorType: {0}'}" />
+            <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.CompressionMethod, StringFormat='CompressionMethod: {0}'}" />
+            <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.FilterMethod, StringFormat='FilterMethod: {0}'}" />
+            <Label Style="{StaticResource SmallLabel}" Text="{Binding ImageToProcess.ChIHDR.InterlaceMethod, StringFormat='InterlaceMethod: {0}'}" />
+        </VerticalStackLayout>
+    </Grid>
+</ContentView>

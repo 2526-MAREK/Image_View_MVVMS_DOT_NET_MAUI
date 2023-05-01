@@ -56,10 +56,10 @@ namespace Image_View_V1._0.Services
 
             SaveImage(stream1);
 
-            imageToProcess.ImageSrcMain = await GetImageSource(stream1);
-            imageToProcess.ImageSrcMainBytes = await imageHelper.ImageSourceToByteArrayAsync(await GetImageSource(stream2));
+            imageToProcess.ImageSrcMain = await GetImageSource(stream2);
+            imageToProcess.ImageSrcMainBytes = await imageHelper.ImageSourceToByteArrayAsync(await GetImageSource(stream3));
 
-            imageToProcess.ImageSrcThumbnail = await GetImageSource(stream3);
+            //imageToProcess.ImageSrcThumbnail = await GetImageSource(stream3);
 
             return imageToProcess;
         }
@@ -77,7 +77,233 @@ namespace Image_View_V1._0.Services
                 @"C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Images\photo_processed.png", memory_stream.ToArray());
         }
 
-        public async Task<ChunkIHDR> GetChunkIHDR()
+        public async Task<T> GetChunkData<T>(string filePath)
+        {
+            T chunkData = default(T);
+
+            var contents = await File.ReadAllTextAsync(filePath);
+            chunkData = JsonConvert.DeserializeObject<T>(contents);
+
+            return chunkData;
+        }
+
+        public async Task<ChunktIME> GetChunktIME()
+        {
+
+            string filePath = @"C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Resources\\Raw\\tIME.json";
+
+            if (File.Exists(filePath))
+            {
+                return await GetChunkData<ChunktIME>(filePath);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public async Task<ChunktEXt> GetChunktEXt()
+        {
+
+            string filePath = @"C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Resources\\Raw\\tEXt.json";
+
+            if (File.Exists(filePath))
+            {
+                return await GetChunkData<ChunktEXt>(filePath);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        //można i utworzyć generyczną metodę 
+        public async Task<T> GetChunkDataByName<T>(string fileName)
+        {
+            string filePath = $@"C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Raw\{fileName}.json";
+
+            if (File.Exists(filePath))
+            {
+                return await GetChunkData<T>(filePath);
+            }
+            else
+            {
+                return default(T);
+            }
+        }
+
+        public async Task<ChunksTER> GetChunksTER()
+        {
+
+            string filePath = @"C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Resources\\Raw\\sTER.json";
+
+            if (File.Exists(filePath))
+            {
+                return await GetChunkData<ChunksTER>(filePath);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public async Task<ChunksRGB> GetChunksRGB()
+        {
+
+            string filePath = @"C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Resources\\Raw\\sRGB.json";
+
+            if (File.Exists(filePath))
+            {
+                return await GetChunkData<ChunksRGB>(filePath);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public async Task<ChunksPLT> GetChunksPLT()
+        {
+
+            string filePath = @"C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Resources\\Raw\\sPLT.json";
+
+            if (File.Exists(filePath))
+            {
+                return await GetChunkData<ChunksPLT>(filePath);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public async Task<ChunksBIT> GetChunksBIT()
+        {
+
+            string filePath = @"C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Resources\\Raw\\sBIT.json";
+
+            if (File.Exists(filePath))
+            {
+                return await GetChunkData<ChunksBIT>(filePath);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public async Task<ChunkpHYs> GetChunkpHYs()
+        {
+
+            string filePath = @"C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Resources\\Raw\\pHYs.json";
+
+            if (File.Exists(filePath))
+            {
+                return await GetChunkData<ChunkpHYs>(filePath);
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+
+
+        //Parsowanie Chunków na dwa sposoby:
+
+        public async Task<ChunkoFFs> GetChunkoFFs()
+        {
+
+            string filePath = @"C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Resources\\Raw\\oFFs.json";
+
+            if (File.Exists(filePath))
+            {
+                //1 sposob
+                return await GetChunkData<ChunkoFFs>(filePath);
+            }
+            else
+            {
+                return null;
+            }
+            }
+
+        public async Task<ChunkiTXt> GetChunkiTXt()
+        {
+            ChunkiTXt ChTemp = new();
+
+            string filePath = @"C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Resources\\Raw\\iTXt.json";
+
+            if (File.Exists(filePath))
+            {
+                var contents = await File.ReadAllTextAsync(filePath);
+
+                //2 sposob
+                JObject jObject = JObject.Parse(contents);
+            //{"Keyword": "Author", "CompressionFlag": 0, "CompressionMethod": 0,
+            //"LanguageTag": "ja", "TranslatedKeyword": "\u4f5c\u8005", "Text":
+            //"\u30d7\u30ed\u30b8\u30a7\u30af\u30c8\u540d\u96ea"}
+            ChTemp.Keyword = (string)jObject["Keyword"];
+            ChTemp.CompressionFlag = (int)jObject["CompressionFlag"];
+            ChTemp.CompressionMethod = (int)jObject["CompressionMethod"];
+            ChTemp.LanguageTag = (string)jObject["LanguageTag"];
+            ChTemp.TranslatedKeyword = (string)jObject["TranslatedKeyword"];
+            ChTemp.Text = (string)jObject["Text"];
+
+            //Debug.WriteLine($"Przetworzone dane: Szerokość = {ChTemp.Width}, Wysokość = {ChTemp.Height}, Głębia bitów = {ChTemp.BitDepth}");
+
+            return ChTemp;
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+
+        public async Task<ChunkgAMA> GetChunkgAMA()
+        {
+            ChunkgAMA ChTemp = new();
+
+            string filePath = @"C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Resources\\Raw\\gAMA.json";
+
+            if (File.Exists(filePath))
+            {
+                var contents = await File.ReadAllTextAsync(filePath);
+
+                JObject jObject = JObject.Parse(contents);
+
+                ChTemp.Gamma = (int)jObject["Gamma"];
+
+                return ChTemp;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public async Task<ChunkhIST> GetChunkhIST()
+        {
+            ChunkhIST ChTemp = new();
+
+            string filePath = @"C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Resources\\Raw\\hIST.json";
+
+            if (File.Exists(filePath))
+            {
+                var contents = await File.ReadAllTextAsync(filePath);
+
+            JObject jObject = JObject.Parse(contents);
+
+            ChTemp.Histogram = jObject["Histogram"].ToObject<List<int>>();
+
+            return ChTemp;
+            }
+            else
+            {
+                return null;
+            }
+        }
+            public async Task<ChunkIHDR> GetChunkIHDR()
         {
             ChunkIHDR ChTemp = new();
 
@@ -97,7 +323,10 @@ namespace Image_View_V1._0.Services
 
             string filePath = @"C:\\Users\\marek\\OneDrive\\Dokumenty\\GitHub\\Image_Viewer\\Image_View_MVVC\\Image_View_V1.0\\Resources\\Raw\\IHDR.json";
 
-            var contents = await File.ReadAllTextAsync(filePath);
+            if (File.Exists(filePath))
+            {
+                var contents = await File.ReadAllTextAsync(filePath);
+
             
             //Debug.WriteLine("Zawartość pliku IHDR.json przed przetworzeniem: " + contents);
             JObject jObject = JObject.Parse(contents);
@@ -114,6 +343,11 @@ namespace Image_View_V1._0.Services
             //Debug.WriteLine($"Przetworzone dane: Szerokość = {ChTemp.Width}, Wysokość = {ChTemp.Height}, Głębia bitów = {ChTemp.BitDepth}");
 
             return ChTemp;
+            }
+            else
+            {
+                return null;
+            }
 
         }
 
@@ -129,9 +363,18 @@ namespace Image_View_V1._0.Services
         public ImageSource GetImageFFTFromProcess()
         {
              string imagePath = @"C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Images\fft.png"; // Ścieżka do zdjęcia w folderze projektu
+            ImageSource source;
 
-            ImageSource source =  LoadImageFromResource(imagePath); //new FileImageSource { File = @"C:\Users\marek\source\repos\Image_View_V1.0\Image_View_V1.0\Resources\Images\fft.png" };
-
+            if (File.Exists(imagePath))
+            {
+               source = LoadImageFromResource(imagePath); //new FileImageSource { File = @"C:\Users\marek\source\repos\Image_View_V1.0\Image_View_V1.0\Resources\Images\fft.png" };
+            }
+            else
+            {
+                imagePath = @"C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Images\fftdontexists.png";
+                source = LoadImageFromResource(imagePath);
+            }
+            
             return source;
         }
 
