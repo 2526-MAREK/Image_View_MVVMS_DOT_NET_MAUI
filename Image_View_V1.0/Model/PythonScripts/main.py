@@ -67,6 +67,9 @@ def main(args):
 
             ChunkParser.save_chunk_data_to_json(chunk_name, chunk_data, output_json_folder)
 
+
+    ImageAnalysis.create_thumbnail(file_name, output_imgs_folder, (128, 128))
+
     ImageAnalysis.fft_of_image(file_name, output_imgs_folder, draw_fft)
     ImageAnalysis.histogram_of_image(file_name, output_json_folder, output_imgs_folder, draw_hist, hIST)
 

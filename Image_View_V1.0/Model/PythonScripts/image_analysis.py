@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-
+from PIL import Image
 
 class ImageAnalysis:
 
@@ -102,3 +102,10 @@ class ImageAnalysis:
         plt.savefig(output_imgs_folder + 'hist_rgb.png')
         if draw_plots:
             plt.show()
+
+
+    @staticmethod
+    def create_thumbnail(input_image_path, output_image_path, thumbnail_size=(128, 128)):
+        with Image.open(input_image_path) as img:
+            img.thumbnail(thumbnail_size)
+            img.save(output_image_path + "thumbnail_output.png", 'PNG')
