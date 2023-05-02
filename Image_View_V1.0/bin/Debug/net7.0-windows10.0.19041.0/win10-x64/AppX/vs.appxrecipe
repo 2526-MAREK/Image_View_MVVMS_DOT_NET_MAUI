@@ -29,13 +29,13 @@
     <AppXManifest Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-05-01T12:21:23.118</Modified>
+      <Modified>2023-05-02T19:08:53.639</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-05-01T12:21:21.915</Modified>
+      <Modified>2023-05-02T19:08:52.853</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Image_View_V1.0.runtimeconfig.json">
       <PackagePath>Image_View_V1.0.runtimeconfig.json</PackagePath>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\Image_View_V1.0.dll">
       <PackagePath>Image_View_V1.0.dll</PackagePath>
-      <Modified>2023-05-01T12:21:20.149</Modified>
+      <Modified>2023-05-02T19:08:49.916</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>Image_View_V1.0.exe</PackagePath>
-      <Modified>2023-05-01T12:21:20.196</Modified>
+      <Modified>2023-05-02T19:08:49.978</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.3\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -995,7 +995,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\Image_View_V1.0.deps.json">
       <PackagePath>Image_View_V1.0.deps.json</PackagePath>
-      <Modified>2023-05-01T12:21:22.837</Modified>
+      <Modified>2023-05-02T19:08:53.373</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\.nuget\packages\humanizer.core\2.14.1\lib\net6.0\Humanizer.dll">
       <PackagePath>Humanizer.dll</PackagePath>
@@ -1029,25 +1029,21 @@
       <PackagePath>AboutAssets.txt</PackagePath>
       <Modified>2023-04-06T20:38:32.735</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Raw\gAMA.json">
-      <PackagePath>gAMA.json</PackagePath>
-      <Modified>2023-05-01T12:24:07.046</Modified>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Raw\IHDR.json">
       <PackagePath>IHDR.json</PackagePath>
-      <Modified>2023-05-01T12:24:07.046</Modified>
+      <Modified>2023-05-02T19:04:48.292</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Raw\iTXt.json">
+      <PackagePath>iTXt.json</PackagePath>
+      <Modified>2023-05-02T19:04:48.324</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Raw\pHYs.json">
       <PackagePath>pHYs.json</PackagePath>
-      <Modified>2023-05-01T12:24:07.046</Modified>
+      <Modified>2023-05-02T19:04:48.292</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Raw\png_no_meta.png">
       <PackagePath>png_no_meta.png</PackagePath>
-      <Modified>2023-05-01T12:24:09.357</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Raw\tEXt.json">
-      <PackagePath>tEXt.json</PackagePath>
-      <Modified>2023-05-01T12:24:07.062</Modified>
+      <Modified>2023-05-01T12:41:21.772</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
@@ -1079,211 +1075,211 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appicon.ico">
       <PackagePath>appicon.ico</PackagePath>
-      <Modified>2023-05-01T12:24:12.917</Modified>
+      <Modified>2023-05-02T19:06:06.670</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-100.png">
       <PackagePath>appiconLargeTile.scale-100.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.220</Modified>
+      <Modified>2023-05-02T19:06:07.209</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-125.png">
       <PackagePath>appiconLargeTile.scale-125.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.241</Modified>
+      <Modified>2023-05-02T19:06:07.241</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-150.png">
       <PackagePath>appiconLargeTile.scale-150.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.260</Modified>
+      <Modified>2023-05-02T19:06:07.259</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-200.png">
       <PackagePath>appiconLargeTile.scale-200.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.276</Modified>
+      <Modified>2023-05-02T19:06:07.289</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLargeTile.scale-400.png">
       <PackagePath>appiconLargeTile.scale-400.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.355</Modified>
+      <Modified>2023-05-02T19:06:07.409</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-16.png</PackagePath>
-      <Modified>2023-05-01T12:24:12.995</Modified>
+      <Modified>2023-05-02T19:06:06.820</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-24.png</PackagePath>
-      <Modified>2023-05-01T12:24:12.995</Modified>
+      <Modified>2023-05-02T19:06:06.827</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-256.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.011</Modified>
+      <Modified>2023-05-02T19:06:06.861</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-32.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.011</Modified>
+      <Modified>2023-05-02T19:06:06.835</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-lightunplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-lightunplated_targetsize-48.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.011</Modified>
+      <Modified>2023-05-02T19:06:06.843</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-16.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-16.png</PackagePath>
-      <Modified>2023-05-01T12:24:12.980</Modified>
+      <Modified>2023-05-02T19:06:06.788</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-24.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-24.png</PackagePath>
-      <Modified>2023-05-01T12:24:12.980</Modified>
+      <Modified>2023-05-02T19:06:06.792</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-256.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-256.png</PackagePath>
-      <Modified>2023-05-01T12:24:12.995</Modified>
+      <Modified>2023-05-02T19:06:06.811</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-32.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-32.png</PackagePath>
-      <Modified>2023-05-01T12:24:12.980</Modified>
+      <Modified>2023-05-02T19:06:06.796</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.altform-unplated_targetsize-48.png">
       <PackagePath>appiconLogo.altform-unplated_targetsize-48.png</PackagePath>
-      <Modified>2023-05-01T12:24:12.980</Modified>
+      <Modified>2023-05-02T19:06:06.800</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-100.png">
       <PackagePath>appiconLogo.scale-100.png</PackagePath>
-      <Modified>2023-05-01T12:24:12.933</Modified>
+      <Modified>2023-05-02T19:06:06.685</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-125.png">
       <PackagePath>appiconLogo.scale-125.png</PackagePath>
-      <Modified>2023-05-01T12:24:12.933</Modified>
+      <Modified>2023-05-02T19:06:06.698</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-150.png">
       <PackagePath>appiconLogo.scale-150.png</PackagePath>
-      <Modified>2023-05-01T12:24:12.948</Modified>
+      <Modified>2023-05-02T19:06:06.707</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-200.png">
       <PackagePath>appiconLogo.scale-200.png</PackagePath>
-      <Modified>2023-05-01T12:24:12.948</Modified>
+      <Modified>2023-05-02T19:06:06.716</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.scale-400.png">
       <PackagePath>appiconLogo.scale-400.png</PackagePath>
-      <Modified>2023-05-01T12:24:12.948</Modified>
+      <Modified>2023-05-02T19:06:06.730</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-16.png">
       <PackagePath>appiconLogo.targetsize-16.png</PackagePath>
-      <Modified>2023-05-01T12:24:12.948</Modified>
+      <Modified>2023-05-02T19:06:06.737</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-24.png">
       <PackagePath>appiconLogo.targetsize-24.png</PackagePath>
-      <Modified>2023-05-01T12:24:12.964</Modified>
+      <Modified>2023-05-02T19:06:06.744</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-256.png">
       <PackagePath>appiconLogo.targetsize-256.png</PackagePath>
-      <Modified>2023-05-01T12:24:12.964</Modified>
+      <Modified>2023-05-02T19:06:06.780</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-32.png">
       <PackagePath>appiconLogo.targetsize-32.png</PackagePath>
-      <Modified>2023-05-01T12:24:12.964</Modified>
+      <Modified>2023-05-02T19:06:06.751</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconLogo.targetsize-48.png">
       <PackagePath>appiconLogo.targetsize-48.png</PackagePath>
-      <Modified>2023-05-01T12:24:12.964</Modified>
+      <Modified>2023-05-02T19:06:06.759</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-100.png">
       <PackagePath>appiconMediumTile.scale-100.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.079</Modified>
+      <Modified>2023-05-02T19:06:06.975</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-125.png">
       <PackagePath>appiconMediumTile.scale-125.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.095</Modified>
+      <Modified>2023-05-02T19:06:06.986</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-150.png">
       <PackagePath>appiconMediumTile.scale-150.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.095</Modified>
+      <Modified>2023-05-02T19:06:07.004</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-200.png">
       <PackagePath>appiconMediumTile.scale-200.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.110</Modified>
+      <Modified>2023-05-02T19:06:07.022</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconMediumTile.scale-400.png">
       <PackagePath>appiconMediumTile.scale-400.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.126</Modified>
+      <Modified>2023-05-02T19:06:07.050</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-100.png">
       <PackagePath>appiconSmallTile.scale-100.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.062</Modified>
+      <Modified>2023-05-02T19:06:06.917</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-125.png">
       <PackagePath>appiconSmallTile.scale-125.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.067</Modified>
+      <Modified>2023-05-02T19:06:06.926</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-150.png">
       <PackagePath>appiconSmallTile.scale-150.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.072</Modified>
+      <Modified>2023-05-02T19:06:06.939</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-200.png">
       <PackagePath>appiconSmallTile.scale-200.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.077</Modified>
+      <Modified>2023-05-02T19:06:06.948</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconSmallTile.scale-400.png">
       <PackagePath>appiconSmallTile.scale-400.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.079</Modified>
+      <Modified>2023-05-02T19:06:06.963</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-100.png">
       <PackagePath>appiconStoreLogo.scale-100.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.026</Modified>
+      <Modified>2023-05-02T19:06:06.870</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-125.png">
       <PackagePath>appiconStoreLogo.scale-125.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.043</Modified>
+      <Modified>2023-05-02T19:06:06.881</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-150.png">
       <PackagePath>appiconStoreLogo.scale-150.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.048</Modified>
+      <Modified>2023-05-02T19:06:06.889</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-200.png">
       <PackagePath>appiconStoreLogo.scale-200.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.052</Modified>
+      <Modified>2023-05-02T19:06:06.897</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconStoreLogo.scale-400.png">
       <PackagePath>appiconStoreLogo.scale-400.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.059</Modified>
+      <Modified>2023-05-02T19:06:06.908</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-100.png">
       <PackagePath>appiconWideTile.scale-100.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.142</Modified>
+      <Modified>2023-05-02T19:06:07.059</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-125.png">
       <PackagePath>appiconWideTile.scale-125.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.158</Modified>
+      <Modified>2023-05-02T19:06:07.073</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-150.png">
       <PackagePath>appiconWideTile.scale-150.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.158</Modified>
+      <Modified>2023-05-02T19:06:07.091</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-200.png">
       <PackagePath>appiconWideTile.scale-200.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.172</Modified>
+      <Modified>2023-05-02T19:06:07.124</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\appiconWideTile.scale-400.png">
       <PackagePath>appiconWideTile.scale-400.png</PackagePath>
-      <Modified>2023-05-01T12:24:13.204</Modified>
+      <Modified>2023-05-02T19:06:07.189</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-100.png">
       <PackagePath>dotnet_bot.scale-100.png</PackagePath>
-      <Modified>2023-05-01T12:23:26.403</Modified>
+      <Modified>2023-05-02T19:06:06.089</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-125.png">
       <PackagePath>dotnet_bot.scale-125.png</PackagePath>
-      <Modified>2023-05-01T12:23:26.495</Modified>
+      <Modified>2023-05-02T19:06:06.136</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-150.png">
       <PackagePath>dotnet_bot.scale-150.png</PackagePath>
-      <Modified>2023-05-01T12:23:26.542</Modified>
+      <Modified>2023-05-02T19:06:06.199</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-200.png">
       <PackagePath>dotnet_bot.scale-200.png</PackagePath>
-      <Modified>2023-05-01T12:23:26.604</Modified>
+      <Modified>2023-05-02T19:06:06.339</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
-      <Modified>2023-05-01T12:23:26.729</Modified>
+      <Modified>2023-05-02T19:06:06.433</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\fft.scale-100.png">
       <PackagePath>fft.scale-100.png</PackagePath>
-      <Modified>2023-05-01T12:24:07.420</Modified>
+      <Modified>2023-05-02T19:04:52.151</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\fftdontexists.scale-100.png">
       <PackagePath>fftdontexists.scale-100.png</PackagePath>
@@ -1291,11 +1287,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\hist.scale-100.png">
       <PackagePath>hist.scale-100.png</PackagePath>
-      <Modified>2023-05-01T12:24:08.413</Modified>
+      <Modified>2023-05-02T19:04:55.512</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\hist_rgb.scale-100.png">
       <PackagePath>hist_rgb.scale-100.png</PackagePath>
-      <Modified>2023-05-01T12:24:09.357</Modified>
+      <Modified>2023-05-02T19:04:56.931</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\miniature.scale-100.png">
       <PackagePath>miniature.scale-100.png</PackagePath>
@@ -1303,7 +1299,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\photo_processed.scale-100.png">
       <PackagePath>photo_processed.scale-100.png</PackagePath>
-      <Modified>2023-05-01T12:24:05.897</Modified>
+      <Modified>2023-05-02T19:04:43.798</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\thumbnail_output.scale-100.png">
+      <PackagePath>thumbnail_output.scale-100.png</PackagePath>
+      <Modified>2023-05-02T19:04:49.339</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

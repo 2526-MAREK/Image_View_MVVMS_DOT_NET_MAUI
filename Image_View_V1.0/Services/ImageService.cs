@@ -389,7 +389,7 @@ namespace Image_View_V1._0.Services
 
         public ImageSource GetImageMiniatureFromProcess()
         {
-            string imagePath = @"C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Images\miniature.png"; // Ścieżka do zdjęcia w folderze projektu
+            string imagePath = @"C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Images\thumbnail_output.png"; // Ścieżka do zdjęcia w folderze projektu
 
             ImageSource source = LoadImageFromResource(imagePath); //new FileImageSource { File = @"C:\Users\marek\source\repos\Image_View_V1.0\Image_View_V1.0\Resources\Images\fft.png" };
 

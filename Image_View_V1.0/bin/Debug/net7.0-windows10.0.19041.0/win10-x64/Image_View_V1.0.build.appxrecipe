@@ -772,20 +772,17 @@
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Raw\AboutAssets.txt">
       <PackagePath>AboutAssets.txt</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Raw\gAMA.json">
-      <PackagePath>gAMA.json</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Raw\IHDR.json">
       <PackagePath>IHDR.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Raw\iTXt.json">
+      <PackagePath>iTXt.json</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Raw\pHYs.json">
       <PackagePath>pHYs.json</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Raw\png_no_meta.png">
       <PackagePath>png_no_meta.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\Resources\Raw\tEXt.json">
-      <PackagePath>tEXt.json</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\sp\splashSplashScreen.scale-100.png">
       <PackagePath>splashSplashScreen.scale-100.png</PackagePath>
@@ -978,6 +975,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\photo_processed.scale-100.png">
       <PackagePath>photo_processed.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\marek\OneDrive\Dokumenty\GitHub\Image_Viewer\Image_View_MVVC\Image_View_V1.0\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\thumbnail_output.scale-100.png">
+      <PackagePath>thumbnail_output.scale-100.png</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
