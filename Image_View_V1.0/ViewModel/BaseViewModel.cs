@@ -5,6 +5,10 @@
 
 namespace Image_View_V1._0.ViewModel;
 
+/**
+* @brief The base class for all view models.
+*/
+
 public partial class BaseViewModel : ObservableObject
 {
     [ObservableProperty]

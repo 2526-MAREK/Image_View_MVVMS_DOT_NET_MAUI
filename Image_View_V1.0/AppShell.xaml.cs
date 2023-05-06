@@ -7,6 +7,10 @@ using Image_View_V1._0;
 
 namespace Image_View_V1._0;
 
+/**
+* @brief Interaction logic for AppShell.xaml
+*/
+
 public partial class AppShell : Shell
 {
     public AppShell()

@@ -5,6 +5,10 @@
 
 namespace Image_View_V1._0.View.ChunkSection;
 
+/**
+* @brief Interaction logic for IHDRSection.xaml
+*/
+
 public partial class IHDRSection : ContentView
 {
 	public IHDRSection(ImageDetailsViewModel viewModel)

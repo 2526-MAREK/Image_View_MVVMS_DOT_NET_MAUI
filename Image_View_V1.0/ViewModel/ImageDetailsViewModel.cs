@@ -14,6 +14,10 @@ using Mopups.Interfaces;
 namespace Image_View_V1._0.ViewModel;
 
 [QueryProperty("ImageToProcess", "ImageToProcess")]
+/**
+* @brief The view model for the ImageDetailsPage.
+*/
+
 public partial class ImageDetailsViewModel : BaseViewModel
 {
     ImageDataBaseService imageDataBaseService;

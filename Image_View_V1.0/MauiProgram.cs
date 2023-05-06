@@ -14,6 +14,10 @@ using Mopups.Services;
 
 namespace Image_View_V1._0;
 
+/**
+* @brief The MauiProgram class, which is the entry point of the application.
+*/
+
 public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()

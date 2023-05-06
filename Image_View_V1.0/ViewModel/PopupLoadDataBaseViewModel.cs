@@ -9,9 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/**
+* @brief Represents the popup window for loading images from the database.
+*/
 namespace Image_View_V1._0.ViewModel
 {
-    
+    /**
+    * @brief Represents the popup window for loading images from the database.
+    */
     partial class PopupLoadDataBaseViewModel : INotifyPropertyChanged
     {
 

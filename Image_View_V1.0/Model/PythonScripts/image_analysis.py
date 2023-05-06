@@ -7,9 +7,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 
-class ImageAnalysis:
+## @class ImageAnalysis
+#  @brief A class to perform image analysis functions sych as histogram operations and Fast Fourier Transform.
 
-    """A class to perform image analysis functions."""
+class ImageAnalysis:
 
     def __init__(self):
         pass

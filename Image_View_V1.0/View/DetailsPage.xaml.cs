@@ -8,6 +8,10 @@ using Mopups.Services;
 
 namespace Image_View_V1._0;
 
+/**
+* @brief Interaction logic for DetailsPage.xaml
+*/
+
 public partial class DetailsPage : ContentPage
 {
     

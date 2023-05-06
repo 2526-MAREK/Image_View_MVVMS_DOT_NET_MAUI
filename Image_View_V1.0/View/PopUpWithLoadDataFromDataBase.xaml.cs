@@ -11,6 +11,10 @@ using Microsoft.Maui.Controls;
 
 namespace Image_View_V1._0;
 
+/**
+* @brief Interaction logic for PopUpWithLoadDataFromDataBase.xaml
+*/
+
 public partial class PopUpWithLoadDataFromDataBase : PopupPage
 {
     /*public PopUpWithLoadDataFromDataBases()//(PopUpWithLoadDataFromDataBaseViewModel popUpWithLoadDataFromDataBaseViewModel)

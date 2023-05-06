@@ -5,6 +5,10 @@
 
 namespace Image_View_V1._0.View;
 
+/**
+* @brief Interaction logic for MainPage.xaml
+*/
+
 public partial class MainPage : ContentPage
 {
     public MainPage(ImagesViewModel viewModel)

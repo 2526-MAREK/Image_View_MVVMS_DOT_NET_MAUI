@@ -8,6 +8,10 @@ using Image_View_V1._0.Helpers;
 
 namespace Image_View_V1._0.ViewModel;
 
+/**
+* @brief The view model for the Images page.
+*/
+
 public partial class ImagesViewModel : BaseViewModel
 {
     ImageService imageService;
