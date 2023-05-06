@@ -1,0 +1,318 @@
+\hypertarget{classchunk__parser_1_1_chunk_parser}{}\doxysection{chunk\+\_\+parser.\+Chunk\+Parser Class Reference}
+\label{classchunk__parser_1_1_chunk_parser}\index{chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}}
+
+
+A class to parse different types of PNG chunks and save their data to JSON files.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classchunk__parser_1_1_chunk_parser_a4eaf377d19cd600051a6ffe87db7a38d}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classchunk__parser_1_1_chunk_parser_ab8f9e11c4a8910c1a2f5b67acb78ddef}{get\+\_\+\+IHDR\+\_\+data}} (chunk\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Get IHDR chunk data. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classchunk__parser_1_1_chunk_parser_a45916c6451e612d6be542119dd8dde86}{get\+\_\+t\+EXt\+\_\+data}} (chunk\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Get t\+EXt chunk data. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classchunk__parser_1_1_chunk_parser_ad66435832ce796dbf537314c767928ef}{get\+\_\+t\+IME\+\_\+data}} (chunk\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Get t\+IME chunk data. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classchunk__parser_1_1_chunk_parser_ae5dbbcfed71121ceb7df762441222673}{get\+\_\+p\+HYs\+\_\+data}} (chunk\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Get p\+HYs chunk data. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classchunk__parser_1_1_chunk_parser_a0de75e01f4ba8e56749a52d8e09778a6}{get\+\_\+g\+AMA\+\_\+data}} (chunk\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Get g\+AMA chunk data. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classchunk__parser_1_1_chunk_parser_a563ba5955a260a56a2669cff88d279ba}{get\+\_\+h\+IST\+\_\+data}} (chunk\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Get h\+IST chunk data. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classchunk__parser_1_1_chunk_parser_aa7d832f0d13d30933cc580d16377203c}{get\+\_\+i\+TXt\+\_\+data}} (chunk\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Get i\+TXt chunk data. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classchunk__parser_1_1_chunk_parser_a401755ba548705d14a1eb8e7eaedf405}{get\+\_\+s\+PLT\+\_\+data}} (chunk\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Get s\+PLT chunk data. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classchunk__parser_1_1_chunk_parser_a193265602dd80d13649b4543226a251f}{get\+\_\+s\+TER\+\_\+data}} (chunk\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Get s\+RGB chunk data. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classchunk__parser_1_1_chunk_parser_a31476b49e6e8764d6a20ff38fd160b1f}{get\+\_\+s\+RGB\+\_\+data}} (chunk\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Get s\+RGB chunk data. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classchunk__parser_1_1_chunk_parser_a8e16b6cdc35ab1cdbf9dc0a6c014ed3b}{get\+\_\+s\+BIT\+\_\+data}} (chunk\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Get s\+BIT chunk data. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classchunk__parser_1_1_chunk_parser_a811e298001f37e86b231e6c3d8c00469}{get\+\_\+o\+FFs\+\_\+data}} (chunk\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Get o\+FFs chunk data. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classchunk__parser_1_1_chunk_parser_a235051716b03c3b349e6ce9269eeb510}{get\+\_\+chunk\+\_\+data}} (chunk\+\_\+name, chunk\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Get chunk data based on the chunk name. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classchunk__parser_1_1_chunk_parser_a16a4edf4da66d3366a926f1116d42701}{save\+\_\+chunk\+\_\+data\+\_\+to\+\_\+json}} (chunk\+\_\+name, chunk\+\_\+data, output\+\_\+folder)
+\begin{DoxyCompactList}\small\item\em Save the chunk data to a JSON file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class to parse different types of PNG chunks and save their data to JSON files. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classchunk__parser_1_1_chunk_parser_a4eaf377d19cd600051a6ffe87db7a38d}\label{classchunk__parser_1_1_chunk_parser_a4eaf377d19cd600051a6ffe87db7a38d}} 
+\index{chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def chunk\+\_\+parser.\+Chunk\+Parser.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classchunk__parser_1_1_chunk_parser_a235051716b03c3b349e6ce9269eeb510}\label{classchunk__parser_1_1_chunk_parser_a235051716b03c3b349e6ce9269eeb510}} 
+\index{chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}!get\_chunk\_data@{get\_chunk\_data}}
+\index{get\_chunk\_data@{get\_chunk\_data}!chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}}
+\doxysubsubsection{\texorpdfstring{get\_chunk\_data()}{get\_chunk\_data()}}
+{\footnotesize\ttfamily def chunk\+\_\+parser.\+Chunk\+Parser.\+get\+\_\+chunk\+\_\+data (\begin{DoxyParamCaption}\item[{}]{chunk\+\_\+name,  }\item[{}]{chunk\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get chunk data based on the chunk name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chunk\+\_\+name} & The name of the chunk to parse. \\
+\hline
+{\em chunk\+\_\+data} & The binary data of the chunk. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The chunk data as a dictionary or None if the chunk\+\_\+name is not supported. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classchunk__parser_1_1_chunk_parser_a0de75e01f4ba8e56749a52d8e09778a6}\label{classchunk__parser_1_1_chunk_parser_a0de75e01f4ba8e56749a52d8e09778a6}} 
+\index{chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}!get\_gAMA\_data@{get\_gAMA\_data}}
+\index{get\_gAMA\_data@{get\_gAMA\_data}!chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}}
+\doxysubsubsection{\texorpdfstring{get\_gAMA\_data()}{get\_gAMA\_data()}}
+{\footnotesize\ttfamily def chunk\+\_\+parser.\+Chunk\+Parser.\+get\+\_\+g\+AMA\+\_\+data (\begin{DoxyParamCaption}\item[{}]{chunk\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get g\+AMA chunk data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chunk\+\_\+data} & The binary data of the g\+AMA chunk. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A dictionary containing the g\+AMA chunk data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classchunk__parser_1_1_chunk_parser_a563ba5955a260a56a2669cff88d279ba}\label{classchunk__parser_1_1_chunk_parser_a563ba5955a260a56a2669cff88d279ba}} 
+\index{chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}!get\_hIST\_data@{get\_hIST\_data}}
+\index{get\_hIST\_data@{get\_hIST\_data}!chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}}
+\doxysubsubsection{\texorpdfstring{get\_hIST\_data()}{get\_hIST\_data()}}
+{\footnotesize\ttfamily def chunk\+\_\+parser.\+Chunk\+Parser.\+get\+\_\+h\+IST\+\_\+data (\begin{DoxyParamCaption}\item[{}]{chunk\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get h\+IST chunk data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chunk\+\_\+data} & The binary data of the h\+IST chunk. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A dictionary containing the h\+IST chunk data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classchunk__parser_1_1_chunk_parser_ab8f9e11c4a8910c1a2f5b67acb78ddef}\label{classchunk__parser_1_1_chunk_parser_ab8f9e11c4a8910c1a2f5b67acb78ddef}} 
+\index{chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}!get\_IHDR\_data@{get\_IHDR\_data}}
+\index{get\_IHDR\_data@{get\_IHDR\_data}!chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}}
+\doxysubsubsection{\texorpdfstring{get\_IHDR\_data()}{get\_IHDR\_data()}}
+{\footnotesize\ttfamily def chunk\+\_\+parser.\+Chunk\+Parser.\+get\+\_\+\+IHDR\+\_\+data (\begin{DoxyParamCaption}\item[{}]{chunk\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get IHDR chunk data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chunk\+\_\+data} & The binary data of the IHDR chunk. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A dictionary containing the IHDR chunk data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classchunk__parser_1_1_chunk_parser_aa7d832f0d13d30933cc580d16377203c}\label{classchunk__parser_1_1_chunk_parser_aa7d832f0d13d30933cc580d16377203c}} 
+\index{chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}!get\_iTXt\_data@{get\_iTXt\_data}}
+\index{get\_iTXt\_data@{get\_iTXt\_data}!chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}}
+\doxysubsubsection{\texorpdfstring{get\_iTXt\_data()}{get\_iTXt\_data()}}
+{\footnotesize\ttfamily def chunk\+\_\+parser.\+Chunk\+Parser.\+get\+\_\+i\+TXt\+\_\+data (\begin{DoxyParamCaption}\item[{}]{chunk\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get i\+TXt chunk data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chunk\+\_\+data} & The binary data of the i\+TXt chunk. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A dictionary containing the i\+TXt chunk data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classchunk__parser_1_1_chunk_parser_a811e298001f37e86b231e6c3d8c00469}\label{classchunk__parser_1_1_chunk_parser_a811e298001f37e86b231e6c3d8c00469}} 
+\index{chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}!get\_oFFs\_data@{get\_oFFs\_data}}
+\index{get\_oFFs\_data@{get\_oFFs\_data}!chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}}
+\doxysubsubsection{\texorpdfstring{get\_oFFs\_data()}{get\_oFFs\_data()}}
+{\footnotesize\ttfamily def chunk\+\_\+parser.\+Chunk\+Parser.\+get\+\_\+o\+FFs\+\_\+data (\begin{DoxyParamCaption}\item[{}]{chunk\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get o\+FFs chunk data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chunk\+\_\+data} & The binary data of the o\+FFs chunk. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A dictionary containing the o\+FFs chunk data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classchunk__parser_1_1_chunk_parser_ae5dbbcfed71121ceb7df762441222673}\label{classchunk__parser_1_1_chunk_parser_ae5dbbcfed71121ceb7df762441222673}} 
+\index{chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}!get\_pHYs\_data@{get\_pHYs\_data}}
+\index{get\_pHYs\_data@{get\_pHYs\_data}!chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}}
+\doxysubsubsection{\texorpdfstring{get\_pHYs\_data()}{get\_pHYs\_data()}}
+{\footnotesize\ttfamily def chunk\+\_\+parser.\+Chunk\+Parser.\+get\+\_\+p\+HYs\+\_\+data (\begin{DoxyParamCaption}\item[{}]{chunk\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get p\+HYs chunk data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chunk\+\_\+data} & The binary data of the p\+HYs chunk. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A dictionary containing the p\+HYs chunk data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classchunk__parser_1_1_chunk_parser_a8e16b6cdc35ab1cdbf9dc0a6c014ed3b}\label{classchunk__parser_1_1_chunk_parser_a8e16b6cdc35ab1cdbf9dc0a6c014ed3b}} 
+\index{chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}!get\_sBIT\_data@{get\_sBIT\_data}}
+\index{get\_sBIT\_data@{get\_sBIT\_data}!chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}}
+\doxysubsubsection{\texorpdfstring{get\_sBIT\_data()}{get\_sBIT\_data()}}
+{\footnotesize\ttfamily def chunk\+\_\+parser.\+Chunk\+Parser.\+get\+\_\+s\+BIT\+\_\+data (\begin{DoxyParamCaption}\item[{}]{chunk\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get s\+BIT chunk data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chunk\+\_\+data} & The binary data of the s\+BIT chunk. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A dictionary containing the s\+BIT chunk data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classchunk__parser_1_1_chunk_parser_a401755ba548705d14a1eb8e7eaedf405}\label{classchunk__parser_1_1_chunk_parser_a401755ba548705d14a1eb8e7eaedf405}} 
+\index{chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}!get\_sPLT\_data@{get\_sPLT\_data}}
+\index{get\_sPLT\_data@{get\_sPLT\_data}!chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}}
+\doxysubsubsection{\texorpdfstring{get\_sPLT\_data()}{get\_sPLT\_data()}}
+{\footnotesize\ttfamily def chunk\+\_\+parser.\+Chunk\+Parser.\+get\+\_\+s\+PLT\+\_\+data (\begin{DoxyParamCaption}\item[{}]{chunk\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get s\+PLT chunk data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chunk\+\_\+data} & The binary data of the s\+PLT chunk. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A dictionary containing the s\+PLT chunk data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classchunk__parser_1_1_chunk_parser_a31476b49e6e8764d6a20ff38fd160b1f}\label{classchunk__parser_1_1_chunk_parser_a31476b49e6e8764d6a20ff38fd160b1f}} 
+\index{chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}!get\_sRGB\_data@{get\_sRGB\_data}}
+\index{get\_sRGB\_data@{get\_sRGB\_data}!chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}}
+\doxysubsubsection{\texorpdfstring{get\_sRGB\_data()}{get\_sRGB\_data()}}
+{\footnotesize\ttfamily def chunk\+\_\+parser.\+Chunk\+Parser.\+get\+\_\+s\+RGB\+\_\+data (\begin{DoxyParamCaption}\item[{}]{chunk\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get s\+RGB chunk data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chunk\+\_\+data} & The binary data of the s\+RGB chunk. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A dictionary containing the s\+RGB chunk data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classchunk__parser_1_1_chunk_parser_a193265602dd80d13649b4543226a251f}\label{classchunk__parser_1_1_chunk_parser_a193265602dd80d13649b4543226a251f}} 
+\index{chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}!get\_sTER\_data@{get\_sTER\_data}}
+\index{get\_sTER\_data@{get\_sTER\_data}!chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}}
+\doxysubsubsection{\texorpdfstring{get\_sTER\_data()}{get\_sTER\_data()}}
+{\footnotesize\ttfamily def chunk\+\_\+parser.\+Chunk\+Parser.\+get\+\_\+s\+TER\+\_\+data (\begin{DoxyParamCaption}\item[{}]{chunk\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get s\+RGB chunk data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chunk\+\_\+data} & The binary data of the s\+RGB chunk. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A dictionary containing the s\+RGB chunk data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classchunk__parser_1_1_chunk_parser_a45916c6451e612d6be542119dd8dde86}\label{classchunk__parser_1_1_chunk_parser_a45916c6451e612d6be542119dd8dde86}} 
+\index{chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}!get\_tEXt\_data@{get\_tEXt\_data}}
+\index{get\_tEXt\_data@{get\_tEXt\_data}!chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}}
+\doxysubsubsection{\texorpdfstring{get\_tEXt\_data()}{get\_tEXt\_data()}}
+{\footnotesize\ttfamily def chunk\+\_\+parser.\+Chunk\+Parser.\+get\+\_\+t\+EXt\+\_\+data (\begin{DoxyParamCaption}\item[{}]{chunk\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get t\+EXt chunk data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chunk\+\_\+data} & The binary data of the t\+EXt chunk. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A dictionary containing the t\+EXt chunk data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classchunk__parser_1_1_chunk_parser_ad66435832ce796dbf537314c767928ef}\label{classchunk__parser_1_1_chunk_parser_ad66435832ce796dbf537314c767928ef}} 
+\index{chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}!get\_tIME\_data@{get\_tIME\_data}}
+\index{get\_tIME\_data@{get\_tIME\_data}!chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}}
+\doxysubsubsection{\texorpdfstring{get\_tIME\_data()}{get\_tIME\_data()}}
+{\footnotesize\ttfamily def chunk\+\_\+parser.\+Chunk\+Parser.\+get\+\_\+t\+IME\+\_\+data (\begin{DoxyParamCaption}\item[{}]{chunk\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get t\+IME chunk data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chunk\+\_\+data} & The binary data of the t\+IME chunk. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A dictionary containing the t\+IME chunk data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classchunk__parser_1_1_chunk_parser_a16a4edf4da66d3366a926f1116d42701}\label{classchunk__parser_1_1_chunk_parser_a16a4edf4da66d3366a926f1116d42701}} 
+\index{chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}!save\_chunk\_data\_to\_json@{save\_chunk\_data\_to\_json}}
+\index{save\_chunk\_data\_to\_json@{save\_chunk\_data\_to\_json}!chunk\_parser.ChunkParser@{chunk\_parser.ChunkParser}}
+\doxysubsubsection{\texorpdfstring{save\_chunk\_data\_to\_json()}{save\_chunk\_data\_to\_json()}}
+{\footnotesize\ttfamily def chunk\+\_\+parser.\+Chunk\+Parser.\+save\+\_\+chunk\+\_\+data\+\_\+to\+\_\+json (\begin{DoxyParamCaption}\item[{}]{chunk\+\_\+name,  }\item[{}]{chunk\+\_\+data,  }\item[{}]{output\+\_\+folder }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Save the chunk data to a JSON file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chunk\+\_\+name} & The name of the chunk to save. \\
+\hline
+{\em chunk\+\_\+data} & The binary data of the chunk. \\
+\hline
+{\em output\+\_\+folder} & The folder to save the JSON file to. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/erykwojcik/\+Documents/\+Git\+Hub/\+Image\+\_\+\+View\+\_\+\+MVVC/\+Image\+\_\+\+View\+\_\+\+V1.\+0/\+Model/\+Python\+Scripts/\mbox{\hyperlink{chunk__parser_8py}{chunk\+\_\+parser.\+py}}\end{DoxyCompactItemize}

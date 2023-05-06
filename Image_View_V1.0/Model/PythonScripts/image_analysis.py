@@ -1,3 +1,7 @@
+## @file image_analysis.py
+# @brief This module provides image analysis functions, such as Fast Fourier Transform, histogram calculation, and thumbnail creation.
+
+
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -5,12 +9,21 @@ from PIL import Image
 
 class ImageAnalysis:
 
+    """A class to perform image analysis functions."""
+
     def __init__(self):
         pass
 
 
     @staticmethod
     def fft_of_image(image_path, output_path, draw_plots):
+        """
+        Computes the Fast Fourier Transform (FFT) of an input image and saves the magnitude spectrum as an image.
+        
+        @param image_path: A string representing the path of the input image.
+        @param output_path: A string representing the path where the output FFT image will be saved.
+        @param draw_plots: A boolean indicating whether to display the input image and magnitude spectrum plot.
+        """
 
         img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
         # if image is 1x1 break
@@ -32,6 +45,12 @@ class ImageAnalysis:
 
     @staticmethod
     def transform_hist(hist_data):
+        """
+        Transforms histogram data to a NumPy array with float data type.
+        
+        @param hist_data: A dictionary containing the histogram data.
+        @return: A NumPy array with transformed histogram data.
+        """
         hist = hist_data['Histogram']
         result = np.zeros((256, 1), dtype=float)
 
@@ -43,6 +62,15 @@ class ImageAnalysis:
 
     @staticmethod
     def histogram_of_image(image_path, output_folder, output_imgs_folder, draw_plots, hIST):
+        """
+        Computes the histogram of an input image, saves the histogram plots as images, and optionally displays the plots.
+        
+        @param image_path: A string representing the path of the input image.
+        @param output_folder: A string representing the path of the output folder.
+        @param output_imgs_folder: A string representing the path of the folder to save histogram plot images.
+        @param draw_plots: A boolean indicating whether to display the histogram plots.
+        @param hIST: A dictionary containing histogram data (if provided) or None.
+        """
         # Load the image
         img = cv2.imread(image_path)
         img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -106,6 +134,13 @@ class ImageAnalysis:
 
     @staticmethod
     def create_thumbnail(input_image_path, output_image_path, thumbnail_size=(128, 128)):
+        """
+        Creates a thumbnail of the input image with the specified size and saves it as a PNG image.
+        
+        @param input_image_path: A string representing the path of the input image.
+        @param output_image_path: A string representing the path where the output thumbnail image will be saved.
+        @param thumbnail_size: A tuple containing the width and height of the thumbnail (default is (128, 128)).
+        """
         with Image.open(input_image_path) as img:
             img.thumbnail(thumbnail_size)
             img.save(output_image_path + "thumbnail_output.png", 'PNG')

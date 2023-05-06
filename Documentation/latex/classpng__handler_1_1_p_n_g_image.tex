@@ -1,0 +1,106 @@
+\hypertarget{classpng__handler_1_1_p_n_g_image}{}\doxysection{png\+\_\+handler.\+PNGImage Class Reference}
+\label{classpng__handler_1_1_p_n_g_image}\index{png\_handler.PNGImage@{png\_handler.PNGImage}}
+
+
+A class for processing PNG images.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpng__handler_1_1_p_n_g_image_a5d9a949fd19d3425a8e52fb86b2dc82d}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classpng__handler_1_1_p_n_g_image_ad7b7bf6aff71b55b18735f1dbafbd2f2}{get\+\_\+chunk}} (file)
+\begin{DoxyCompactList}\small\item\em Reads a chunk from a PNG file. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpng__handler_1_1_p_n_g_image_ac51e8222d869e4c21caa7c8cbe8df068}{delete\+\_\+output\+\_\+files}} (output\+\_\+folder, output\+\_\+folder\+\_\+img)
+\begin{DoxyCompactList}\small\item\em Deletes output files from the specified folders. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpng__handler_1_1_p_n_g_image_af61edecd50fbe0c0547732667ada84f1}{delete\+\_\+redundant\+\_\+chunks}} (input\+\_\+file\+\_\+path, output\+\_\+file\+\_\+path)
+\begin{DoxyCompactList}\small\item\em Removes redundant chunks from the input PNG file and saves the result to the output file. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classpng__handler_1_1_p_n_g_image_accc953e77ca357389086fbfc6710db40}{remove\+\_\+unwanted\+\_\+chunks}} (png\+\_\+file, output\+\_\+file)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class for processing PNG images. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpng__handler_1_1_p_n_g_image_a5d9a949fd19d3425a8e52fb86b2dc82d}\label{classpng__handler_1_1_p_n_g_image_a5d9a949fd19d3425a8e52fb86b2dc82d}} 
+\index{png\_handler.PNGImage@{png\_handler.PNGImage}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!png\_handler.PNGImage@{png\_handler.PNGImage}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def png\+\_\+handler.\+PNGImage.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classpng__handler_1_1_p_n_g_image_ac51e8222d869e4c21caa7c8cbe8df068}\label{classpng__handler_1_1_p_n_g_image_ac51e8222d869e4c21caa7c8cbe8df068}} 
+\index{png\_handler.PNGImage@{png\_handler.PNGImage}!delete\_output\_files@{delete\_output\_files}}
+\index{delete\_output\_files@{delete\_output\_files}!png\_handler.PNGImage@{png\_handler.PNGImage}}
+\doxysubsubsection{\texorpdfstring{delete\_output\_files()}{delete\_output\_files()}}
+{\footnotesize\ttfamily def png\+\_\+handler.\+PNGImage.\+delete\+\_\+output\+\_\+files (\begin{DoxyParamCaption}\item[{}]{output\+\_\+folder,  }\item[{}]{output\+\_\+folder\+\_\+img }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Deletes output files from the specified folders. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output\+\_\+folder} & The folder containing output JSON files. \\
+\hline
+{\em output\+\_\+folder\+\_\+img} & The folder containing output image files. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpng__handler_1_1_p_n_g_image_af61edecd50fbe0c0547732667ada84f1}\label{classpng__handler_1_1_p_n_g_image_af61edecd50fbe0c0547732667ada84f1}} 
+\index{png\_handler.PNGImage@{png\_handler.PNGImage}!delete\_redundant\_chunks@{delete\_redundant\_chunks}}
+\index{delete\_redundant\_chunks@{delete\_redundant\_chunks}!png\_handler.PNGImage@{png\_handler.PNGImage}}
+\doxysubsubsection{\texorpdfstring{delete\_redundant\_chunks()}{delete\_redundant\_chunks()}}
+{\footnotesize\ttfamily def png\+\_\+handler.\+PNGImage.\+delete\+\_\+redundant\+\_\+chunks (\begin{DoxyParamCaption}\item[{}]{input\+\_\+file\+\_\+path,  }\item[{}]{output\+\_\+file\+\_\+path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Removes redundant chunks from the input PNG file and saves the result to the output file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+file\+\_\+path} & The path to the input PNG file. \\
+\hline
+{\em output\+\_\+file\+\_\+path} & The path to the output PNG file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classpng__handler_1_1_p_n_g_image_ad7b7bf6aff71b55b18735f1dbafbd2f2}\label{classpng__handler_1_1_p_n_g_image_ad7b7bf6aff71b55b18735f1dbafbd2f2}} 
+\index{png\_handler.PNGImage@{png\_handler.PNGImage}!get\_chunk@{get\_chunk}}
+\index{get\_chunk@{get\_chunk}!png\_handler.PNGImage@{png\_handler.PNGImage}}
+\doxysubsubsection{\texorpdfstring{get\_chunk()}{get\_chunk()}}
+{\footnotesize\ttfamily def png\+\_\+handler.\+PNGImage.\+get\+\_\+chunk (\begin{DoxyParamCaption}\item[{}]{file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Reads a chunk from a PNG file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & The file object to read the chunk from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tuple containing the chunk name and the chunk data. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Value\+Error} & Raised if the CRC check fails. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classpng__handler_1_1_p_n_g_image_accc953e77ca357389086fbfc6710db40}\label{classpng__handler_1_1_p_n_g_image_accc953e77ca357389086fbfc6710db40}} 
+\index{png\_handler.PNGImage@{png\_handler.PNGImage}!remove\_unwanted\_chunks@{remove\_unwanted\_chunks}}
+\index{remove\_unwanted\_chunks@{remove\_unwanted\_chunks}!png\_handler.PNGImage@{png\_handler.PNGImage}}
+\doxysubsubsection{\texorpdfstring{remove\_unwanted\_chunks()}{remove\_unwanted\_chunks()}}
+{\footnotesize\ttfamily def png\+\_\+handler.\+PNGImage.\+remove\+\_\+unwanted\+\_\+chunks (\begin{DoxyParamCaption}\item[{}]{png\+\_\+file,  }\item[{}]{output\+\_\+file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/erykwojcik/\+Documents/\+Git\+Hub/\+Image\+\_\+\+View\+\_\+\+MVVC/\+Image\+\_\+\+View\+\_\+\+V1.\+0/\+Model/\+Python\+Scripts/\mbox{\hyperlink{png__handler_8py}{png\+\_\+handler.\+py}}\end{DoxyCompactItemize}

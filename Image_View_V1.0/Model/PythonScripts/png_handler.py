@@ -1,11 +1,21 @@
+## @file PNGImage.py
+#  @brief This module provides the PNGImage class for processing PNG images.
+
 import os
 import zlib
 import struct
+
+## @class PNGImage
+#  @brief A class for processing PNG images.
 
 class PNGImage:
     def __init__(self):
         pass
 
+    ## @brief Reads a chunk from a PNG file.
+    #  @param file The file object to read the chunk from.
+    #  @return A tuple containing the chunk name and the chunk data.
+    #  @exception ValueError Raised if the CRC check fails.
     @staticmethod
     def get_chunk(file):
         length = int.from_bytes(file.read(4), byteorder='big')  # Read chunk length
@@ -18,6 +28,9 @@ class PNGImage:
         return chunk_name, chunk_data
 
 
+    ## @brief Deletes output files from the specified folders.
+    #  @param output_folder The folder containing output JSON files.
+    #  @param output_folder_img The folder containing output image files.
     @staticmethod
     def delete_output_files(output_folder, output_folder_img):
         if os.path.exists(output_folder + "IHDR.json"):
@@ -64,6 +77,9 @@ class PNGImage:
             os.remove(output_folder_img + "fft.png")
 
 
+    ## @brief Removes redundant chunks from the input PNG file and saves the result to the output file.
+    #  @param input_file_path The path to the input PNG file.
+    #  @param output_file_path The path to the output PNG file.
     @staticmethod
     def delete_redundant_chunks(input_file_path, output_file_path):
         essential_chunks = {'IHDR', 'IDAT', 'IEND'}
@@ -90,7 +106,9 @@ class PNGImage:
                 if chunk_name == 'IEND':
                     break
 
-
+    ## @brief Removes unwanted chunks from the input PNG file and saves the result to the output file.
+    #  @param png_file The path to the input PNG file.
+    #  @param output_file The path to the output PNG file.
     @staticmethod
     def remove_unwanted_chunks(png_file, output_file):
         with open(png_file, 'rb') as src, open(output_file, 'wb') as dest:

@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['chartdata_7261',['ChartData',['../class_image___view___v1_1_1__0_1_1_model_1_1_chart_data.html',1,'Image_View_V1::_0::Model']]],
+  ['chunkentriestype_7262',['ChunkEntriesType',['../class_image___view___v1_1_1__0_1_1_model_1_1_chunk_entries_type.html',1,'Image_View_V1::_0::Model']]],
+  ['chunkgama_7263',['ChunkgAMA',['../class_image___view___v1_1_1__0_1_1_model_1_1_chunkg_a_m_a.html',1,'Image_View_V1::_0::Model']]],
+  ['chunkhist_7264',['ChunkhIST',['../class_image___view___v1_1_1__0_1_1_model_1_1_chunkh_i_s_t.html',1,'Image_View_V1::_0::Model']]],
+  ['chunkihdr_7265',['ChunkIHDR',['../class_image___view___v1_1_1__0_1_1_model_1_1_chunk_i_h_d_r.html',1,'Image_View_V1::_0::Model']]],
+  ['chunkitxt_7266',['ChunkiTXt',['../class_image___view___v1_1_1__0_1_1_model_1_1_chunki_t_xt.html',1,'Image_View_V1::_0::Model']]],
+  ['chunkoffs_7267',['ChunkoFFs',['../class_image___view___v1_1_1__0_1_1_model_1_1_chunko_f_fs.html',1,'Image_View_V1::_0::Model']]],
+  ['chunkparser_7268',['ChunkParser',['../classchunk__parser_1_1_chunk_parser.html',1,'chunk_parser']]],
+  ['chunkphys_7269',['ChunkpHYs',['../class_image___view___v1_1_1__0_1_1_model_1_1_chunkp_h_ys.html',1,'Image_View_V1::_0::Model']]],
+  ['chunksbit_7270',['ChunksBIT',['../class_image___view___v1_1_1__0_1_1_model_1_1_chunks_b_i_t.html',1,'Image_View_V1::_0::Model']]],
+  ['chunksplt_7271',['ChunksPLT',['../class_image___view___v1_1_1__0_1_1_model_1_1_chunks_p_l_t.html',1,'Image_View_V1::_0::Model']]],
+  ['chunksrgb_7272',['ChunksRGB',['../class_image___view___v1_1_1__0_1_1_model_1_1_chunks_r_g_b.html',1,'Image_View_V1::_0::Model']]],
+  ['chunkster_7273',['ChunksTER',['../class_image___view___v1_1_1__0_1_1_model_1_1_chunks_t_e_r.html',1,'Image_View_V1::_0::Model']]],
+  ['chunktext_7274',['ChunktEXt',['../class_image___view___v1_1_1__0_1_1_model_1_1_chunkt_e_xt.html',1,'Image_View_V1::_0::Model']]],
+  ['chunktime_7275',['ChunktIME',['../class_image___view___v1_1_1__0_1_1_model_1_1_chunkt_i_m_e.html',1,'Image_View_V1::_0::Model']]],
+  ['color_7276',['color',['../classandroidx_1_1appcompat_1_1_r_1_1color.html',1,'androidx.appcompat.R.color'],['../classandroidx_1_1browser_1_1_r_1_1color.html',1,'androidx.browser.R.color'],['../classandroidx_1_1cardview_1_1_r_1_1color.html',1,'androidx.cardview.R.color'],['../classandroidx_1_1constraintlayout_1_1widget_1_1_r_1_1color.html',1,'androidx.constraintlayout.widget.R.color'],['../classandroidx_1_1core_1_1_r_1_1color.html',1,'androidx.core.R.color'],['../classandroidx_1_1drawerlayout_1_1_r_1_1color.html',1,'androidx.drawerlayout.R.color'],['../classandroidx_1_1media_1_1_r_1_1color.html',1,'androidx.media.R.color'],['../classandroidx_1_1recyclerview_1_1_r_1_1color.html',1,'androidx.recyclerview.R.color'],['../classandroidx_1_1swiperefreshlayout_1_1_r_1_1color.html',1,'androidx.swiperefreshlayout.R.color'],['../classandroidx_1_1transition_1_1_r_1_1color.html',1,'androidx.transition.R.color'],['../classandroidx_1_1viewpager2_1_1_r_1_1color.html',1,'androidx.viewpager2.R.color'],['../classcom_1_1bumptech_1_1glide_1_1_r_1_1color.html',1,'com.bumptech.glide.R.color'],['../classcom_1_1google_1_1android_1_1material_1_1_r_1_1color.html',1,'com.google.android.material.R.color'],['../classcom_1_1microsoft_1_1maui_1_1_r_1_1color.html',1,'com.microsoft.maui.R.color']]],
+  ['color_7277',['Color',['../class_image___view___v1_1_1__0_1_1_resource_1_1_color.html',1,'Image_View_V1::_0::Resource']]]
+];

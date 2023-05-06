@@ -1,15 +1,26 @@
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-#                                                               #
-#     Napisz flage jeśli chcesz ustawić tą wartość na True:     #
-#                                                               #
-#     Flagi:                                                    #
-#   --windows      - jeśli uruchamiamy na Windowsie             #
-#   --draw_fft     - rysuje FFT                                 #
-#   --draw_hist    - rysuje histogram                           #
-#   --print_info   - wypisuje informacje o pliku                #
-#   --clear_chunks - usuwa metadane obrazu, aktualizuje jsony   #
-#                                                               #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+## @file ImageProcess.py
+# @brief This is the main script of the Image Analysis and Processing module.
+
+
+"""
+Image Analysis and Processing Script
+
+This script provides functionality to analyze and process PNG images. Available options include:
+- Running the script on Windows
+- Drawing Fast Fourier Transform (FFT)
+- Drawing histogram
+- Printing information about the image file
+- Clearing metadata chunks from the image and updating JSON files
+
+Usage:
+    Run the script with desired flags to enable specific features.
+    Flags:
+        --windows      - if running on Windows
+        --draw_fft     - draw FFT
+        --draw_hist    - draw histogram
+        --print_info   - print information about the file
+        --clear_chunks - remove image metadata and update JSON files
+"""
 
 from png_handler import PNGImage
 from chunk_parser import ChunkParser
@@ -38,7 +49,6 @@ else:
 # Only for debugging:
 # file_name = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Model/PythonScripts/ExampleImages/gAMA.png"
 # file_name = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Resources/Images/cleaned.png"
-#
 
 hIST = None
 PNGImage.delete_output_files(output_json_folder, output_imgs_folder)

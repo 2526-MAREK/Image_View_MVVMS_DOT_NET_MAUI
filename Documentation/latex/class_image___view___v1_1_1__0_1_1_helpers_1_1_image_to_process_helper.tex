@@ -1,0 +1,64 @@
+\hypertarget{class_image___view___v1_1_1__0_1_1_helpers_1_1_image_to_process_helper}{}\doxysection{Image\+\_\+\+View\+\_\+\+V1.\+\_\+0.\+Helpers.\+Image\+To\+Process\+Helper Class Reference}
+\label{class_image___view___v1_1_1__0_1_1_helpers_1_1_image_to_process_helper}\index{Image\_View\_V1.\_0.Helpers.ImageToProcessHelper@{Image\_View\_V1.\_0.Helpers.ImageToProcessHelper}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+async Task$<$ byte\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{class_image___view___v1_1_1__0_1_1_helpers_1_1_image_to_process_helper_a54ea8f7124c84c4e3c5f7497bd7ac68a}{Image\+Source\+To\+Byte\+Array\+Async}} (Image\+Source image\+Source)
+\item 
+Image\+Source \mbox{\hyperlink{class_image___view___v1_1_1__0_1_1_helpers_1_1_image_to_process_helper_a170eabbec766bca45b29a0244b3f916c}{Byte\+Array\+To\+Image\+Source}} (byte\mbox{[}$\,$\mbox{]} image\+Bytes)
+\item 
+T \mbox{\hyperlink{class_image___view___v1_1_1__0_1_1_helpers_1_1_image_to_process_helper_a24d93ff862b42f77605ba6b47205500e}{Deserialize\+Chunk$<$ T $>$}} (string json)
+\item 
+string \mbox{\hyperlink{class_image___view___v1_1_1__0_1_1_helpers_1_1_image_to_process_helper_a41c19f51f54bb9f3022b82b9ccc0fa02}{Serialize\+Chunk$<$ T $>$}} (T chunk)
+\item 
+async Task$<$(T chunk, string json)$>$ \mbox{\hyperlink{class_image___view___v1_1_1__0_1_1_helpers_1_1_image_to_process_helper_adecddf555b21346ce2677979319a9f99}{Load\+Chunk\+Data$<$ T $>$}} (Func$<$ Task$<$ T $>$$>$ get\+Chunk\+Method)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+async Task$<$ Stream\+Image\+Source $>$ \mbox{\hyperlink{class_image___view___v1_1_1__0_1_1_helpers_1_1_image_to_process_helper_a7c707c10fe4305b90b0370e113d38c6a}{Convert\+File\+Image\+Source\+To\+File\+Stream\+Image\+Source}} (File\+Image\+Source file\+Image\+Source)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_image___view___v1_1_1__0_1_1_helpers_1_1_image_to_process_helper_a170eabbec766bca45b29a0244b3f916c}\label{class_image___view___v1_1_1__0_1_1_helpers_1_1_image_to_process_helper_a170eabbec766bca45b29a0244b3f916c}} 
+\index{Image\_View\_V1.\_0.Helpers.ImageToProcessHelper@{Image\_View\_V1.\_0.Helpers.ImageToProcessHelper}!ByteArrayToImageSource@{ByteArrayToImageSource}}
+\index{ByteArrayToImageSource@{ByteArrayToImageSource}!Image\_View\_V1.\_0.Helpers.ImageToProcessHelper@{Image\_View\_V1.\_0.Helpers.ImageToProcessHelper}}
+\doxysubsubsection{\texorpdfstring{ByteArrayToImageSource()}{ByteArrayToImageSource()}}
+{\footnotesize\ttfamily Image\+Source Image\+\_\+\+View\+\_\+\+V1.\+\_\+0.\+Helpers.\+Image\+To\+Process\+Helper.\+Byte\+Array\+To\+Image\+Source (\begin{DoxyParamCaption}\item[{byte\mbox{[}$\,$\mbox{]}}]{image\+Bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_image___view___v1_1_1__0_1_1_helpers_1_1_image_to_process_helper_a7c707c10fe4305b90b0370e113d38c6a}\label{class_image___view___v1_1_1__0_1_1_helpers_1_1_image_to_process_helper_a7c707c10fe4305b90b0370e113d38c6a}} 
+\index{Image\_View\_V1.\_0.Helpers.ImageToProcessHelper@{Image\_View\_V1.\_0.Helpers.ImageToProcessHelper}!ConvertFileImageSourceToFileStreamImageSource@{ConvertFileImageSourceToFileStreamImageSource}}
+\index{ConvertFileImageSourceToFileStreamImageSource@{ConvertFileImageSourceToFileStreamImageSource}!Image\_View\_V1.\_0.Helpers.ImageToProcessHelper@{Image\_View\_V1.\_0.Helpers.ImageToProcessHelper}}
+\doxysubsubsection{\texorpdfstring{ConvertFileImageSourceToFileStreamImageSource()}{ConvertFileImageSourceToFileStreamImageSource()}}
+{\footnotesize\ttfamily async Task$<$Stream\+Image\+Source$>$ Image\+\_\+\+View\+\_\+\+V1.\+\_\+0.\+Helpers.\+Image\+To\+Process\+Helper.\+Convert\+File\+Image\+Source\+To\+File\+Stream\+Image\+Source (\begin{DoxyParamCaption}\item[{File\+Image\+Source}]{file\+Image\+Source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_image___view___v1_1_1__0_1_1_helpers_1_1_image_to_process_helper_a24d93ff862b42f77605ba6b47205500e}\label{class_image___view___v1_1_1__0_1_1_helpers_1_1_image_to_process_helper_a24d93ff862b42f77605ba6b47205500e}} 
+\index{Image\_View\_V1.\_0.Helpers.ImageToProcessHelper@{Image\_View\_V1.\_0.Helpers.ImageToProcessHelper}!DeserializeChunk$<$ T $>$@{DeserializeChunk$<$ T $>$}}
+\index{DeserializeChunk$<$ T $>$@{DeserializeChunk$<$ T $>$}!Image\_View\_V1.\_0.Helpers.ImageToProcessHelper@{Image\_View\_V1.\_0.Helpers.ImageToProcessHelper}}
+\doxysubsubsection{\texorpdfstring{DeserializeChunk$<$ T $>$()}{DeserializeChunk< T >()}}
+{\footnotesize\ttfamily T Image\+\_\+\+View\+\_\+\+V1.\+\_\+0.\+Helpers.\+Image\+To\+Process\+Helper.\+Deserialize\+Chunk$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_image___view___v1_1_1__0_1_1_helpers_1_1_image_to_process_helper_a54ea8f7124c84c4e3c5f7497bd7ac68a}\label{class_image___view___v1_1_1__0_1_1_helpers_1_1_image_to_process_helper_a54ea8f7124c84c4e3c5f7497bd7ac68a}} 
+\index{Image\_View\_V1.\_0.Helpers.ImageToProcessHelper@{Image\_View\_V1.\_0.Helpers.ImageToProcessHelper}!ImageSourceToByteArrayAsync@{ImageSourceToByteArrayAsync}}
+\index{ImageSourceToByteArrayAsync@{ImageSourceToByteArrayAsync}!Image\_View\_V1.\_0.Helpers.ImageToProcessHelper@{Image\_View\_V1.\_0.Helpers.ImageToProcessHelper}}
+\doxysubsubsection{\texorpdfstring{ImageSourceToByteArrayAsync()}{ImageSourceToByteArrayAsync()}}
+{\footnotesize\ttfamily async Task$<$byte\mbox{[}$\,$\mbox{]}$>$ Image\+\_\+\+View\+\_\+\+V1.\+\_\+0.\+Helpers.\+Image\+To\+Process\+Helper.\+Image\+Source\+To\+Byte\+Array\+Async (\begin{DoxyParamCaption}\item[{Image\+Source}]{image\+Source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_image___view___v1_1_1__0_1_1_helpers_1_1_image_to_process_helper_adecddf555b21346ce2677979319a9f99}\label{class_image___view___v1_1_1__0_1_1_helpers_1_1_image_to_process_helper_adecddf555b21346ce2677979319a9f99}} 
+\index{Image\_View\_V1.\_0.Helpers.ImageToProcessHelper@{Image\_View\_V1.\_0.Helpers.ImageToProcessHelper}!LoadChunkData$<$ T $>$@{LoadChunkData$<$ T $>$}}
+\index{LoadChunkData$<$ T $>$@{LoadChunkData$<$ T $>$}!Image\_View\_V1.\_0.Helpers.ImageToProcessHelper@{Image\_View\_V1.\_0.Helpers.ImageToProcessHelper}}
+\doxysubsubsection{\texorpdfstring{LoadChunkData$<$ T $>$()}{LoadChunkData< T >()}}
+{\footnotesize\ttfamily async Task$<$(T chunk, string json)$>$ Image\+\_\+\+View\+\_\+\+V1.\+\_\+0.\+Helpers.\+Image\+To\+Process\+Helper.\+Load\+Chunk\+Data$<$ T $>$ (\begin{DoxyParamCaption}\item[{Func$<$ Task$<$ T $>$$>$}]{get\+Chunk\+Method }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_image___view___v1_1_1__0_1_1_helpers_1_1_image_to_process_helper_a41c19f51f54bb9f3022b82b9ccc0fa02}\label{class_image___view___v1_1_1__0_1_1_helpers_1_1_image_to_process_helper_a41c19f51f54bb9f3022b82b9ccc0fa02}} 
+\index{Image\_View\_V1.\_0.Helpers.ImageToProcessHelper@{Image\_View\_V1.\_0.Helpers.ImageToProcessHelper}!SerializeChunk$<$ T $>$@{SerializeChunk$<$ T $>$}}
+\index{SerializeChunk$<$ T $>$@{SerializeChunk$<$ T $>$}!Image\_View\_V1.\_0.Helpers.ImageToProcessHelper@{Image\_View\_V1.\_0.Helpers.ImageToProcessHelper}}
+\doxysubsubsection{\texorpdfstring{SerializeChunk$<$ T $>$()}{SerializeChunk< T >()}}
+{\footnotesize\ttfamily string Image\+\_\+\+View\+\_\+\+V1.\+\_\+0.\+Helpers.\+Image\+To\+Process\+Helper.\+Serialize\+Chunk$<$ T $>$ (\begin{DoxyParamCaption}\item[{T}]{chunk }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/erykwojcik/\+Documents/\+Git\+Hub/\+Image\+\_\+\+View\+\_\+\+MVVC/\+Image\+\_\+\+View\+\_\+\+V1.\+0/\+Helpers/\mbox{\hyperlink{_image_to_process_helper_8cs}{Image\+To\+Process\+Helper.\+cs}}\end{DoxyCompactItemize}

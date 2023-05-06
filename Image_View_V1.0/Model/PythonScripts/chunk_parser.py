@@ -1,11 +1,20 @@
+## @file chunk_parser.py
+# @brief This script provides functionality to parse different types of PNG chunks and save their data to JSON files.
+
 import json
 
+## @class ChunkParser
+#  @brief A class to parse different types of PNG chunks and save their data to JSON files.
 
 class ChunkParser:
 
     def __init__(self):
         pass
 
+
+    ## @brief Get IHDR chunk data.
+    #  @param chunk_data The binary data of the IHDR chunk.
+    #  @return A dictionary containing the IHDR chunk data.
     @staticmethod
     def get_IHDR_data(chunk_data):
         width = int.from_bytes(chunk_data[0:4], byteorder='big')
@@ -24,6 +33,9 @@ class ChunkParser:
                 'interlace_method': interlace_method}
 
 
+    ## @brief Get tEXt chunk data.
+    #  @param chunk_data The binary data of the tEXt chunk.
+    #  @return A dictionary containing the tEXt chunk data.
     @staticmethod
     def get_tEXt_data(chunk_data):
         null_byte_index = chunk_data.find(b'\x00')
@@ -33,6 +45,9 @@ class ChunkParser:
                 'Text': text}
 
 
+    ## @brief Get tIME chunk data.
+    #  @param chunk_data The binary data of the tIME chunk.
+    #  @return A dictionary containing the tIME chunk data.
     @staticmethod
     def get_tIME_data(chunk_data):
         year = int.from_bytes(chunk_data[:2], byteorder='big')
@@ -49,6 +64,9 @@ class ChunkParser:
                 'Second': second}
 
 
+    ## @brief Get pHYs chunk data.
+    #  @param chunk_data The binary data of the pHYs chunk.
+    #  @return A dictionary containing the pHYs chunk data.
     @staticmethod
     def get_pHYs_data(chunk_data):
         pixels_per_unit_x = int.from_bytes(chunk_data[:4], byteorder='big')
@@ -59,18 +77,28 @@ class ChunkParser:
                 'UnitSpecifier': unit_specifier}
 
 
+    ## @brief Get gAMA chunk data.
+    #  @param chunk_data The binary data of the gAMA chunk.
+    #  @return A dictionary containing the gAMA chunk data.
     @staticmethod
     def get_gAMA_data(chunk_data):
         gamma = int.from_bytes(chunk_data, byteorder='big')
         return {'Gamma': gamma}
 
 
+
+    ## @brief Get hIST chunk data.
+    #  @param chunk_data The binary data of the hIST chunk.
+    #  @return A dictionary containing the hIST chunk data.
     @staticmethod
     def get_hIST_data(chunk_data):
         hist_values = [int.from_bytes(chunk_data[i:i + 2], byteorder='big') for i in range(0, len(chunk_data), 2)]
         return {'Histogram': hist_values}
 
 
+    ## @brief Get iTXt chunk data.
+    #  @param chunk_data The binary data of the iTXt chunk.
+    #  @return A dictionary containing the iTXt chunk data.
     @staticmethod
     def get_iTXt_data(chunk_data):
         null_byte_index = chunk_data.find(b'\x00')
@@ -92,6 +120,9 @@ class ChunkParser:
         }
 
 
+    ## @brief Get sPLT chunk data.
+    #  @param chunk_data The binary data of the sPLT chunk.
+    #  @return A dictionary containing the sPLT chunk data.
     @staticmethod
     def get_sPLT_data(chunk_data):
         null_byte_index = chunk_data.find(b'\x00')
@@ -123,18 +154,27 @@ class ChunkParser:
         }
 
 
+    ## @brief Get sRGB chunk data.
+    #  @param chunk_data The binary data of the sRGB chunk.
+    #  @return A dictionary containing the sRGB chunk data.
     @staticmethod
     def get_sTER_data(chunk_data):
         stereo_mode = chunk_data[0]
         return {'StereoMode': stereo_mode}
 
 
+    ## @brief Get sRGB chunk data.
+    #  @param chunk_data The binary data of the sRGB chunk.
+    #  @return A dictionary containing the sRGB chunk data.
     @staticmethod
     def get_sRGB_data(chunk_data):
         rendering_intent = chunk_data[0]
         return {'RenderingIntent': rendering_intent}
 
 
+    ## @brief Get sBIT chunk data.
+    #  @param chunk_data The binary data of the sBIT chunk.
+    #  @return A dictionary containing the sBIT chunk data.
     @staticmethod
     def get_sBIT_data(chunk_data):
         color_type = int.from_bytes(chunk_data[:1], byteorder='big')
@@ -151,6 +191,10 @@ class ChunkParser:
         else:
             return None
 
+
+    ## @brief Get oFFs chunk data.
+    #  @param chunk_data The binary data of the oFFs chunk.
+    #  @return A dictionary containing the oFFs chunk data.
     @staticmethod
     def get_oFFs_data(chunk_data):
         position_x = int.from_bytes(chunk_data[:4], byteorder='big', signed=True)
@@ -161,6 +205,10 @@ class ChunkParser:
                 'UnitSpecifier': unit_specifier}
 
 
+    ## @brief Get chunk data based on the chunk name.
+    #  @param chunk_name The name of the chunk to parse.
+    #  @param chunk_data The binary data of the chunk.
+    #  @return The chunk data as a dictionary or None if the chunk_name is not supported.
     @staticmethod
     def get_chunk_data(chunk_name, chunk_data):
         if chunk_name == 'IHDR':
@@ -190,7 +238,11 @@ class ChunkParser:
         else:
             return None
 
-
+    ## @brief Save the chunk data to a JSON file.
+    #  @param chunk_name The name of the chunk to save.
+    #  @param chunk_data The binary data of the chunk.
+    #  @param output_folder The folder to save the JSON file to.
+   
     @staticmethod
     def save_chunk_data_to_json(chunk_name, chunk_data, output_folder):
         if chunk_name == 'IHDR':
@@ -230,4 +282,4 @@ class ChunkParser:
             with open(output_folder + 'oFFs.json', 'w') as f:
                 json.dump(ChunkParser.get_oFFs_data(chunk_data), f)
         else:
-            return None
+            return None 
