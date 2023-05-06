@@ -13,11 +13,13 @@ bool \mbox{\hyperlink{namespace_image_process_a2453133f18f46da116bb09193916a6ee}
 \item 
 bool \mbox{\hyperlink{namespace_image_process_a180293b37cf7ce9c639017430c024d27}{clear\+\_\+chunks}} = False
 \item 
-string \mbox{\hyperlink{namespace_image_process_a9a87a0f58b10b05729d051daa6ff6e35}{file\+\_\+name}} = \char`\"{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}marek\textbackslash{}\textbackslash{}\+One\+Drive\textbackslash{}\textbackslash{}\+Dokumenty\textbackslash{}\textbackslash{}\+Git\+Hub\textbackslash{}\textbackslash{}\+Image\+\_\+\+Viewer\textbackslash{}\textbackslash{}\+Image\+\_\+\+View\+\_\+\+MVVC\textbackslash{}\textbackslash{}\+Image\+\_\+\+View\+\_\+\+V1.\+0\textbackslash{}\textbackslash{}\+Resources\textbackslash{}\textbackslash{}\+Images\textbackslash{}\textbackslash{}photo\+\_\+processed.\+png\char`\"{}
+string \mbox{\hyperlink{namespace_image_process_a4c4fcb44124b465ed5bb8ead54061289}{main\+\_\+path}} = \char`\"{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}marek\textbackslash{}\textbackslash{}\+One\+Drive\textbackslash{}\textbackslash{}\+Dokumenty\textbackslash{}\textbackslash{}\+Git\+Hub\textbackslash{}\textbackslash{}\+Image\+\_\+\+Viewer\textbackslash{}\textbackslash{}\+Image\+\_\+\+View\+\_\+\+MVVC\textbackslash{}\textbackslash{}\+Image\+\_\+\+View\+\_\+\+V1.\+0\textbackslash{}\textbackslash{}\+Resources\textbackslash{}\textbackslash{}\char`\"{}
 \item 
-string \mbox{\hyperlink{namespace_image_process_a77b4ba7b4e81336ca8f63b758e402a12}{output\+\_\+json\+\_\+folder}} = \char`\"{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}marek\textbackslash{}\textbackslash{}\+One\+Drive\textbackslash{}\textbackslash{}\+Dokumenty\textbackslash{}\textbackslash{}\+Git\+Hub\textbackslash{}\textbackslash{}\+Image\+\_\+\+Viewer\textbackslash{}\textbackslash{}\+Image\+\_\+\+View\+\_\+\+MVVC\textbackslash{}\textbackslash{}\+Image\+\_\+\+View\+\_\+\+V1.\+0\textbackslash{}\textbackslash{}\+Resources\textbackslash{}\textbackslash{}\+Raw\textbackslash{}\textbackslash{}\char`\"{}
+string \mbox{\hyperlink{namespace_image_process_a9a87a0f58b10b05729d051daa6ff6e35}{file\+\_\+name}} = \mbox{\hyperlink{namespace_image_process_a4c4fcb44124b465ed5bb8ead54061289}{main\+\_\+path}} + \char`\"{}Images\textbackslash{}\textbackslash{}photo\+\_\+processed.\+png\char`\"{}
 \item 
-string \mbox{\hyperlink{namespace_image_process_acd178208fd4e0d043b300f0b2be79d8a}{output\+\_\+imgs\+\_\+folder}} = \char`\"{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}marek\textbackslash{}\textbackslash{}\+One\+Drive\textbackslash{}\textbackslash{}\+Dokumenty\textbackslash{}\textbackslash{}\+Git\+Hub\textbackslash{}\textbackslash{}\+Image\+\_\+\+Viewer\textbackslash{}\textbackslash{}\+Image\+\_\+\+View\+\_\+\+MVVC\textbackslash{}\textbackslash{}\+Image\+\_\+\+View\+\_\+\+V1.\+0\textbackslash{}\textbackslash{}\+Resources\textbackslash{}\textbackslash{}\+Images\textbackslash{}\textbackslash{}\char`\"{}
+string \mbox{\hyperlink{namespace_image_process_a77b4ba7b4e81336ca8f63b758e402a12}{output\+\_\+json\+\_\+folder}} = \mbox{\hyperlink{namespace_image_process_a4c4fcb44124b465ed5bb8ead54061289}{main\+\_\+path}} + \char`\"{}Raw\textbackslash{}\textbackslash{}\char`\"{}
+\item 
+string \mbox{\hyperlink{namespace_image_process_acd178208fd4e0d043b300f0b2be79d8a}{output\+\_\+imgs\+\_\+folder}} = \mbox{\hyperlink{namespace_image_process_a4c4fcb44124b465ed5bb8ead54061289}{main\+\_\+path}} + \char`\"{}Images\textbackslash{}\textbackslash{}\char`\"{}
 \item 
 \mbox{\hyperlink{namespace_image_process_a78204845bce7616a65b1f6097bed0614}{h\+IST}} = None
 \item 
@@ -66,7 +68,7 @@ string \mbox{\hyperlink{namespace_image_process_a034a9854e596bd4927c5218a6baab1a
 \index{ImageProcess@{ImageProcess}!file\_name@{file\_name}}
 \index{file\_name@{file\_name}!ImageProcess@{ImageProcess}}
 \doxysubsubsection{\texorpdfstring{file\_name}{file\_name}}
-{\footnotesize\ttfamily string Image\+Process.\+file\+\_\+name = \char`\"{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}marek\textbackslash{}\textbackslash{}\+One\+Drive\textbackslash{}\textbackslash{}\+Dokumenty\textbackslash{}\textbackslash{}\+Git\+Hub\textbackslash{}\textbackslash{}\+Image\+\_\+\+Viewer\textbackslash{}\textbackslash{}\+Image\+\_\+\+View\+\_\+\+MVVC\textbackslash{}\textbackslash{}\+Image\+\_\+\+View\+\_\+\+V1.\+0\textbackslash{}\textbackslash{}\+Resources\textbackslash{}\textbackslash{}\+Images\textbackslash{}\textbackslash{}photo\+\_\+processed.\+png\char`\"{}}
+{\footnotesize\ttfamily string Image\+Process.\+file\+\_\+name = \mbox{\hyperlink{namespace_image_process_a4c4fcb44124b465ed5bb8ead54061289}{main\+\_\+path}} + \char`\"{}Images\textbackslash{}\textbackslash{}photo\+\_\+processed.\+png\char`\"{}}
 
 \mbox{\Hypertarget{namespace_image_process_a78204845bce7616a65b1f6097bed0614}\label{namespace_image_process_a78204845bce7616a65b1f6097bed0614}} 
 \index{ImageProcess@{ImageProcess}!hIST@{hIST}}
@@ -80,6 +82,12 @@ string \mbox{\hyperlink{namespace_image_process_a034a9854e596bd4927c5218a6baab1a
 \doxysubsubsection{\texorpdfstring{img\_data}{img\_data}}
 {\footnotesize\ttfamily string Image\+Process.\+img\+\_\+data = b\textquotesingle{}\textquotesingle{}}
 
+\mbox{\Hypertarget{namespace_image_process_a4c4fcb44124b465ed5bb8ead54061289}\label{namespace_image_process_a4c4fcb44124b465ed5bb8ead54061289}} 
+\index{ImageProcess@{ImageProcess}!main\_path@{main\_path}}
+\index{main\_path@{main\_path}!ImageProcess@{ImageProcess}}
+\doxysubsubsection{\texorpdfstring{main\_path}{main\_path}}
+{\footnotesize\ttfamily string Image\+Process.\+main\+\_\+path = \char`\"{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}marek\textbackslash{}\textbackslash{}\+One\+Drive\textbackslash{}\textbackslash{}\+Dokumenty\textbackslash{}\textbackslash{}\+Git\+Hub\textbackslash{}\textbackslash{}\+Image\+\_\+\+Viewer\textbackslash{}\textbackslash{}\+Image\+\_\+\+View\+\_\+\+MVVC\textbackslash{}\textbackslash{}\+Image\+\_\+\+View\+\_\+\+V1.\+0\textbackslash{}\textbackslash{}\+Resources\textbackslash{}\textbackslash{}\char`\"{}}
+
 \mbox{\Hypertarget{namespace_image_process_a03ad56330e5d3e89f094f679a1966659}\label{namespace_image_process_a03ad56330e5d3e89f094f679a1966659}} 
 \index{ImageProcess@{ImageProcess}!output\_cleaned\_png@{output\_cleaned\_png}}
 \index{output\_cleaned\_png@{output\_cleaned\_png}!ImageProcess@{ImageProcess}}
@@ -90,13 +98,13 @@ string \mbox{\hyperlink{namespace_image_process_a034a9854e596bd4927c5218a6baab1a
 \index{ImageProcess@{ImageProcess}!output\_imgs\_folder@{output\_imgs\_folder}}
 \index{output\_imgs\_folder@{output\_imgs\_folder}!ImageProcess@{ImageProcess}}
 \doxysubsubsection{\texorpdfstring{output\_imgs\_folder}{output\_imgs\_folder}}
-{\footnotesize\ttfamily string Image\+Process.\+output\+\_\+imgs\+\_\+folder = \char`\"{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}marek\textbackslash{}\textbackslash{}\+One\+Drive\textbackslash{}\textbackslash{}\+Dokumenty\textbackslash{}\textbackslash{}\+Git\+Hub\textbackslash{}\textbackslash{}\+Image\+\_\+\+Viewer\textbackslash{}\textbackslash{}\+Image\+\_\+\+View\+\_\+\+MVVC\textbackslash{}\textbackslash{}\+Image\+\_\+\+View\+\_\+\+V1.\+0\textbackslash{}\textbackslash{}\+Resources\textbackslash{}\textbackslash{}\+Images\textbackslash{}\textbackslash{}\char`\"{}}
+{\footnotesize\ttfamily string Image\+Process.\+output\+\_\+imgs\+\_\+folder = \mbox{\hyperlink{namespace_image_process_a4c4fcb44124b465ed5bb8ead54061289}{main\+\_\+path}} + \char`\"{}Images\textbackslash{}\textbackslash{}\char`\"{}}
 
 \mbox{\Hypertarget{namespace_image_process_a77b4ba7b4e81336ca8f63b758e402a12}\label{namespace_image_process_a77b4ba7b4e81336ca8f63b758e402a12}} 
 \index{ImageProcess@{ImageProcess}!output\_json\_folder@{output\_json\_folder}}
 \index{output\_json\_folder@{output\_json\_folder}!ImageProcess@{ImageProcess}}
 \doxysubsubsection{\texorpdfstring{output\_json\_folder}{output\_json\_folder}}
-{\footnotesize\ttfamily string Image\+Process.\+output\+\_\+json\+\_\+folder = \char`\"{}C\+:\textbackslash{}\textbackslash{}\+Users\textbackslash{}\textbackslash{}marek\textbackslash{}\textbackslash{}\+One\+Drive\textbackslash{}\textbackslash{}\+Dokumenty\textbackslash{}\textbackslash{}\+Git\+Hub\textbackslash{}\textbackslash{}\+Image\+\_\+\+Viewer\textbackslash{}\textbackslash{}\+Image\+\_\+\+View\+\_\+\+MVVC\textbackslash{}\textbackslash{}\+Image\+\_\+\+View\+\_\+\+V1.\+0\textbackslash{}\textbackslash{}\+Resources\textbackslash{}\textbackslash{}\+Raw\textbackslash{}\textbackslash{}\char`\"{}}
+{\footnotesize\ttfamily string Image\+Process.\+output\+\_\+json\+\_\+folder = \mbox{\hyperlink{namespace_image_process_a4c4fcb44124b465ed5bb8ead54061289}{main\+\_\+path}} + \char`\"{}Raw\textbackslash{}\textbackslash{}\char`\"{}}
 
 \mbox{\Hypertarget{namespace_image_process_a2453133f18f46da116bb09193916a6ee}\label{namespace_image_process_a2453133f18f46da116bb09193916a6ee}} 
 \index{ImageProcess@{ImageProcess}!print\_info@{print\_info}}

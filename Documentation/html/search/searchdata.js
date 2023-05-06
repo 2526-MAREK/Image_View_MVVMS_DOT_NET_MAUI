@@ -8,7 +8,8 @@ var indexSectionsWithContent =
   5: "_abcdefghijklmnopqrstuvwxy",
   6: "n",
   7: "_abcdefghiklmnoprstuwxy",
-  8: "bp"
+  8: "bp",
+  9: "i"
 };
 
 var indexSectionNames =
@@ -21,7 +22,8 @@ var indexSectionNames =
   5: "variables",
   6: "typedefs",
   7: "properties",
-  8: "events"
+  8: "events",
+  9: "pages"
 };
 
 var indexSectionLabels =
@@ -34,6 +36,7 @@ var indexSectionLabels =
   5: "Variables",
   6: "Typedefs",
   7: "Properties",
-  8: "Events"
+  8: "Events",
+  9: "Pages"
 };
 
