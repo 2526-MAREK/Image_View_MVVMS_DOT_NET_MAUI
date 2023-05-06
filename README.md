@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This program is a simple image viewer. It can be used to view png images, draws histograms and shows chunks of the image. Programm can store data about images in a database.
+This program is a simple image viewer. It can be used to view png images, draws histograms and shows chunks of the image. Program can store data about images in a database.
 Program is based on .NET MAUI and runs image analysis python code in the background. Works best on Windows.
 
 ## Installation
