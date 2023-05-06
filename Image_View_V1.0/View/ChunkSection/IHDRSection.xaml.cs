@@ -1,3 +1,8 @@
+/**
+* @file IHDRSection.xaml.cs
+* @brief Contains the IHDRSection class, which represents the IHDR section of the PNG file.
+*/
+
 namespace Image_View_V1._0.View.ChunkSection;
 
 public partial class IHDRSection : ContentView

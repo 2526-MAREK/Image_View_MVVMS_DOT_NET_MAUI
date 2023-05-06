@@ -1,4 +1,9 @@
-﻿//using MvvmHelpers;
+﻿/**
+* @file ImageDetailsViewModel.cs
+* @brief Contains the ImageDetailsViewModel class, which is the view model for the ImageDetailsPage.
+*/
+
+//using MvvmHelpers;
 //using MvvmHelpers.Commands;
 //using Command = MvvmHelpers.Commands.Command;
 using Image_View_V1._0.Services;

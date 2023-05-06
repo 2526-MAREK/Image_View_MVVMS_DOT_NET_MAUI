@@ -1,4 +1,9 @@
-﻿global using CommunityToolkit.Mvvm.ComponentModel;
+﻿/**
+* @file GlobalUsings.cs
+* @brief Contains the global usings for the project.
+*/
+
+global using CommunityToolkit.Mvvm.ComponentModel;
 global using CommunityToolkit.Mvvm.Input;
 global using Image_View_V1._0.Model;
 global using Image_View_V1._0.ViewModel;

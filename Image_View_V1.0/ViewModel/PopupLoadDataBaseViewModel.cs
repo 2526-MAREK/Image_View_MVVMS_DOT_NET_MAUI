@@ -1,4 +1,9 @@
-﻿using System;
+﻿/**
+* @file PopupLoadDataBaseViewModel.cs
+* @brief Contains the PopupLoadDataBaseViewModel class, which represents the popup window for loading images from the database.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

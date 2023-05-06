@@ -1,4 +1,9 @@
-﻿using Image_View_V1._0;
+﻿/**
+* @file AppShell.xaml.cs
+* @brief Contains the AppShell class, which represents the application shell.
+*/
+
+using Image_View_V1._0;
 
 namespace Image_View_V1._0;
 

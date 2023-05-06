@@ -1,3 +1,8 @@
+/**
+* @file PopUpWithLoadDataFromDataBase.xaml.cs
+* @brief Contains the PopUpWithLoadDataFromDataBase class, which represents the PopUpWithLoadDataFromDataBase section of the PNG file.
+*/
+
 using Mopups.Pages;
 using Mopups.Services;
 using System.Collections.Generic;
@@ -59,8 +64,8 @@ public partial class PopUpWithLoadDataFromDataBase : PopupPage
 
     /*private void LoadButtons()
     {
-        // Pobierz dane z odpowiedniego Ÿród³a
-        // Wype³nij listê przycisków, u¿ywaj¹c poni¿szego kodu
+        // Pobierz dane z odpowiedniego ï¿½rï¿½dï¿½a
+        // Wypeï¿½nij listï¿½ przyciskï¿½w, uï¿½ywajï¿½c poniï¿½szego kodu
 
         ButtonGrid.RowDefinitions.Clear();
         int numberOfRows = imageAfterProcessList.Count;
@@ -94,7 +99,7 @@ public partial class PopUpWithLoadDataFromDataBase : PopupPage
        // var image = button.BindingContext as ImageToProcess;
         if (image != null) { 
         
-            // Zrób coœ z wartoœciami 'imageName' i 'imageType', np. wyœwietl alert
+            // Zrï¿½b coï¿½ z wartoï¿½ciami 'imageName' i 'imageType', np. wyï¿½wietl alert
             ButtonClicked?.Invoke(this, image.Id);
         }
         MopupService.Instance.PopAsync();

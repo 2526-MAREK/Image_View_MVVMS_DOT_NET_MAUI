@@ -1,4 +1,9 @@
-﻿using Microsoft.Extensions.Logging;
+﻿/**
+* @file MauiProgram.cs
+* @brief Contains the MauiProgram class, which is the entry point of the application.
+*/
+
+using Microsoft.Extensions.Logging;
 using Image_View_V1._0.Services;
 using Image_View_V1._0.Helpers;
 using Image_View_V1._0.View;

@@ -1,4 +1,9 @@
-﻿using Image_View_V1._0.Services;
+﻿/**
+* @file  ImagesViewModel.cs
+* @brief Contains the ImagesViewModel class, which represents the view model for the Images page.
+*/
+
+using Image_View_V1._0.Services;
 using Image_View_V1._0.Helpers;
 
 namespace Image_View_V1._0.ViewModel;

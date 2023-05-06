@@ -1,3 +1,8 @@
+/**
+* @file     DetailsPage.xaml.cs
+* @brief    Contains the DetailsPage class, which represents the DetailsPage of the application.    
+*/
+
 using Mopups.Interfaces;
 using Mopups.Services;
 
