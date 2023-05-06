@@ -1,4 +1,9 @@
-﻿namespace Image_View_V1._0.Model
+﻿/**
+* @file ChunkEntriesType.cs
+* @brief Contains the ChunkEntriesType class, which represents a data point for a chart.
+*/
+
+namespace Image_View_V1._0.Model
 {
     public class ChunkEntriesType
     {

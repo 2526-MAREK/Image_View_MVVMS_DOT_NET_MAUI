@@ -1,4 +1,9 @@
-﻿namespace Image_View_V1._0.Model
+﻿/**
+* @file ChunkpHYs.cs
+* @brief Contains the ChunkpHYs class, which represents the pHYs chunk.
+*/
+
+namespace Image_View_V1._0.Model
 {
     public class ChunkpHYs
     {

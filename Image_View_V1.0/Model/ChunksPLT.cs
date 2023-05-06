@@ -1,4 +1,9 @@
-﻿namespace Image_View_V1._0.Model
+﻿/**
+* @file ChunksPLT.cs
+* @brief Contains the ChunksPLT class, which represents the PLTE chunk.
+*/
+
+namespace Image_View_V1._0.Model
 { 
     public class ChunksPLT
     {

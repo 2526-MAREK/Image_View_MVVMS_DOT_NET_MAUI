@@ -1,4 +1,9 @@
-﻿namespace Image_View_V1._0.Model
+﻿/**
+* @file ChunkIHDR.cs
+* @brief Contains the ChunkIHDR class, which represents the IHDR chunk.
+*/
+
+namespace Image_View_V1._0.Model
 {
     public class ChunkIHDR
     {

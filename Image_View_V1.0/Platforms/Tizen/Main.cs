@@ -1,3 +1,8 @@
+/**
+* @file Main.cs
+* @brief Contains the Program class, which is the entry point of the application.
+*/
+
 using System;
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;

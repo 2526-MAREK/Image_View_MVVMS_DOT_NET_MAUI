@@ -1,4 +1,9 @@
-﻿using Foundation;
+﻿/**
+* @file AppDelegate.cs
+* @brief Contains the AppDelegate class, which is the entry point for the iOS app.
+*/
+
+using Foundation;
 
 namespace Image_View_V1._0;
 

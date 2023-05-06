@@ -1,4 +1,9 @@
-﻿namespace Image_View_V1._0.Model
+﻿/**
+* @file ChunkiTXt.cs
+* @brief Contains the ChunkiTXt class, which represents the iTXt chunk.
+*/
+
+namespace Image_View_V1._0.Model
 {
     public class ChunkiTXt
     {

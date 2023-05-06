@@ -1,4 +1,4 @@
-## @file PNGImage.py
+## @file png_handler.py
 #  @brief This module provides the PNGImage class for processing PNG images.
 
 import os

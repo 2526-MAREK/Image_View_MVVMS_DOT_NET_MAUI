@@ -1,4 +1,9 @@
-﻿using ObjCRuntime;
+﻿/**
+* @file Program.cs
+* @brief Contains the Program class, which represents the PLTE chunk.
+*/
+
+using ObjCRuntime;
 using UIKit;
 
 namespace Image_View_V1._0;

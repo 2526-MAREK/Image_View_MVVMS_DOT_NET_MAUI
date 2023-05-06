@@ -1,4 +1,9 @@
-﻿namespace Image_View_V1._0.Model
+﻿/**
+* @file ChunktIME.cs
+* @brief Contains the ChunktIME class, which represents the tIME chunk.
+*/
+
+namespace Image_View_V1._0.Model
 { 
     public class ChunktIME
     {

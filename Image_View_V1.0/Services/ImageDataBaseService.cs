@@ -1,4 +1,9 @@
-﻿using Image_View_V1._0.Services;
+﻿/**
+* @file ImageDataBaseService.cs
+* @brief Contains the ImageDataBaseService class, which represents the database for processed images.
+*/
+
+using Image_View_V1._0.Services;
 using Microsoft.EntityFrameworkCore;
 using SQLite;
 using System;

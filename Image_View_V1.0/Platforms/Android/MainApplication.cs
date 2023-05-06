@@ -1,4 +1,9 @@
-﻿using Android.App;
+﻿/**
+* @file MainApplication.cs
+* @brief Contains the MainApplication class, which represents the Android application.
+*/
+
+using Android.App;
 using Android.Runtime;
 
 namespace Image_View_V1._0;

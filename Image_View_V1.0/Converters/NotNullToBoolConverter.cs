@@ -1,4 +1,9 @@
-﻿using System.Globalization;
+﻿/**
+* @file NotNullToBoolConverter.cs
+* @brief Contains the NotNullToBoolConverter class, which is used to convert a chunk to a boolean value.
+*/
+
+using System.Globalization;
 
 namespace Image_View_V1._0.Converters
 {

@@ -1,4 +1,9 @@
-﻿using Microsoft.Maui.Storage;
+﻿/**
+* @file ImageService.cs
+* @brief Contains the ImageService class, which represents the service for image processing.
+*/
+
+using Microsoft.Maui.Storage;
 using System;
 using System.Collections.Generic;
 using System.Linq;

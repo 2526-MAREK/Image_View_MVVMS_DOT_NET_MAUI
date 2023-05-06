@@ -1,4 +1,9 @@
-﻿namespace Image_View_V1._0.Model
+﻿/**
+* @file ChunkoFFs.cs
+* @brief Contains the ChunkoFFs class, which represents the oFFs chunk.
+*/
+
+namespace Image_View_V1._0.Model
 { 
     public class ChunkoFFs
     {

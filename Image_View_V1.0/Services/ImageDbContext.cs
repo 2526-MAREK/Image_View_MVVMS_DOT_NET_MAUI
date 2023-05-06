@@ -1,4 +1,9 @@
-﻿using System;
+﻿/**
+* @file ImageDbContext.cs
+* @brief Contains the ImageDbContext class, which represents the database context.
+*/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

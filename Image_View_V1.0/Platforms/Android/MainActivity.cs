@@ -1,4 +1,9 @@
-﻿using Android.App;
+﻿/**
+* @file MainActivity.cs
+* @brief Contains the MainActivity class, which is the entry point for the Android application.
+*/
+
+using Android.App;
 using Android.Content.PM;
 using Android.OS;
 

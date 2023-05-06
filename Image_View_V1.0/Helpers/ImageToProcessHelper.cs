@@ -1,4 +1,9 @@
-﻿using Newtonsoft.Json;
+﻿/**
+* @file ImageToProcessHelper.cs
+* @brief Contains the ImageToProcessHelper class, which is used to convert images to byte arrays and vice versa.
+*/
+
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;

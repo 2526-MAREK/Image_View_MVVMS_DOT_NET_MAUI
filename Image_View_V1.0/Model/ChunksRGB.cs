@@ -1,4 +1,9 @@
-﻿namespace Image_View_V1._0.Model
+﻿/**
+* @file ChunksRGB.cs
+* @brief Contains the ChunksRGB class, which represents the PLTE chunk.
+*/
+
+namespace Image_View_V1._0.Model
 {
     public class ChunksRGB
     {
