@@ -13,6 +13,7 @@
 
 from png_handler import PNGImage
 from chunk_parser import ChunkParser
+from image_cleaner import PNGImageCleaner
 from image_analysis import ImageAnalysis
 import argparse
 import os
@@ -37,15 +38,15 @@ def main(args):
 
     # Only for debugging:
     # file_name = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Model/PythonScripts/ExampleImages/gAMA.png"
-    # file_name = "/Users/erykwojcik/Documents/GitHub/Image_View_MVVC/Image_View_V1.0/Resources/Images/cleaned.png"
-    #
+
+    file_name = "/Users/erykwojcik/Desktop/cleaned.png"
 
     hIST = None
     PNGImage.delete_output_files(output_json_folder, output_imgs_folder)
 
     if clear_chunks:
         output_cleaned_png = os.path.join(output_imgs_folder, "cleaned.png")
-        PNGImage.remove_unwanted_chunks(file_name, output_cleaned_png)
+        PNGImage.delete_redundant_chunks(file_name, output_cleaned_png)
 
     with open(file_name, 'rb') as file:     # Open PNG file
         file.read(8)                        # Read PNG file header
@@ -75,6 +76,9 @@ def main(args):
     ImageAnalysis.fft_of_image(file_name, output_imgs_folder, draw_fft)
     ImageAnalysis.histogram_of_image(file_name, output_json_folder, output_imgs_folder, draw_hist, hIST)
 
+
+    # cleaner = PNGImageCleaner
+    # cleaner.remove_text_chunks(file_name, 'cleaned.png')
     # PNGImage.delete_redundant_chunks(file_name, (output_json_folder + 'png_no_meta.png'))
 
 
